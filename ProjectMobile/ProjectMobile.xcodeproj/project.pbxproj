@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
 		04E96B21192A0FE200EEDFCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B20192A0FE200EEDFCF /* UIKit.framework */; };
@@ -50,7 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04520A17192A66D30068993A /* ITabBarViewListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITabBarViewListener.h; sourceTree = "<group>"; };
+		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
+		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		04E96B19192A0FE200EEDFCF /* ProjectMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E96B1C192A0FE200EEDFCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 		04520A18192A6BD00068993A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				04520A1D192A6C670068993A /* HomeViewController.h */,
+				04520A1E192A6C670068993A /* HomeViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -245,7 +250,7 @@
 				04E96B71192A3A0A00EEDFCF /* TabBarView.m */,
 				04E96B73192A3AEE00EEDFCF /* TabBarController.h */,
 				04E96B74192A3AEE00EEDFCF /* TabBarController.m */,
-				04520A17192A66D30068993A /* ITabBarViewListener.h */,
+				04520A17192A66D30068993A /* ButtonClickListener.h */,
 			);
 			name = TabBar;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				04E96B32192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld in Sources */,
+				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

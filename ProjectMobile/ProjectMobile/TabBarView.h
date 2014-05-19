@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ITabBarViewListener.h"
+#import "ButtonClickListener.h"
 
 @interface TabBarView : UITabBar
 @property (strong, nonatomic) IBOutlet UIView *view;
@@ -16,6 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *memoryButton;
 @property (weak, nonatomic) IBOutlet UIButton *aidButton;
 @property (weak, nonatomic) IBOutlet UIButton *calendarButton;
-@property id<ITabBarViewListener> tabBarViewListener;
+@property id<ButtonClickListener> tabBarViewListener;
 
 @end

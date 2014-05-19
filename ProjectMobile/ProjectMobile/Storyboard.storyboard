@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - home-->
+        <!--Home View Controller - home-->
         <scene sceneID="WLH-Kd-tcs">
             <objects>
-                <viewController id="9eO-Dc-ESX" sceneMemberID="viewController">
+                <viewController id="9eO-Dc-ESX" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k23-fB-BRZ"/>
                         <viewControllerLayoutGuide type="bottom" id="q9w-HS-OgV"/>
@@ -27,7 +27,7 @@
         <scene sceneID="bXq-t1-cuK">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="VJW-wj-UZg" customClass="TabBarController" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="idl-eq-uQI" customClass="TabBarView">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -181,7 +181,6 @@
         <!--Navigation Controller - aid-->
         <scene sceneID="LK2-Fn-3cQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DdP-FQ-qWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Gp-cc-9AP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="4" title="aid" id="8lh-mC-Ufa"/>
                     <toolbarItems/>
@@ -194,6 +193,7 @@
                         <segue destination="xgg-r0-IhW" kind="relationship" relationship="rootViewController" id="vMN-eV-4GE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DdP-FQ-qWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="731" y="2514"/>
         </scene>

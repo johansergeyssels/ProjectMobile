@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ITabBarViewListener.h"
+#import "ButtonClickListener.h"
 #import "TabBarView.h"
 
-@interface TabBarController : UITabBarController<UITabBarControllerDelegate, ITabBarViewListener>
+@interface TabBarController : UITabBarController<UITabBarControllerDelegate, ButtonClickListener>
 @property(weak) TabBarView *tabBarView;
 @end

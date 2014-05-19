@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ITabBarViewListener <NSObject>
+@protocol ButtonClickListener <NSObject>
 @required
 - (void)didClickButton:(int)index;
 @end
