@@ -16,6 +16,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:(205.0f / 255.0f) green:(113.0f / 255.0f) blue:0 alpha:1.0f]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
+    
+    UIFont *titleFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:20];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:titleFont, NSFontAttributeName,
+                                [UIColor whiteColor], NSForegroundColorAttributeName, nil];
+    [[UINavigationBar appearance] setTitleTextAttributes:attributes];
+    
     return YES;
 }
 

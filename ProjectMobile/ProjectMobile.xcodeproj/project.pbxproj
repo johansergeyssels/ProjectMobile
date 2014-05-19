@@ -136,6 +136,9 @@
 		04520A1A192A6BE00068993A /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				04CED282192AA99C002C32BB /* Herinneringen */,
+				04CED281192AA994002C32BB /* Personen */,
+				04CED280192AA98C002C32BB /* Stappenplan */,
 			);
 			name = Memory;
 			sourceTree = "<group>";
@@ -152,6 +155,27 @@
 			children = (
 			);
 			name = Locations;
+			sourceTree = "<group>";
+		};
+		04CED280192AA98C002C32BB /* Stappenplan */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Stappenplan;
+			sourceTree = "<group>";
+		};
+		04CED281192AA994002C32BB /* Personen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Personen;
+			sourceTree = "<group>";
+		};
+		04CED282192AA99C002C32BB /* Herinneringen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Herinneringen;
 			sourceTree = "<group>";
 		};
 		04E96B10192A0FE200EEDFCF = {

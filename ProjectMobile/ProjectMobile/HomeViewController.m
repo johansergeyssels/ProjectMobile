@@ -14,6 +14,21 @@
 @end
 
 @implementation HomeViewController
+- (IBAction)memoryClicked:(id)sender {
+    [self.listener didClickButton:1];
+}
+
+- (IBAction)calendarClicked:(id)sender {
+    [self.listener didClickButton:2];
+}
+
+- (IBAction)locationsClicked:(id)sender {
+    [self.listener didClickButton:3];
+}
+
+- (IBAction)aidClicked:(id)sender {
+    [self.listener didClickButton:4];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
