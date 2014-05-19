@@ -114,6 +114,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04520A18192A6BD00068993A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		04520A19192A6BDA0068993A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		04520A1A192A6BE00068993A /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Memory;
+			sourceTree = "<group>";
+		};
+		04520A1B192A6BF30068993A /* Aid */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Aid;
+			sourceTree = "<group>";
+		};
+		04520A1C192A6C060068993A /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Locations;
+			sourceTree = "<group>";
+		};
 		04E96B10192A0FE200EEDFCF = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +183,11 @@
 		04E96B24192A0FE200EEDFCF /* ProjectMobile */ = {
 			isa = PBXGroup;
 			children = (
+				04520A1C192A6C060068993A /* Locations */,
+				04520A1B192A6BF30068993A /* Aid */,
+				04520A1A192A6BE00068993A /* Memory */,
+				04520A19192A6BDA0068993A /* Calendar */,
+				04520A18192A6BD00068993A /* Home */,
 				04E96B55192A191D00EEDFCF /* Images */,
 				04E96B54192A126B00EEDFCF /* TabBar */,
 				04E96B51192A107B00EEDFCF /* StoryBoard */,
