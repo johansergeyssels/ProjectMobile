@@ -44,6 +44,7 @@
 		85507AF2192B498D00DD7D53 /* home_Emind.png in Resources */ = {isa = PBXBuildFile; fileRef = 85507AED192B498D00DD7D53 /* home_Emind.png */; };
 		85507AF3192B498D00DD7D53 /* home_locatie.png in Resources */ = {isa = PBXBuildFile; fileRef = 85507AEE192B498D00DD7D53 /* home_locatie.png */; };
 		85507AF4192B498D00DD7D53 /* home_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 85507AEF192B498D00DD7D53 /* home_phone.png */; };
+		665241D6192B48C700484AC1 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665241D5192B48C700484AC1 /* LocationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		85507AED192B498D00DD7D53 /* home_Emind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_Emind.png; sourceTree = "<group>"; };
 		85507AEE192B498D00DD7D53 /* home_locatie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_locatie.png; sourceTree = "<group>"; };
 		85507AEF192B498D00DD7D53 /* home_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_phone.png; sourceTree = "<group>"; };
+		665241D4192B48C700484AC1 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		665241D5192B48C700484AC1 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 		04520A1C192A6C060068993A /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				665241D4192B48C700484AC1 /* LocationViewController.h */,
+				665241D5192B48C700484AC1 /* LocationViewController.m */,
 			);
 			name = Locations;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
 				4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */,
+				665241D6192B48C700484AC1 /* LocationViewController.m in Sources */,
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				04E96B32192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld in Sources */,
