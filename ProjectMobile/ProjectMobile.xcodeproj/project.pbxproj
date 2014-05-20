@@ -15,7 +15,6 @@
 		04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B27192A0FE200EEDFCF /* InfoPlist.strings */; };
 		04E96B2B192A0FE200EEDFCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B2A192A0FE200EEDFCF /* main.m */; };
 		04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B2E192A0FE200EEDFCF /* AppDelegate.m */; };
-		04E96B32192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B30192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld */; };
 		04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B33192A0FE200EEDFCF /* Images.xcassets */; };
 		04E96B3B192A0FE200EEDFCF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B3A192A0FE200EEDFCF /* XCTest.framework */; };
 		04E96B3C192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
@@ -24,18 +23,7 @@
 		04E96B46192A0FE200EEDFCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B44192A0FE200EEDFCF /* InfoPlist.strings */; };
 		04E96B48192A0FE200EEDFCF /* ProjectMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B47192A0FE200EEDFCF /* ProjectMobileTests.m */; };
 		04E96B53192A109D00EEDFCF /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B52192A109D00EEDFCF /* Storyboard.storyboard */; };
-		04E96B57192A2C9600EEDFCF /* tabbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B56192A2C9600EEDFCF /* tabbar_background.png */; };
 		04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B58192A2CBF00EEDFCF /* TabBarView.xib */; };
-		04E96B5D192A2F6D00EEDFCF /* tabbar_homebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B5C192A2F6D00EEDFCF /* tabbar_homebutton.png */; };
-		04E96B5F192A301900EEDFCF /* tabbar_homebutton_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B5E192A301900EEDFCF /* tabbar_homebutton_selected.png */; };
-		04E96B68192A387F00EEDFCF /* tabbar_geheugenbutton_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B60192A387F00EEDFCF /* tabbar_geheugenbutton_selected.png */; };
-		04E96B69192A387F00EEDFCF /* tabbar_geheugenbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B61192A387F00EEDFCF /* tabbar_geheugenbutton.png */; };
-		04E96B6A192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B62192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png */; };
-		04E96B6B192A387F00EEDFCF /* tabbar_kalenderbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B63192A387F00EEDFCF /* tabbar_kalenderbutton.png */; };
-		04E96B6C192A387F00EEDFCF /* tabbar_locatiebutton_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B64192A387F00EEDFCF /* tabbar_locatiebutton_selected.png */; };
-		04E96B6D192A387F00EEDFCF /* tabbar_locatiebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B65192A387F00EEDFCF /* tabbar_locatiebutton.png */; };
-		04E96B6E192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B66192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png */; };
-		04E96B6F192A387F00EEDFCF /* tabbbar_hulpbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B67192A387F00EEDFCF /* tabbbar_hulpbutton.png */; };
 		04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B71192A3A0A00EEDFCF /* TabBarView.m */; };
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
 		4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C40F0E2192B477300B71D93 /* PersonenViewController.m */; };
@@ -75,7 +63,6 @@
 		04E96B2C192A0FE200EEDFCF /* ProjectMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectMobile-Prefix.pch"; sourceTree = "<group>"; };
 		04E96B2D192A0FE200EEDFCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E96B2E192A0FE200EEDFCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04E96B31192A0FE200EEDFCF /* ProjectMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectMobile.xcdatamodel; sourceTree = "<group>"; };
 		04E96B33192A0FE200EEDFCF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04E96B39192A0FE200EEDFCF /* ProjectMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E96B3A192A0FE200EEDFCF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -83,18 +70,7 @@
 		04E96B45192A0FE200EEDFCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04E96B47192A0FE200EEDFCF /* ProjectMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectMobileTests.m; sourceTree = "<group>"; };
 		04E96B52192A109D00EEDFCF /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		04E96B56192A2C9600EEDFCF /* tabbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_background.png; sourceTree = "<group>"; };
 		04E96B58192A2CBF00EEDFCF /* TabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarView.xib; sourceTree = "<group>"; };
-		04E96B5C192A2F6D00EEDFCF /* tabbar_homebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_homebutton.png; sourceTree = "<group>"; };
-		04E96B5E192A301900EEDFCF /* tabbar_homebutton_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_homebutton_selected.png; sourceTree = "<group>"; };
-		04E96B60192A387F00EEDFCF /* tabbar_geheugenbutton_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_geheugenbutton_selected.png; sourceTree = "<group>"; };
-		04E96B61192A387F00EEDFCF /* tabbar_geheugenbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_geheugenbutton.png; sourceTree = "<group>"; };
-		04E96B62192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_kalenderbutton_selected.png; sourceTree = "<group>"; };
-		04E96B63192A387F00EEDFCF /* tabbar_kalenderbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_kalenderbutton.png; sourceTree = "<group>"; };
-		04E96B64192A387F00EEDFCF /* tabbar_locatiebutton_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_locatiebutton_selected.png; sourceTree = "<group>"; };
-		04E96B65192A387F00EEDFCF /* tabbar_locatiebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_locatiebutton.png; sourceTree = "<group>"; };
-		04E96B66192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbbar_hulpbutton_selected.png; sourceTree = "<group>"; };
-		04E96B67192A387F00EEDFCF /* tabbbar_hulpbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbbar_hulpbutton.png; sourceTree = "<group>"; };
 		04E96B70192A3A0A00EEDFCF /* TabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarView.h; sourceTree = "<group>"; };
 		04E96B71192A3A0A00EEDFCF /* TabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarView.m; sourceTree = "<group>"; };
 		04E96B73192A3AEE00EEDFCF /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
@@ -252,13 +228,11 @@
 				04520A1A192A6BE00068993A /* Memory */,
 				04520A19192A6BDA0068993A /* Calendar */,
 				04520A18192A6BD00068993A /* Home */,
-				04E96B55192A191D00EEDFCF /* Images */,
 				04E96B54192A126B00EEDFCF /* TabBar */,
 				04E96B51192A107B00EEDFCF /* StoryBoard */,
 				04E96B2D192A0FE200EEDFCF /* AppDelegate.h */,
 				04E96B2E192A0FE200EEDFCF /* AppDelegate.m */,
 				04E96B33192A0FE200EEDFCF /* Images.xcassets */,
-				04E96B30192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld */,
 				04E96B25192A0FE200EEDFCF /* Supporting Files */,
 			);
 			path = ProjectMobile;
@@ -312,29 +286,6 @@
 				04520A17192A66D30068993A /* ButtonClickListener.h */,
 			);
 			name = TabBar;
-			sourceTree = "<group>";
-		};
-		04E96B55192A191D00EEDFCF /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				85507AEB192B498D00DD7D53 /* home_activiteiten.png */,
-				85507AEC192B498D00DD7D53 /* home_brein.png */,
-				85507AED192B498D00DD7D53 /* home_Emind.png */,
-				85507AEE192B498D00DD7D53 /* home_locatie.png */,
-				85507AEF192B498D00DD7D53 /* home_phone.png */,
-				04E96B60192A387F00EEDFCF /* tabbar_geheugenbutton_selected.png */,
-				04E96B61192A387F00EEDFCF /* tabbar_geheugenbutton.png */,
-				04E96B62192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png */,
-				04E96B63192A387F00EEDFCF /* tabbar_kalenderbutton.png */,
-				04E96B64192A387F00EEDFCF /* tabbar_locatiebutton_selected.png */,
-				04E96B65192A387F00EEDFCF /* tabbar_locatiebutton.png */,
-				04E96B66192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png */,
-				04E96B67192A387F00EEDFCF /* tabbbar_hulpbutton.png */,
-				04E96B5E192A301900EEDFCF /* tabbar_homebutton_selected.png */,
-				04E96B5C192A2F6D00EEDFCF /* tabbar_homebutton.png */,
-				04E96B56192A2C9600EEDFCF /* tabbar_background.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,26 +363,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E96B5F192A301900EEDFCF /* tabbar_homebutton_selected.png in Resources */,
-				04E96B6D192A387F00EEDFCF /* tabbar_locatiebutton.png in Resources */,
 				04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */,
-				04E96B6B192A387F00EEDFCF /* tabbar_kalenderbutton.png in Resources */,
-				04E96B6A192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png in Resources */,
-				85507AF1192B498D00DD7D53 /* home_brein.png in Resources */,
-				04E96B6C192A387F00EEDFCF /* tabbar_locatiebutton_selected.png in Resources */,
-				04E96B6E192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png in Resources */,
-				04E96B69192A387F00EEDFCF /* tabbar_geheugenbutton.png in Resources */,
 				04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */,
-				85507AF3192B498D00DD7D53 /* home_locatie.png in Resources */,
-				85507AF2192B498D00DD7D53 /* home_Emind.png in Resources */,
-				85507AF0192B498D00DD7D53 /* home_activiteiten.png in Resources */,
-				04E96B6F192A387F00EEDFCF /* tabbbar_hulpbutton.png in Resources */,
 				04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */,
-				04E96B68192A387F00EEDFCF /* tabbar_geheugenbutton_selected.png in Resources */,
 				04E96B53192A109D00EEDFCF /* Storyboard.storyboard in Resources */,
-				04E96B5D192A2F6D00EEDFCF /* tabbar_homebutton.png in Resources */,
-				04E96B57192A2C9600EEDFCF /* tabbar_background.png in Resources */,
-				85507AF4192B498D00DD7D53 /* home_phone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,19 +602,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		04E96B30192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				04E96B31192A0FE200EEDFCF /* ProjectMobile.xcdatamodel */,
-			);
-			currentVersion = 04E96B31192A0FE200EEDFCF /* ProjectMobile.xcdatamodel */;
-			path = ProjectMobile.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 04E96B11192A0FE200EEDFCF /* Project object */;
 }
