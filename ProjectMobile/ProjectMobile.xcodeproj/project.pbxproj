@@ -39,6 +39,7 @@
 		04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B71192A3A0A00EEDFCF /* TabBarView.m */; };
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
 		4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C40F0E2192B477300B71D93 /* PersonenViewController.m */; };
+		665241D6192B48C700484AC1 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665241D5192B48C700484AC1 /* LocationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		04E96B74192A3AEE00EEDFCF /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		4C40F0E1192B477300B71D93 /* PersonenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonenViewController.h; sourceTree = "<group>"; };
 		4C40F0E2192B477300B71D93 /* PersonenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonenViewController.m; sourceTree = "<group>"; };
+		665241D4192B48C700484AC1 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		665241D5192B48C700484AC1 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 		04520A1C192A6C060068993A /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				665241D4192B48C700484AC1 /* LocationViewController.h */,
+				665241D5192B48C700484AC1 /* LocationViewController.m */,
 			);
 			name = Locations;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
 				4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */,
+				665241D6192B48C700484AC1 /* LocationViewController.m in Sources */,
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				04E96B32192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld in Sources */,
