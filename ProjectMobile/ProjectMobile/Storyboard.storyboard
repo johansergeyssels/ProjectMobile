@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VJW-wj-UZg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VJW-wj-UZg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -145,10 +145,10 @@
             </objects>
             <point key="canvasLocation" x="1239" y="414"/>
         </scene>
-        <!--View Controller - Stappenplan-->
+        <!--Stappen Plan View Controller - Stappenplan-->
         <scene sceneID="HLn-ru-NuQ">
             <objects>
-                <viewController id="ygh-k7-ztf" sceneMemberID="viewController">
+                <viewController id="ygh-k7-ztf" customClass="StappenPlanViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wsj-s9-3kG"/>
                         <viewControllerLayoutGuide type="bottom" id="a7p-xT-kM9"/>

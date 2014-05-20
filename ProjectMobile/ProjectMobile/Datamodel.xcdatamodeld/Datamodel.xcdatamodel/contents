@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Stap" representedClassName="Stap" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fotoUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stepNr" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="stappenplan" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Stappenplan" inverseName="stap" inverseEntity="Stappenplan" syncable="YES"/>
+    </entity>
+    <entity name="Stappenplan" representedClassName="Stappenplan" syncable="YES">
+        <attribute name="titel" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stap" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Stap" inverseName="stappenplan" inverseEntity="Stap" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Stappenplan" positionX="-90" positionY="-36" width="128" height="73"/>
+        <element name="Stap" positionX="187" positionY="-18" width="128" height="103"/>
+    </elements>
+</model>
