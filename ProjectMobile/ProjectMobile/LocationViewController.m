@@ -14,14 +14,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 }
 
 //als de gebruiker zijn locatie veranderd, update de mapview
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
+    //het scherm aanpassen als de gebruiker wandelt.
     NSLog(@"beweegt");
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 800, 800);
     [self.mapView setRegion:region animated:YES];
+    
+    
+    // Toevoegen van een annotatie
+    MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
+    pin.coordinate = userLocation.coordinate;
+    pin.title = @"Ik ben hier!!!";
+    
+    [self.mapView addAnnotation:pin];
+    
 }
 
 
