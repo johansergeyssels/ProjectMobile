@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IManagedContextObjectContainer.h"
 
-@interface HulpViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-
-
+@interface HulpViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, IManagedContextObjectContainer>
+@property NSManagedObjectContext* context;
 
 @end

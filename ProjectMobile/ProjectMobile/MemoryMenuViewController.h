@@ -1,5 +1,5 @@
 //
-//  StappenPlanViewController.h
+//  MemoryMenuViewController.h
 //  ProjectMobile
 //
 //  Created by johan on 20/05/14.
@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "IManagedContextObjectContainer.h"
 
-@interface StappenPlanViewController : UIViewController<IManagedContextObjectContainer>
+@interface MemoryMenuViewController : UIViewController<IManagedContextObjectContainer>
 @property NSManagedObjectContext* context;
+
 @end

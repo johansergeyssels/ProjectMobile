@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="-155" y="1120"/>
         </scene>
-        <!--View Controller - Geheugen-->
+        <!--Memory Menu View Controller - Geheugen-->
         <scene sceneID="S3a-9e-CrZ">
             <objects>
-                <viewController id="Mnw-GG-9hC" sceneMemberID="viewController">
+                <viewController id="Mnw-GG-9hC" customClass="MemoryMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yZ7-Mu-aBD"/>
                         <viewControllerLayoutGuide type="bottom" id="Qd4-6Y-3MA"/>
@@ -113,7 +113,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ygh-k7-ztf" kind="push" id="HGe-es-UMw"/>
+                                    <segue destination="ygh-k7-ztf" kind="push" identifier="gotoStepstones" id="HGe-es-UMw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPl-bn-ZIV">
@@ -123,7 +123,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CcS-er-cZ9" kind="push" id="jbv-Ev-Bil"/>
+                                    <segue destination="CcS-er-cZ9" kind="push" identifier="gotoPersons" id="jbv-Ev-Bil"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8U-Sq-ceh">
@@ -133,7 +133,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mt2-v8-BLq" kind="push" id="TZT-qA-DJh"/>
+                                    <segue destination="mt2-v8-BLq" kind="push" identifier="gotoMemories" id="TZT-qA-DJh"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -1,19 +1,19 @@
 //
-//  StappenPlanViewController.m
+//  MemoryMenuViewController.m
 //  ProjectMobile
 //
 //  Created by johan on 20/05/14.
 //  Copyright (c) 2014 johan. All rights reserved.
 //
 
-#import "StappenPlanViewController.h"
-#import "Stappenplan.h"
+#import "MemoryMenuViewController.h"
+#import "IManagedContextObjectContainer.h"
 
-@interface StappenPlanViewController ()
+@interface MemoryMenuViewController ()
 
 @end
 
-@implementation StappenPlanViewController
+@implementation MemoryMenuViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,22 +28,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    Stappenplan *stepstones = [NSEntityDescription insertNewObjectForEntityForName:@"Stappenplan" inManagedObjectContext:self.context];
-    stepstones.titel = @"test";
-    NSError* error;
-    if([self.context save:&error]) {
-        NSLog(@"gelukt");
-    }
-    else
-    {
-        NSLog(@"mislukt");
-    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if(![segue.identifier isEqualToString:@"gotoPersons"]) {
+        id<IManagedContextObjectContainer> container = segue.destinationViewController;
+        container.context = self.context;
+    }
 }
 
 @end
