@@ -10,20 +10,21 @@
 
 @implementation LocationViewController
 
-@synthesize mapView;
-
 //als de view geladen is
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.mapView.delegate = self;
 }
 
 //als de gebruiker zijn locatie veranderd, update de mapview
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    NSLog(@"beweegt");
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 800, 800);
+    [self.mapView setRegion:region animated:YES];
 }
 
+
 @end
+
+

@@ -12,8 +12,6 @@
 
 @interface LocationViewController : UIViewController <MKMapViewDelegate>
 
-
-@property (nonatomic, strong) IBOutlet MKMapView *mapView;
-
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
