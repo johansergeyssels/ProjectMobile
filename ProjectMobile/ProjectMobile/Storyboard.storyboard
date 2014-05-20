@@ -255,7 +255,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Locaties" id="JFb-1Q-N5c"/>
+                    <navigationItem key="navigationItem" title="Locaties" id="JFb-1Q-N5c">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="EGf-TZ-14L">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="HFx-hC-sfI">
+                                <rect key="frame" x="282" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="s8d-8x-ySv" kind="push" id="yUK-Rp-wNa"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="3vK-VF-DHe" id="7qb-Fm-aWg"/>
                     </connections>
@@ -263,6 +276,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCo-DW-ums" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1257" y="1820"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="b9a-gQ-eGU">
+            <objects>
+                <viewController id="s8d-8x-ySv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HDe-AN-16k"/>
+                        <viewControllerLayoutGuide type="bottom" id="kXr-QS-ViF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oz0-M8-F9u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e2J-0z-Y3D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Pt-r7-PYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1978" y="1820"/>
         </scene>
         <!--Hulp View Controller - Hulp-->
         <scene sceneID="xCI-q4-xf5">

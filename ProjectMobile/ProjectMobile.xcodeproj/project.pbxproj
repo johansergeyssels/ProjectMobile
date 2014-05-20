@@ -29,10 +29,10 @@
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
 		4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C40F0E2192B477300B71D93 /* PersonenViewController.m */; };
 		665241D6192B48C700484AC1 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665241D5192B48C700484AC1 /* LocationViewController.m */; };
-		85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85507AF6192B77C200DD7D53 /* HulpViewController.m */; };
-		665241D9192B542E00484AC1 /* GroupToiletAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 665241D8192B542E00484AC1 /* GroupToiletAPI.m */; };
 		665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DB192B5E2500484AC1 /* CoreLocation.framework */; };
 		665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DD192B5E2E00484AC1 /* MapKit.framework */; };
+		668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */; };
+		85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85507AF6192B77C200DD7D53 /* HulpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,13 +78,12 @@
 		4C40F0E2192B477300B71D93 /* PersonenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonenViewController.m; sourceTree = "<group>"; };
 		665241D4192B48C700484AC1 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		665241D5192B48C700484AC1 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
-		85507AF5192B77C200DD7D53 /* HulpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HulpViewController.h; sourceTree = "<group>"; };
-		85507AF6192B77C200DD7D53 /* HulpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HulpViewController.m; sourceTree = "<group>"; };
-		665241D7192B542E00484AC1 /* GroupToiletAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupToiletAPI.h; sourceTree = "<group>"; };
-		665241D8192B542E00484AC1 /* GroupToiletAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupToiletAPI.m; sourceTree = "<group>"; };
-		665241DA192B5B0E00484AC1 /* ToiletAPICommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToiletAPICommunicator.h; sourceTree = "<group>"; };
 		665241DB192B5E2500484AC1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		665241DD192B5E2E00484AC1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		668202CC192B9CA600875220 /* LocationToevoegenControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationToevoegenControllerViewController.h; sourceTree = "<group>"; };
+		668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationToevoegenControllerViewController.m; sourceTree = "<group>"; };
+		85507AF5192B77C200DD7D53 /* HulpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HulpViewController.h; sourceTree = "<group>"; };
+		85507AF6192B77C200DD7D53 /* HulpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HulpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +156,8 @@
 			children = (
 				665241D4192B48C700484AC1 /* LocationViewController.h */,
 				665241D5192B48C700484AC1 /* LocationViewController.m */,
+				668202CC192B9CA600875220 /* LocationToevoegenControllerViewController.h */,
+				668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */,
 			);
 			name = Locations;
 			sourceTree = "<group>";
@@ -388,6 +389,7 @@
 				4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */,
 				665241D6192B48C700484AC1 /* LocationViewController.m in Sources */,
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
+				668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
 				85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */,

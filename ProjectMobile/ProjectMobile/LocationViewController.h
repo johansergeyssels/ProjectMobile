@@ -22,3 +22,4 @@
 @property (strong, nonatomic) NSString *longtitudeISlong;
 
 @end
+
