@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0406338F192B6798003BF9F6 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406338E192B6798003BF9F6 /* EventViewController.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0406338D192B6798003BF9F6 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		0406338E192B6798003BF9F6 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 		04520A19192A6BDA0068993A /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				0406338D192B6798003BF9F6 /* EventViewController.h */,
+				0406338E192B6798003BF9F6 /* EventViewController.m */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
+				0406338F192B6798003BF9F6 /* EventViewController.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
 				4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */,
 				665241D6192B48C700484AC1 /* LocationViewController.m in Sources */,
