@@ -38,6 +38,7 @@
 		04E96B6F192A387F00EEDFCF /* tabbbar_hulpbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B67192A387F00EEDFCF /* tabbbar_hulpbutton.png */; };
 		04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B71192A3A0A00EEDFCF /* TabBarView.m */; };
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
+		4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C40F0E2192B477300B71D93 /* PersonenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		04E96B71192A3A0A00EEDFCF /* TabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarView.m; sourceTree = "<group>"; };
 		04E96B73192A3AEE00EEDFCF /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		04E96B74192A3AEE00EEDFCF /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		4C40F0E1192B477300B71D93 /* PersonenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonenViewController.h; sourceTree = "<group>"; };
+		4C40F0E2192B477300B71D93 /* PersonenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 		04CED281192AA994002C32BB /* Personen */ = {
 			isa = PBXGroup;
 			children = (
+				4C40F0E1192B477300B71D93 /* PersonenViewController.h */,
+				4C40F0E2192B477300B71D93 /* PersonenViewController.m */,
 			);
 			name = Personen;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 			files = (
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
+				4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */,
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				04E96B32192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld in Sources */,
