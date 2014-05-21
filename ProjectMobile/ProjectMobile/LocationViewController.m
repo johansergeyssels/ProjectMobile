@@ -27,10 +27,6 @@
     NSLog(@"beweegt");
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 800, 800);
     [self.mapView setRegion:region animated:YES];
-    
-    
-    
-    
 }
 
 - (BOOL) jsonBinnenhalen {
@@ -55,6 +51,7 @@
             
                 if(!error) {
                     for(Toilet *Toilet in toiletlocatie.openbaartoilet) {
+                        NSLog(@"%@", Toilet.district);
                         NSLog(@"%@", Toilet.omschrijving);
                         NSLog(@"%@", Toilet.straat);
                         NSLog(@"%@", Toilet.huisnummer);
@@ -62,6 +59,7 @@
                         NSLog(@"%@", Toilet.point_lat);
                         NSLog(@"%@", Toilet.point_lng);
                         
+                        NSString *gemeentePostcodeStraatNummer = [NSString stringWithFormat:@"%@ %@ %@ %@", Toilet.district, Toilet.postcode, Toilet.straat, Toilet.huisnummer];
                         
                         // Toevoegen van een annotatie
                         MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
@@ -78,7 +76,8 @@
                         pin.coordinate = pinCoordinate;
                         
                         //pin.coordinate = userLocation.coordinate;
-                        pin.title = @"Ik ben hier!!!";
+                        pin.title = Toilet.omschrijving;
+                        pin.subtitle = gemeentePostcodeStraatNummer;
                         
                         [self.mapView addAnnotation:pin];
 
@@ -91,10 +90,45 @@
     return YES;
 }
 
-- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate{
+//overschrijven standaard pin design
+//elke pin die getekend moet worden wordt deze functie uitgevoerd
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    //checkt de locatie waar je nu bent
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
     
-}
+    //Deze functie gaat elke custom (wc) annotatie gaan behandelen
+    if ([annotation isKindOfClass:[MKPointAnnotation class]])
+    {
+        // Try to dequeue an existing pin view first.
+        MKAnnotationView *pinView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomPinAnnotationView"];
+        if (!pinView)
+        {
+            // If an existing pin view was not available, create one.
+            pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotationView"];
+            //pinView.animatesDrop = YES;
+            pinView.canShowCallout = YES;
+            pinView.image = [UIImage imageNamed:@"wc.png"];
+            pinView.calloutOffset = CGPointMake(0, 0);
+            
+        } else {
+            pinView.annotation = annotation;
+        }
+        
+        // Add an image to the left callout.
+        UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wc.png"]];
+        pinView.leftCalloutAccessoryView = iconView;
+        
+        return pinView;
+    }
+    return nil;
+    
+    
 
+
+
+}
 
 @end
 
