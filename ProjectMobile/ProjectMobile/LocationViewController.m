@@ -14,6 +14,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self jsonBinnenhalen];
+    
     
 }
 
@@ -33,6 +35,27 @@
     
     [self.mapView addAnnotation:pin];
     
+}
+
+- (BOOL) jsonBinnenhalen {
+    NSString *openbaarToiletUrl = @"http://datasets.antwerpen.be/v1/infrastructuur/openbaartoilet.json";
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:[NSURL URLWithString:openbaarToiletUrl]
+            completionHandler:^(NSData *data,
+                                NSURLResponse *response,
+                                NSError *error) {
+                // handle response
+                NSLog(@"gelukt");
+                NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
+                id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error:&error];
+                //NSLog(json);
+                NSLog(@"%@", jsonObject);
+
+            }] resume];
+    
+    return YES;
 }
 
 @end

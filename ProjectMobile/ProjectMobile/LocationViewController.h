@@ -21,5 +21,7 @@
 @property (strong, nonatomic) NSString *latitudeISlat;
 @property (strong, nonatomic) NSString *longtitudeISlong;
 
+-(BOOL) jsonBinnenhalen;
+
 @end
 
