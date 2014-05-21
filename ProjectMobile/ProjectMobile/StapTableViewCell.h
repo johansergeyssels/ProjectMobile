@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface StapTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
 
 @end

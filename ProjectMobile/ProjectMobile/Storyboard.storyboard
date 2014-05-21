@@ -189,6 +189,11 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="editButton" destination="HQb-uB-RWT" id="UQY-P4-WyD"/>
+                                            <outlet property="image" destination="AvE-4r-GnL" id="Krb-QY-B76"/>
+                                            <outlet property="label" destination="ntr-lz-u5D" id="JU4-xO-Ifi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -198,6 +203,9 @@
                     <navigationItem key="navigationItem" title="Stappenplan" id="e72-mM-Uok">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="e8C-se-g0R"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="Knc-dx-wfC" id="W2n-Cq-DOR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGS-Wn-r48" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

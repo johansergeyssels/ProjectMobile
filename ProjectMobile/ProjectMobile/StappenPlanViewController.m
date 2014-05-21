@@ -8,8 +8,12 @@
 
 #import "StappenPlanViewController.h"
 #import "Stappenplan.h"
+#import "StapTableViewCell.h"
 
 @interface StappenPlanViewController ()
+
+@property NSMutableArray* stepstones;
+@property (weak, nonatomic) IBOutlet UITableView *table;
 
 @end
 
@@ -28,16 +32,31 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    Stappenplan *stepstones = [NSEntityDescription insertNewObjectForEntityForName:@"Stappenplan" inManagedObjectContext:self.context];
-    stepstones.titel = @"test";
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self getStepstones];
+}
+
+- (void)getStepstones
+{
+    NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Stappenplan"];
     NSError* error;
-    if([self.context save:&error]) {
-        NSLog(@"gelukt");
-    }
-    else
-    {
-        NSLog(@"mislukt");
-    }
+    self.stepstones = [[self.context executeFetchRequest:fetchRequest error:&error] mutableCopy];
+    [self.table reloadData];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.stepstones.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    StapTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"stappenplanCell" forIndexPath:indexPath];
+    
+    
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning
