@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0406338F192B6798003BF9F6 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406338E192B6798003BF9F6 /* EventViewController.m */; };
+		04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */; };
+		0406339C192B9B33003BF9F6 /* Stap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406339B192B9B33003BF9F6 /* Stap.m */; };
+		0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406339E192B9B34003BF9F6 /* Stappenplan.m */; };
+		040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */; };
+		040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */; };
+		040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -27,17 +33,17 @@
 		04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B58192A2CBF00EEDFCF /* TabBarView.xib */; };
 		04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B71192A3A0A00EEDFCF /* TabBarView.m */; };
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
-		4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C40F0E2192B477300B71D93 /* PersonenViewController.m */; };
+		3866BFD5192C9CB30022BB0C /* HerinneringenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3866BFD4192C9CB30022BB0C /* HerinneringenViewController.m */; };
+		4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380C9192BBA9D00A09211 /* Man.jpeg */; };
+		4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CA192BBA9D00A09211 /* Doctor.jpeg */; };
+		4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CB192BBA9D00A09211 /* Son.jpeg */; };
+		4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */; };
+		4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8BD976192B886D003F00D9 /* PersonenViewController.m */; };
 		665241D6192B48C700484AC1 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665241D5192B48C700484AC1 /* LocationViewController.m */; };
-		85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85507AF6192B77C200DD7D53 /* HulpViewController.m */; };
-		665241D9192B542E00484AC1 /* GroupToiletAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 665241D8192B542E00484AC1 /* GroupToiletAPI.m */; };
 		665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DB192B5E2500484AC1 /* CoreLocation.framework */; };
 		665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DD192B5E2E00484AC1 /* MapKit.framework */; };
-		85507AF0192B498D00DD7D53 /* home_activiteiten.png in Resources */ = {isa = PBXBuildFile; fileRef = 85507AEB192B498D00DD7D53 /* home_activiteiten.png */; };
-		85507AF1192B498D00DD7D53 /* home_brein.png in Resources */ = {isa = PBXBuildFile; fileRef = 85507AEC192B498D00DD7D53 /* home_brein.png */; };
-		85507AF2192B498D00DD7D53 /* home_Emind.png in Resources */ = {isa = PBXBuildFile; fileRef = 85507AED192B498D00DD7D53 /* home_Emind.png */; };
-		85507AF3192B498D00DD7D53 /* home_locatie.png in Resources */ = {isa = PBXBuildFile; fileRef = 85507AEE192B498D00DD7D53 /* home_locatie.png */; };
-		85507AF4192B498D00DD7D53 /* home_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 85507AEF192B498D00DD7D53 /* home_phone.png */; };
+		668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */; };
+		85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85507AF6192B77C200DD7D53 /* HulpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,18 @@
 /* Begin PBXFileReference section */
 		0406338D192B6798003BF9F6 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		0406338E192B6798003BF9F6 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		04063392192B90DB003BF9F6 /* ProjectMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectMobile.xcdatamodel; sourceTree = "<group>"; };
+		0406339A192B9B33003BF9F6 /* Stap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stap.h; sourceTree = "<group>"; };
+		0406339B192B9B33003BF9F6 /* Stap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stap.m; sourceTree = "<group>"; };
+		0406339D192B9B34003BF9F6 /* Stappenplan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stappenplan.h; sourceTree = "<group>"; };
+		0406339E192B9B34003BF9F6 /* Stappenplan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stappenplan.m; sourceTree = "<group>"; };
+		040633A0192B9BFF003BF9F6 /* StappenPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StappenPlanViewController.h; sourceTree = "<group>"; };
+		040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StappenPlanViewController.m; sourceTree = "<group>"; };
+		040633A4192BDD41003BF9F6 /* IManagedContextObjectContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IManagedContextObjectContainer.h; sourceTree = "<group>"; };
+		040633A5192BDDC5003BF9F6 /* MemoryMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryMenuViewController.h; sourceTree = "<group>"; };
+		040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryMenuViewController.m; sourceTree = "<group>"; };
+		040633E9192C8EE2003BF9F6 /* StapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StapTableViewCell.h; sourceTree = "<group>"; };
+		040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StapTableViewCell.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -79,22 +97,23 @@
 		04E96B71192A3A0A00EEDFCF /* TabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarView.m; sourceTree = "<group>"; };
 		04E96B73192A3AEE00EEDFCF /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		04E96B74192A3AEE00EEDFCF /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
-		4C40F0E1192B477300B71D93 /* PersonenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonenViewController.h; sourceTree = "<group>"; };
-		4C40F0E2192B477300B71D93 /* PersonenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonenViewController.m; sourceTree = "<group>"; };
+		3866BFD3192C9CB30022BB0C /* HerinneringenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringenViewController.h; sourceTree = "<group>"; };
+		3866BFD4192C9CB30022BB0C /* HerinneringenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringenViewController.m; sourceTree = "<group>"; };
+		4C2380C9192BBA9D00A09211 /* Man.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Man.jpeg; sourceTree = "<group>"; };
+		4C2380CA192BBA9D00A09211 /* Doctor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Doctor.jpeg; sourceTree = "<group>"; };
+		4C2380CB192BBA9D00A09211 /* Son.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Son.jpeg; sourceTree = "<group>"; };
+		4C3C3F3E192B8B4F00A3650C /* PersoonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersoonCell.h; sourceTree = "<group>"; };
+		4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersoonCell.m; sourceTree = "<group>"; };
+		4C8BD975192B886D003F00D9 /* PersonenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonenViewController.h; sourceTree = "<group>"; };
+		4C8BD976192B886D003F00D9 /* PersonenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonenViewController.m; sourceTree = "<group>"; };
 		665241D4192B48C700484AC1 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		665241D5192B48C700484AC1 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
-		85507AF5192B77C200DD7D53 /* HulpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HulpViewController.h; sourceTree = "<group>"; };
-		85507AF6192B77C200DD7D53 /* HulpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HulpViewController.m; sourceTree = "<group>"; };
-		665241D7192B542E00484AC1 /* GroupToiletAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupToiletAPI.h; sourceTree = "<group>"; };
-		665241D8192B542E00484AC1 /* GroupToiletAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupToiletAPI.m; sourceTree = "<group>"; };
-		665241DA192B5B0E00484AC1 /* ToiletAPICommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToiletAPICommunicator.h; sourceTree = "<group>"; };
 		665241DB192B5E2500484AC1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		665241DD192B5E2E00484AC1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		85507AEB192B498D00DD7D53 /* home_activiteiten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_activiteiten.png; sourceTree = "<group>"; };
-		85507AEC192B498D00DD7D53 /* home_brein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_brein.png; sourceTree = "<group>"; };
-		85507AED192B498D00DD7D53 /* home_Emind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_Emind.png; sourceTree = "<group>"; };
-		85507AEE192B498D00DD7D53 /* home_locatie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_locatie.png; sourceTree = "<group>"; };
-		85507AEF192B498D00DD7D53 /* home_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_phone.png; sourceTree = "<group>"; };
+		668202CC192B9CA600875220 /* LocationToevoegenControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationToevoegenControllerViewController.h; sourceTree = "<group>"; };
+		668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationToevoegenControllerViewController.m; sourceTree = "<group>"; };
+		85507AF5192B77C200DD7D53 /* HulpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HulpViewController.h; sourceTree = "<group>"; };
+		85507AF6192B77C200DD7D53 /* HulpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HulpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +121,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E96B23192A0FE200EEDFCF /* CoreData.framework in Frameworks */,
 				665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */,
 				665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */,
 				04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */,
-				04E96B23192A0FE200EEDFCF /* CoreData.framework in Frameworks */,
 				04E96B21192A0FE200EEDFCF /* UIKit.framework in Frameworks */,
 				04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */,
 			);
@@ -125,6 +144,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04063390192B8BF6003BF9F6 /* Databank */ = {
+			isa = PBXGroup;
+			children = (
+				04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */,
+				0406339D192B9B34003BF9F6 /* Stappenplan.h */,
+				0406339E192B9B34003BF9F6 /* Stappenplan.m */,
+				0406339A192B9B33003BF9F6 /* Stap.h */,
+				0406339B192B9B33003BF9F6 /* Stap.m */,
+			);
+			name = Databank;
+			sourceTree = "<group>";
+		};
+		040633A3192BDCC7003BF9F6 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				040633A4192BDD41003BF9F6 /* IManagedContextObjectContainer.h */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		04520A18192A6BD00068993A /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +188,8 @@
 				04CED282192AA99C002C32BB /* Herinneringen */,
 				04CED281192AA994002C32BB /* Personen */,
 				04CED280192AA98C002C32BB /* Stappenplan */,
+				040633A5192BDDC5003BF9F6 /* MemoryMenuViewController.h */,
+				040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */,
 			);
 			name = Memory;
 			sourceTree = "<group>";
@@ -167,9 +208,8 @@
 			children = (
 				665241D4192B48C700484AC1 /* LocationViewController.h */,
 				665241D5192B48C700484AC1 /* LocationViewController.m */,
-				665241D7192B542E00484AC1 /* GroupToiletAPI.h */,
-				665241D8192B542E00484AC1 /* GroupToiletAPI.m */,
-				665241DA192B5B0E00484AC1 /* ToiletAPICommunicator.h */,
+				668202CC192B9CA600875220 /* LocationToevoegenControllerViewController.h */,
+				668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */,
 			);
 			name = Locations;
 			sourceTree = "<group>";
@@ -177,6 +217,10 @@
 		04CED280192AA98C002C32BB /* Stappenplan */ = {
 			isa = PBXGroup;
 			children = (
+				040633A0192B9BFF003BF9F6 /* StappenPlanViewController.h */,
+				040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */,
+				040633E9192C8EE2003BF9F6 /* StapTableViewCell.h */,
+				040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */,
 			);
 			name = Stappenplan;
 			sourceTree = "<group>";
@@ -184,8 +228,13 @@
 		04CED281192AA994002C32BB /* Personen */ = {
 			isa = PBXGroup;
 			children = (
-				4C40F0E1192B477300B71D93 /* PersonenViewController.h */,
-				4C40F0E2192B477300B71D93 /* PersonenViewController.m */,
+				4C2380C9192BBA9D00A09211 /* Man.jpeg */,
+				4C2380CA192BBA9D00A09211 /* Doctor.jpeg */,
+				4C2380CB192BBA9D00A09211 /* Son.jpeg */,
+				4C8BD975192B886D003F00D9 /* PersonenViewController.h */,
+				4C8BD976192B886D003F00D9 /* PersonenViewController.m */,
+				4C3C3F3E192B8B4F00A3650C /* PersoonCell.h */,
+				4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */,
 			);
 			name = Personen;
 			sourceTree = "<group>";
@@ -193,6 +242,8 @@
 		04CED282192AA99C002C32BB /* Herinneringen */ = {
 			isa = PBXGroup;
 			children = (
+				3866BFD3192C9CB30022BB0C /* HerinneringenViewController.h */,
+				3866BFD4192C9CB30022BB0C /* HerinneringenViewController.m */,
 			);
 			name = Herinneringen;
 			sourceTree = "<group>";
@@ -233,6 +284,8 @@
 		04E96B24192A0FE200EEDFCF /* ProjectMobile */ = {
 			isa = PBXGroup;
 			children = (
+				040633A3192BDCC7003BF9F6 /* Util */,
+				04063390192B8BF6003BF9F6 /* Databank */,
 				04520A1C192A6C060068993A /* Locations */,
 				04520A1B192A6BF30068993A /* Aid */,
 				04520A1A192A6BE00068993A /* Memory */,
@@ -374,6 +427,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */,
+				4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */,
+				4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */,
+				4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */,
 				04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */,
 				04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */,
 				04E96B53192A109D00EEDFCF /* Storyboard.storyboard in Resources */,
@@ -398,14 +454,21 @@
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
 				0406338F192B6798003BF9F6 /* EventViewController.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
-				4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */,
+				4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */,
 				665241D6192B48C700484AC1 /* LocationViewController.m in Sources */,
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
+				668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
-				04E96B32192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld in Sources */,
-				665241D9192B542E00484AC1 /* GroupToiletAPI.m in Sources */,
+				4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */,
+				0406339C192B9B33003BF9F6 /* Stap.m in Sources */,
+				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,
+				040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */,
 				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
+				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
+				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,
+				04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */,
 				85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */,
+				3866BFD5192C9CB30022BB0C /* HerinneringenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +677,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04063392192B90DB003BF9F6 /* ProjectMobile.xcdatamodel */,
+			);
+			currentVersion = 04063392192B90DB003BF9F6 /* ProjectMobile.xcdatamodel */;
+			path = ProjectMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 04E96B11192A0FE200EEDFCF /* Project object */;
 }
