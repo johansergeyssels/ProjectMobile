@@ -14,9 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
-@property (nonatomic,assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic,copy) NSString *title;
-@property (nonatomic, copy) NSString *subtitle;
 
 -(BOOL) jsonBinnenhalen;
 

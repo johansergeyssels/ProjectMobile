@@ -10,6 +10,7 @@
 
 @interface Toilet : JSONModel
 
+@property (strong, nonatomic) NSString *district;
 @property (strong, nonatomic) NSString *omschrijving;
 @property (strong, nonatomic) NSString *straat;
 @property (strong, nonatomic) NSString *huisnummer;
