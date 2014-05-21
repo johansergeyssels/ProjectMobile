@@ -38,7 +38,11 @@
 		04E96B6F192A387F00EEDFCF /* tabbbar_hulpbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B67192A387F00EEDFCF /* tabbbar_hulpbutton.png */; };
 		04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B71192A3A0A00EEDFCF /* TabBarView.m */; };
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
-		4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C40F0E2192B477300B71D93 /* PersonenViewController.m */; };
+		4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380C9192BBA9D00A09211 /* Man.jpeg */; };
+		4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CA192BBA9D00A09211 /* Doctor.jpeg */; };
+		4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CB192BBA9D00A09211 /* Son.jpeg */; };
+		4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */; };
+		4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8BD976192B886D003F00D9 /* PersonenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +94,13 @@
 		04E96B71192A3A0A00EEDFCF /* TabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarView.m; sourceTree = "<group>"; };
 		04E96B73192A3AEE00EEDFCF /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		04E96B74192A3AEE00EEDFCF /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
-		4C40F0E1192B477300B71D93 /* PersonenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonenViewController.h; sourceTree = "<group>"; };
-		4C40F0E2192B477300B71D93 /* PersonenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonenViewController.m; sourceTree = "<group>"; };
+		4C2380C9192BBA9D00A09211 /* Man.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Man.jpeg; sourceTree = "<group>"; };
+		4C2380CA192BBA9D00A09211 /* Doctor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Doctor.jpeg; sourceTree = "<group>"; };
+		4C2380CB192BBA9D00A09211 /* Son.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Son.jpeg; sourceTree = "<group>"; };
+		4C3C3F3E192B8B4F00A3650C /* PersoonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersoonCell.h; sourceTree = "<group>"; };
+		4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersoonCell.m; sourceTree = "<group>"; };
+		4C8BD975192B886D003F00D9 /* PersonenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonenViewController.h; sourceTree = "<group>"; };
+		4C8BD976192B886D003F00D9 /* PersonenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +179,13 @@
 		04CED281192AA994002C32BB /* Personen */ = {
 			isa = PBXGroup;
 			children = (
-				4C40F0E1192B477300B71D93 /* PersonenViewController.h */,
-				4C40F0E2192B477300B71D93 /* PersonenViewController.m */,
+				4C2380C9192BBA9D00A09211 /* Man.jpeg */,
+				4C2380CA192BBA9D00A09211 /* Doctor.jpeg */,
+				4C2380CB192BBA9D00A09211 /* Son.jpeg */,
+				4C8BD975192B886D003F00D9 /* PersonenViewController.h */,
+				4C8BD976192B886D003F00D9 /* PersonenViewController.m */,
+				4C3C3F3E192B8B4F00A3650C /* PersoonCell.h */,
+				4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */,
 			);
 			name = Personen;
 			sourceTree = "<group>";
@@ -380,11 +394,14 @@
 				04E96B5F192A301900EEDFCF /* tabbar_homebutton_selected.png in Resources */,
 				04E96B6D192A387F00EEDFCF /* tabbar_locatiebutton.png in Resources */,
 				04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */,
+				4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */,
 				04E96B6B192A387F00EEDFCF /* tabbar_kalenderbutton.png in Resources */,
 				04E96B6A192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png in Resources */,
+				4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */,
 				04E96B6C192A387F00EEDFCF /* tabbar_locatiebutton_selected.png in Resources */,
 				04E96B6E192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png in Resources */,
 				04E96B69192A387F00EEDFCF /* tabbar_geheugenbutton.png in Resources */,
+				4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */,
 				04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */,
 				04E96B6F192A387F00EEDFCF /* tabbbar_hulpbutton.png in Resources */,
 				04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */,
@@ -412,10 +429,11 @@
 			files = (
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
-				4C40F0E3192B477300B71D93 /* PersonenViewController.m in Sources */,
+				4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */,
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				04E96B32192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld in Sources */,
+				4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */,
 				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface PersonenViewController : UIViewController
+
+@interface PersonenViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, ABPeoplePickerNavigationControllerDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UICollectionView *personenCollectionView;
 
 @end
