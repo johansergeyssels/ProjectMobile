@@ -14,6 +14,7 @@
 		040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */; };
 		040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */; };
 		040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */; };
+		040633EE192CDE2D003BF9F6 /* StappenplanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633ED192CDE2D003BF9F6 /* StappenplanDetailViewController.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -85,6 +86,8 @@
 		040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryMenuViewController.m; sourceTree = "<group>"; };
 		040633E9192C8EE2003BF9F6 /* StapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StapTableViewCell.h; sourceTree = "<group>"; };
 		040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StapTableViewCell.m; sourceTree = "<group>"; };
+		040633EC192CDE2D003BF9F6 /* StappenplanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StappenplanDetailViewController.h; sourceTree = "<group>"; };
+		040633ED192CDE2D003BF9F6 /* StappenplanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StappenplanDetailViewController.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 				040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */,
 				040633E9192C8EE2003BF9F6 /* StapTableViewCell.h */,
 				040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */,
+				040633EC192CDE2D003BF9F6 /* StappenplanDetailViewController.h */,
+				040633ED192CDE2D003BF9F6 /* StappenplanDetailViewController.m */,
 			);
 			name = Stappenplan;
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 				66820328192CCC8400875220 /* JSONKeyMapper.m in Sources */,
 				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
 				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,
+				040633EE192CDE2D003BF9F6 /* StappenplanDetailViewController.m in Sources */,
 				04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */,
 				85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */,
 			);

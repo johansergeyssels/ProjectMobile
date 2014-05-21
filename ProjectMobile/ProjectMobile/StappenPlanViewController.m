@@ -9,6 +9,7 @@
 #import "StappenPlanViewController.h"
 #import "Stappenplan.h"
 #import "StapTableViewCell.h"
+#import "StappenplanDetailViewController.h"
 
 @interface StappenPlanViewController ()
 
@@ -55,6 +56,9 @@
 {
     StapTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"stappenplanCell" forIndexPath:indexPath];
     
+    Stappenplan *steppingstone = [self.stepstones objectAtIndex:indexPath.row];
+    
+    cell.label.text = steppingstone.titel;
     
     return cell;
 }
@@ -63,6 +67,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    StappenplanDetailViewController *dest = segue.destinationViewController;
+    dest.context = self.context;
+    if([segue.identifier isEqualToString:@"updateStepstones"]) {
+        dest.stepstone = [self.stepstones objectAtIndex:self.table.indexPathForSelectedRow.row];
+    }
 }
 
 @end
