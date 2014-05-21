@@ -7,8 +7,12 @@
 //
 
 #import "PersonenViewController.h"
+#import "PersoonCell.h"
 
 @interface PersonenViewController ()
+
+@property NSMutableArray *PersoonImages;
+
 
 @end
 
@@ -26,14 +30,44 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [[self personenCollectionView ]setDataSource:self];
+    [[self personenCollectionView ]setDelegate:self];
+
+    self.PersoonImages = [[NSMutableArray alloc]initWithObjects:@"Man.jpeg", @"Doctor.jpeg", @"Son.jpeg", nil];
 }
+
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+    
+}
+
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.PersoonImages count];
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentiefier = @"Cell";
+    PersoonCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentiefier forIndexPath: indexPath];
+    [[cell persoonImage]setImage:[UIImage imageNamed:self.PersoonImages[indexPath.item]]] ;
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
 
 /*
 #pragma mark - Navigation
