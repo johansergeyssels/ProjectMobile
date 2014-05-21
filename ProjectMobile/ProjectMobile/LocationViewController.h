@@ -10,13 +10,20 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface LocationViewController : UIViewController <MKMapViewDelegate>
+@interface LocationViewController : UIViewController <MKMapViewDelegate, MKAnnotation>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
-@property (nonatomic,assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic,copy) NSString *title;
-@property (nonatomic, copy) NSString *subtitle;
+- (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate;
+- (MKMapItem*)mapItem;
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *address;
+@property (nonatomic, assign) CLLocationCoordinate2D theCoordinate;
+
+//@property (nonatomic,assign) CLLocationCoordinate2D coordinate;
+//@property (nonatomic,copy) NSString *title;
+//@property (nonatomic, copy) NSString *subtitle;
 
 -(BOOL) jsonBinnenhalen;
 
