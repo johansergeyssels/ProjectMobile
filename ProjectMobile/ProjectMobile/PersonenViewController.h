@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IManagedContextObjectContainer.h"
 
-@interface PersonenViewController : UIViewController
-
+@interface PersonenViewController : UIViewController<IManagedContextObjectContainer>
+@property NSManagedObjectContext* context;
 @end
