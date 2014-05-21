@@ -34,6 +34,7 @@
 		04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B71192A3A0A00EEDFCF /* TabBarView.m */; };
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
 		388B3F31192CDA05009FE4C9 /* HerinneringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */; };
+		388B3F34192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F33192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m */; };
 		4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380C9192BBA9D00A09211 /* Man.jpeg */; };
 		4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CA192BBA9D00A09211 /* Doctor.jpeg */; };
 		4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CB192BBA9D00A09211 /* Son.jpeg */; };
@@ -112,6 +113,8 @@
 		04E96B74192A3AEE00EEDFCF /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		388B3F2F192CDA05009FE4C9 /* HerinneringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringViewController.h; sourceTree = "<group>"; };
 		388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringViewController.m; sourceTree = "<group>"; };
+		388B3F32192CE1F0009FE4C9 /* HerinneringToevoegenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringToevoegenViewController.h; sourceTree = "<group>"; };
+		388B3F33192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringToevoegenViewController.m; sourceTree = "<group>"; };
 		4C2380C9192BBA9D00A09211 /* Man.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Man.jpeg; sourceTree = "<group>"; };
 		4C2380CA192BBA9D00A09211 /* Doctor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Doctor.jpeg; sourceTree = "<group>"; };
 		4C2380CB192BBA9D00A09211 /* Son.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Son.jpeg; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 			children = (
 				388B3F2F192CDA05009FE4C9 /* HerinneringViewController.h */,
 				388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */,
+				388B3F32192CE1F0009FE4C9 /* HerinneringToevoegenViewController.h */,
+				388B3F33192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m */,
 			);
 			name = Herinneringen;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */,
 				66820323192CCC8400875220 /* JSONModelError.m in Sources */,
 				6682031F192CCC8400875220 /* JSONModel+CoreData.m in Sources */,
+				388B3F34192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m in Sources */,
 				0406339C192B9B33003BF9F6 /* Stap.m in Sources */,
 				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,
 				040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */,

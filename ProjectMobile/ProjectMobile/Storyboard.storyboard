@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VJW-wj-UZg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VJW-wj-UZg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -265,10 +265,10 @@
             </objects>
             <point key="canvasLocation" x="1978" y="459"/>
         </scene>
-        <!--Herinneringen View Controller - Herinneringen-->
+        <!--Herinnering View Controller - Herinneringen-->
         <scene sceneID="FHK-NS-4AM">
             <objects>
-                <viewController id="mt2-v8-BLq" customClass="HerinneringenViewController" sceneMemberID="viewController">
+                <viewController id="mt2-v8-BLq" customClass="HerinneringViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YyT-ZB-rnr"/>
                         <viewControllerLayoutGuide type="bottom" id="oHg-Xs-ogM"/>
@@ -276,6 +276,35 @@
                     <view key="view" contentMode="scaleToFill" id="pWB-Ol-Btu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A7r-89-8bj">
+                                <rect key="frame" x="0.0" y="61" width="320" height="458"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Uzi-ik-Rio">
+                                    <size key="itemSize" width="115" height="105"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SGt-aL-gx7">
+                                        <rect key="frame" x="0.0" y="64" width="115" height="105"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Haw-9w-xEh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="115" height="105"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Herinneringen" id="4kR-nk-bns">
@@ -293,7 +322,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Trc-Wm-DFY">
                                 <rect key="frame" x="233" y="5" width="71" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -308,10 +337,10 @@
             </objects>
             <point key="canvasLocation" x="1978" y="1120"/>
         </scene>
-        <!--Htoevoegen View Controller - Herinnering toevoegen-->
+        <!--Herinnering Toevoegen View Controller - Herinnering toevoegen-->
         <scene sceneID="a9Q-uD-o2N">
             <objects>
-                <viewController title="Herinnering toevoegen" id="AaH-NX-XDT" customClass="HtoevoegenViewController" sceneMemberID="viewController">
+                <viewController title="Herinnering toevoegen" id="AaH-NX-XDT" customClass="HerinneringToevoegenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Edp-P2-YeU"/>
                         <viewControllerLayoutGuide type="bottom" id="U2o-D5-oln"/>
@@ -330,6 +359,9 @@
                                 <state key="normal" title="Gallerij">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="Gallerij_btn:" destination="AaH-NX-XDT" eventType="touchUpInside" id="kkA-ri-dPG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvR-tJ-kuy">
                                 <rect key="frame" x="120" y="263" width="82" height="30"/>
@@ -342,6 +374,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Toevoegen" id="kwx-JK-cOB"/>
+                    <connections>
+                        <outlet property="Gallerij_btn" destination="bJH-jr-pji" id="v6h-s2-KOo"/>
+                        <outlet property="imageView" destination="vgv-Zg-IMg" id="FXB-1J-Ov3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Qm-oE-aQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

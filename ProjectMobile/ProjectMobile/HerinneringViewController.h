@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IManagedContextObjectContainer.h"
 
-@interface HerinneringViewController : UIViewController
+@interface HerinneringViewController : UIViewController<IManagedContextObjectContainer>
+@property NSManagedObjectContext* context;
 
 @end
