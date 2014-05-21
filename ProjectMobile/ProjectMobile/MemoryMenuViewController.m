@@ -37,10 +37,8 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if(![segue.identifier isEqualToString:@"gotoPersons"]) {
-        id<IManagedContextObjectContainer> container = segue.destinationViewController;
-        container.context = self.context;
-    }
+    id<IManagedContextObjectContainer> container = segue.destinationViewController;
+    container.context = self.context;
 }
 
 @end

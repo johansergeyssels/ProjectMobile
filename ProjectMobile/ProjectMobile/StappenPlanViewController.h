@@ -10,5 +10,8 @@
 #import "IManagedContextObjectContainer.h"
 
 @interface StappenPlanViewController : UIViewController<IManagedContextObjectContainer>
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property NSManagedObjectContext* context;
 @end
