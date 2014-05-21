@@ -18,25 +18,6 @@
     [super viewDidLoad];
     [self jsonBinnenhalen];
     
-    /*
-     // Toevoegen van een annotatie
-     MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
-     //double latitude = [Toilet.point_lat doubleValue];
-     //double longtitude = [Toilet.point_lng doubleValue];
-     _coordinate.latitude = 4.4094030000000544;
-     _coordinate.longitude = 51.225956140000051;
-     NSLog(@"%f", _coordinate.latitude);
-     NSLog(@"%f", _coordinate.longitude);
-     //pin.coordinate = userLocation.coordinate;
-     //NSLog(@"@%", _coordinate.latitude);
-     //NSLog(_coordinate.longitude);
-     
-     //pin.coordinate = userLocation.coordinate;
-     pin.title = @"Ik ben hier!!!";
-     
-     [self.mapView addAnnotation:pin];
-     */
-    
 }
 
 //als de gebruiker zijn locatie veranderd, update de mapview
@@ -81,6 +62,26 @@
                         NSLog(@"%@", Toilet.point_lat);
                         NSLog(@"%@", Toilet.point_lng);
                         
+                        
+                        // Toevoegen van een annotatie
+                        MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
+                        
+                        //maken van een een coordinaat met longtitude en latitude
+                        CLLocationCoordinate2D pinCoordinate;
+                        //specifieren van de latitude en longtitude
+                        double latitude = Toilet.point_lat.doubleValue;
+                        double longtitude = Toilet.point_lng.doubleValue;
+                        
+                        pinCoordinate.latitude = latitude;
+                        pinCoordinate.longitude = longtitude;
+                        //toewijzen van de pincoordinaten aan de pin zelf
+                        pin.coordinate = pinCoordinate;
+                        
+                        //pin.coordinate = userLocation.coordinate;
+                        pin.title = @"Ik ben hier!!!";
+                        
+                        [self.mapView addAnnotation:pin];
+
                     }
                 }
                 
@@ -90,47 +91,9 @@
     return YES;
 }
 
-
-//////
-/*
-- (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate {
-    if ((self = [super init])) {
-        if ([name isKindOfClass:[NSString class]]) {
-            self.name = name;
-        } else {
-            self.name = @"naam is onbekend";
-        }
-        self.address = address;
-        self.theCoordinate = coordinate;
-    }
-    return self;
-}
-
-- (NSString *)title {
-    return _name;
-}
-
-- (NSString *)subtitle {
-    return _address;
-}
-
-- (CLLocationCoordinate2D)coordinate {
-    return _theCoordinate;
-}
-
-- (MKMapItem*)mapItem {
-    NSDictionary *addressDict = @{(NSString*)kABPersonAddressStreetKey : _address};
+- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate{
     
-    MKPlacemark *placemark = [[MKPlacemark alloc]
-                              initWithCoordinate:self.coordinate
-                              addressDictionary:addressDict];
-    
-    MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
-    mapItem.name = self.title;
-    
-    return mapItem;
 }
-*/
 
 
 @end
