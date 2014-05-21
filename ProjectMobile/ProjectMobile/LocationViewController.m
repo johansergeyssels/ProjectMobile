@@ -7,6 +7,8 @@
 //
 
 #import "LocationViewController.h"
+#import "Toilet.h"
+#import "ToiletLocaties.h"
 
 @implementation LocationViewController
 
@@ -38,6 +40,7 @@
 }
 
 - (BOOL) jsonBinnenhalen {
+    //url naar toilet api van de stad antwerpen
     NSString *openbaarToiletUrl = @"http://datasets.antwerpen.be/v1/infrastructuur/openbaartoilet.json";
     
     NSURLSession *session = [NSURLSession sharedSession];
@@ -52,6 +55,20 @@
                 id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error:&error];
                 //NSLog(json);
                 NSLog(@"%@", jsonObject);
+                
+                ToiletLocaties *toiletlocatie = [[ToiletLocaties alloc] initWithString:json error:&error];
+            
+                if(!error) {
+                    for(Toilet *Toilet in toiletlocatie.openbaartoilet) {
+                        NSLog(@"%@", Toilet.omschrijving);
+                        NSLog(@"%@", Toilet.straat);
+                        NSLog(@"%@", Toilet.huisnummer);
+                        NSLog(@"%@", Toilet.postcode);
+                        NSLog(@"%@", Toilet.point_lat);
+                        NSLog(@"%@", Toilet.point_lng);
+                    }
+                }
+                
 
             }] resume];
     
