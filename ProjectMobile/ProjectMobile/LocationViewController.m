@@ -18,6 +18,24 @@
     [super viewDidLoad];
     [self jsonBinnenhalen];
     
+    /*
+     // Toevoegen van een annotatie
+     MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
+     //double latitude = [Toilet.point_lat doubleValue];
+     //double longtitude = [Toilet.point_lng doubleValue];
+     _coordinate.latitude = 4.4094030000000544;
+     _coordinate.longitude = 51.225956140000051;
+     NSLog(@"%f", _coordinate.latitude);
+     NSLog(@"%f", _coordinate.longitude);
+     //pin.coordinate = userLocation.coordinate;
+     //NSLog(@"@%", _coordinate.latitude);
+     //NSLog(_coordinate.longitude);
+     
+     //pin.coordinate = userLocation.coordinate;
+     pin.title = @"Ik ben hier!!!";
+     
+     [self.mapView addAnnotation:pin];
+     */
     
 }
 
@@ -30,17 +48,13 @@
     [self.mapView setRegion:region animated:YES];
     
     
-    // Toevoegen van een annotatie
-    MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
-    pin.coordinate = userLocation.coordinate;
-    pin.title = @"Ik ben hier!!!";
     
-    [self.mapView addAnnotation:pin];
     
 }
 
 - (BOOL) jsonBinnenhalen {
     //url naar toilet api van de stad antwerpen
+    //http://www.raywenderlich.com/51127/nsurlsession-tutorial
     NSString *openbaarToiletUrl = @"http://datasets.antwerpen.be/v1/infrastructuur/openbaartoilet.json";
     
     NSURLSession *session = [NSURLSession sharedSession];
@@ -66,6 +80,7 @@
                         NSLog(@"%@", Toilet.postcode);
                         NSLog(@"%@", Toilet.point_lat);
                         NSLog(@"%@", Toilet.point_lng);
+                        
                     }
                 }
                 
