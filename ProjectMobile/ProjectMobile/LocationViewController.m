@@ -24,7 +24,7 @@
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     //het scherm aanpassen als de gebruiker wandelt.
-    NSLog(@"beweegt");
+    //NSLog(@"beweegt");
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 800, 800);
     [self.mapView setRegion:region animated:YES];
 }
@@ -40,12 +40,12 @@
                                 NSURLResponse *response,
                                 NSError *error) {
                 // handle response
-                NSLog(@"gelukt");
+                //NSLog(@"gelukt");
                 NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                 NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
                 id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error:&error];
                 //NSLog(json);
-                NSLog(@"%@", jsonObject);
+                //NSLog(@"%@", jsonObject);
                 
                 ToiletLocaties *toiletlocatie = [[ToiletLocaties alloc] initWithString:json error:&error];
             
