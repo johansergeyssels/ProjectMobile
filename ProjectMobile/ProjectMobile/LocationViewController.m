@@ -92,6 +92,7 @@
 
 
 //////
+/*
 - (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate {
     if ((self = [super init])) {
         if ([name isKindOfClass:[NSString class]]) {
@@ -129,7 +130,7 @@
     
     return mapItem;
 }
-
+*/
 
 
 @end
