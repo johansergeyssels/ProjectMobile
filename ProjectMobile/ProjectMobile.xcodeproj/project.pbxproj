@@ -34,6 +34,7 @@
 		04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B71192A3A0A00EEDFCF /* TabBarView.m */; };
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
 		3866BFD5192C9CB30022BB0C /* HerinneringenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3866BFD4192C9CB30022BB0C /* HerinneringenViewController.m */; };
+		388B3F31192CDA05009FE4C9 /* HerinneringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */; };
 		4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380C9192BBA9D00A09211 /* Man.jpeg */; };
 		4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CA192BBA9D00A09211 /* Doctor.jpeg */; };
 		4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CB192BBA9D00A09211 /* Son.jpeg */; };
@@ -112,6 +113,8 @@
 		04E96B74192A3AEE00EEDFCF /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		3866BFD3192C9CB30022BB0C /* HerinneringenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringenViewController.h; sourceTree = "<group>"; };
 		3866BFD4192C9CB30022BB0C /* HerinneringenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringenViewController.m; sourceTree = "<group>"; };
+		388B3F2F192CDA05009FE4C9 /* HerinneringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringViewController.h; sourceTree = "<group>"; };
+		388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringViewController.m; sourceTree = "<group>"; };
 		4C2380C9192BBA9D00A09211 /* Man.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Man.jpeg; sourceTree = "<group>"; };
 		4C2380CA192BBA9D00A09211 /* Doctor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Doctor.jpeg; sourceTree = "<group>"; };
 		4C2380CB192BBA9D00A09211 /* Son.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Son.jpeg; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 			children = (
 				3866BFD3192C9CB30022BB0C /* HerinneringenViewController.h */,
 				3866BFD4192C9CB30022BB0C /* HerinneringenViewController.m */,
+				388B3F2F192CDA05009FE4C9 /* HerinneringViewController.h */,
+				388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */,
 			);
 			name = Herinneringen;
 			sourceTree = "<group>";
@@ -572,6 +577,7 @@
 				66820320192CCC8400875220 /* JSONModel.m in Sources */,
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
 				668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */,
+				388B3F31192CDA05009FE4C9 /* HerinneringViewController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */,
 				66820323192CCC8400875220 /* JSONModelError.m in Sources */,

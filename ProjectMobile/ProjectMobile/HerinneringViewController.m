@@ -1,18 +1,18 @@
 //
-//  HerinneringenViewController.m
+//  HerinneringViewController.m
 //  ProjectMobile
 //
 //  Created by KOEKOEKX Annelies (s) on 21/05/14.
 //  Copyright (c) 2014 johan. All rights reserved.
 //
 
-#import "HerinneringenViewController.h"
+#import "HerinneringViewController.h"
 
-@interface HerinneringenViewController ()
+@interface HerinneringViewController ()
 
 @end
 
-@implementation HerinneringenViewController
+@implementation HerinneringViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
