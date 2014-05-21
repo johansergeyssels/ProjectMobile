@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "IManagedContextObjectContainer.h"
 
-@interface LocationViewController : UIViewController <MKMapViewDelegate, MKAnnotation>
+@interface LocationViewController : UIViewController <MKMapViewDelegate, MKAnnotation, IManagedContextObjectContainer>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
+@property NSManagedObjectContext* context;
 
 -(BOOL) jsonBinnenhalen;
 
