@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "IManagedContextObjectContainer.h"
 
 @implementation AppDelegate
 
@@ -23,6 +24,16 @@
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:titleFont, NSFontAttributeName,
                                 [UIColor whiteColor], NSForegroundColorAttributeName, nil];
     [[UINavigationBar appearance] setTitleTextAttributes:attributes];
+    
+    //managedcontext pass through
+    UITabBarController* tabbar = (UITabBarController*)self.window.rootViewController;
+    UINavigationController* nav1 = [tabbar.viewControllers objectAtIndex:1];
+    id<IManagedContextObjectContainer> container1 = [nav1.viewControllers objectAtIndex:0]; //memorymenu
+    container1.context = self.managedObjectContext;
+    
+    UINavigationController* nav2 = [tabbar.viewControllers objectAtIndex:4];
+    id<IManagedContextObjectContainer> container2 = [nav2.viewControllers objectAtIndex:0]; //memorymenu
+    container2.context = self.managedObjectContext;
     
     return YES;
 }

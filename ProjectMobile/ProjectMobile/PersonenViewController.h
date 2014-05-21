@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <AddressBookUI/AddressBookUI.h>
+#import "IManagedContextObjectContainer.h"
 
 
-@interface PersonenViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, ABPeoplePickerNavigationControllerDelegate>
-
+@interface PersonenViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, ABPeoplePickerNavigationControllerDelegate, IManagedContextObjectContainer>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *personenCollectionView;
-
+@property NSManagedObjectContext* context;
 @end

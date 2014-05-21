@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0406338F192B6798003BF9F6 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406338E192B6798003BF9F6 /* EventViewController.m */; };
+		04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */; };
+		0406339C192B9B33003BF9F6 /* Stap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406339B192B9B33003BF9F6 /* Stap.m */; };
+		0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406339E192B9B34003BF9F6 /* Stappenplan.m */; };
+		040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */; };
+		040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */; };
+		040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -15,7 +22,6 @@
 		04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B27192A0FE200EEDFCF /* InfoPlist.strings */; };
 		04E96B2B192A0FE200EEDFCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B2A192A0FE200EEDFCF /* main.m */; };
 		04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B2E192A0FE200EEDFCF /* AppDelegate.m */; };
-		04E96B32192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B30192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld */; };
 		04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B33192A0FE200EEDFCF /* Images.xcassets */; };
 		04E96B3B192A0FE200EEDFCF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B3A192A0FE200EEDFCF /* XCTest.framework */; };
 		04E96B3C192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
@@ -24,18 +30,7 @@
 		04E96B46192A0FE200EEDFCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B44192A0FE200EEDFCF /* InfoPlist.strings */; };
 		04E96B48192A0FE200EEDFCF /* ProjectMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B47192A0FE200EEDFCF /* ProjectMobileTests.m */; };
 		04E96B53192A109D00EEDFCF /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B52192A109D00EEDFCF /* Storyboard.storyboard */; };
-		04E96B57192A2C9600EEDFCF /* tabbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B56192A2C9600EEDFCF /* tabbar_background.png */; };
 		04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B58192A2CBF00EEDFCF /* TabBarView.xib */; };
-		04E96B5D192A2F6D00EEDFCF /* tabbar_homebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B5C192A2F6D00EEDFCF /* tabbar_homebutton.png */; };
-		04E96B5F192A301900EEDFCF /* tabbar_homebutton_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B5E192A301900EEDFCF /* tabbar_homebutton_selected.png */; };
-		04E96B68192A387F00EEDFCF /* tabbar_geheugenbutton_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B60192A387F00EEDFCF /* tabbar_geheugenbutton_selected.png */; };
-		04E96B69192A387F00EEDFCF /* tabbar_geheugenbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B61192A387F00EEDFCF /* tabbar_geheugenbutton.png */; };
-		04E96B6A192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B62192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png */; };
-		04E96B6B192A387F00EEDFCF /* tabbar_kalenderbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B63192A387F00EEDFCF /* tabbar_kalenderbutton.png */; };
-		04E96B6C192A387F00EEDFCF /* tabbar_locatiebutton_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B64192A387F00EEDFCF /* tabbar_locatiebutton_selected.png */; };
-		04E96B6D192A387F00EEDFCF /* tabbar_locatiebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B65192A387F00EEDFCF /* tabbar_locatiebutton.png */; };
-		04E96B6E192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B66192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png */; };
-		04E96B6F192A387F00EEDFCF /* tabbbar_hulpbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B67192A387F00EEDFCF /* tabbbar_hulpbutton.png */; };
 		04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B71192A3A0A00EEDFCF /* TabBarView.m */; };
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
 		4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380C9192BBA9D00A09211 /* Man.jpeg */; };
@@ -43,6 +38,11 @@
 		4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CB192BBA9D00A09211 /* Son.jpeg */; };
 		4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */; };
 		4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8BD976192B886D003F00D9 /* PersonenViewController.m */; };
+		665241D6192B48C700484AC1 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665241D5192B48C700484AC1 /* LocationViewController.m */; };
+		665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DB192B5E2500484AC1 /* CoreLocation.framework */; };
+		665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DD192B5E2E00484AC1 /* MapKit.framework */; };
+		668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */; };
+		85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85507AF6192B77C200DD7D53 /* HulpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +56,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0406338D192B6798003BF9F6 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		0406338E192B6798003BF9F6 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		04063392192B90DB003BF9F6 /* ProjectMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectMobile.xcdatamodel; sourceTree = "<group>"; };
+		0406339A192B9B33003BF9F6 /* Stap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stap.h; sourceTree = "<group>"; };
+		0406339B192B9B33003BF9F6 /* Stap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stap.m; sourceTree = "<group>"; };
+		0406339D192B9B34003BF9F6 /* Stappenplan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stappenplan.h; sourceTree = "<group>"; };
+		0406339E192B9B34003BF9F6 /* Stappenplan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stappenplan.m; sourceTree = "<group>"; };
+		040633A0192B9BFF003BF9F6 /* StappenPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StappenPlanViewController.h; sourceTree = "<group>"; };
+		040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StappenPlanViewController.m; sourceTree = "<group>"; };
+		040633A4192BDD41003BF9F6 /* IManagedContextObjectContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IManagedContextObjectContainer.h; sourceTree = "<group>"; };
+		040633A5192BDDC5003BF9F6 /* MemoryMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryMenuViewController.h; sourceTree = "<group>"; };
+		040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryMenuViewController.m; sourceTree = "<group>"; };
+		040633E9192C8EE2003BF9F6 /* StapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StapTableViewCell.h; sourceTree = "<group>"; };
+		040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StapTableViewCell.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -70,7 +84,6 @@
 		04E96B2C192A0FE200EEDFCF /* ProjectMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectMobile-Prefix.pch"; sourceTree = "<group>"; };
 		04E96B2D192A0FE200EEDFCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E96B2E192A0FE200EEDFCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04E96B31192A0FE200EEDFCF /* ProjectMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectMobile.xcdatamodel; sourceTree = "<group>"; };
 		04E96B33192A0FE200EEDFCF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04E96B39192A0FE200EEDFCF /* ProjectMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E96B3A192A0FE200EEDFCF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -78,18 +91,7 @@
 		04E96B45192A0FE200EEDFCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04E96B47192A0FE200EEDFCF /* ProjectMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectMobileTests.m; sourceTree = "<group>"; };
 		04E96B52192A109D00EEDFCF /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		04E96B56192A2C9600EEDFCF /* tabbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_background.png; sourceTree = "<group>"; };
 		04E96B58192A2CBF00EEDFCF /* TabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarView.xib; sourceTree = "<group>"; };
-		04E96B5C192A2F6D00EEDFCF /* tabbar_homebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_homebutton.png; sourceTree = "<group>"; };
-		04E96B5E192A301900EEDFCF /* tabbar_homebutton_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_homebutton_selected.png; sourceTree = "<group>"; };
-		04E96B60192A387F00EEDFCF /* tabbar_geheugenbutton_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_geheugenbutton_selected.png; sourceTree = "<group>"; };
-		04E96B61192A387F00EEDFCF /* tabbar_geheugenbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_geheugenbutton.png; sourceTree = "<group>"; };
-		04E96B62192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_kalenderbutton_selected.png; sourceTree = "<group>"; };
-		04E96B63192A387F00EEDFCF /* tabbar_kalenderbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_kalenderbutton.png; sourceTree = "<group>"; };
-		04E96B64192A387F00EEDFCF /* tabbar_locatiebutton_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_locatiebutton_selected.png; sourceTree = "<group>"; };
-		04E96B65192A387F00EEDFCF /* tabbar_locatiebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_locatiebutton.png; sourceTree = "<group>"; };
-		04E96B66192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbbar_hulpbutton_selected.png; sourceTree = "<group>"; };
-		04E96B67192A387F00EEDFCF /* tabbbar_hulpbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbbar_hulpbutton.png; sourceTree = "<group>"; };
 		04E96B70192A3A0A00EEDFCF /* TabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarView.h; sourceTree = "<group>"; };
 		04E96B71192A3A0A00EEDFCF /* TabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarView.m; sourceTree = "<group>"; };
 		04E96B73192A3AEE00EEDFCF /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 		4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersoonCell.m; sourceTree = "<group>"; };
 		4C8BD975192B886D003F00D9 /* PersonenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonenViewController.h; sourceTree = "<group>"; };
 		4C8BD976192B886D003F00D9 /* PersonenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonenViewController.m; sourceTree = "<group>"; };
+		665241D4192B48C700484AC1 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		665241D5192B48C700484AC1 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		665241DB192B5E2500484AC1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		665241DD192B5E2E00484AC1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		668202CC192B9CA600875220 /* LocationToevoegenControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationToevoegenControllerViewController.h; sourceTree = "<group>"; };
+		668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationToevoegenControllerViewController.m; sourceTree = "<group>"; };
+		85507AF5192B77C200DD7D53 /* HulpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HulpViewController.h; sourceTree = "<group>"; };
+		85507AF6192B77C200DD7D53 /* HulpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HulpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +118,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */,
 				04E96B23192A0FE200EEDFCF /* CoreData.framework in Frameworks */,
+				665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */,
+				665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */,
+				04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */,
 				04E96B21192A0FE200EEDFCF /* UIKit.framework in Frameworks */,
 				04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */,
 			);
@@ -129,6 +141,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04063390192B8BF6003BF9F6 /* Databank */ = {
+			isa = PBXGroup;
+			children = (
+				04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */,
+				0406339D192B9B34003BF9F6 /* Stappenplan.h */,
+				0406339E192B9B34003BF9F6 /* Stappenplan.m */,
+				0406339A192B9B33003BF9F6 /* Stap.h */,
+				0406339B192B9B33003BF9F6 /* Stap.m */,
+			);
+			name = Databank;
+			sourceTree = "<group>";
+		};
+		040633A3192BDCC7003BF9F6 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				040633A4192BDD41003BF9F6 /* IManagedContextObjectContainer.h */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		04520A18192A6BD00068993A /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +173,8 @@
 		04520A19192A6BDA0068993A /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				0406338D192B6798003BF9F6 /* EventViewController.h */,
+				0406338E192B6798003BF9F6 /* EventViewController.m */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -151,6 +185,8 @@
 				04CED282192AA99C002C32BB /* Herinneringen */,
 				04CED281192AA994002C32BB /* Personen */,
 				04CED280192AA98C002C32BB /* Stappenplan */,
+				040633A5192BDDC5003BF9F6 /* MemoryMenuViewController.h */,
+				040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */,
 			);
 			name = Memory;
 			sourceTree = "<group>";
@@ -158,6 +194,8 @@
 		04520A1B192A6BF30068993A /* Aid */ = {
 			isa = PBXGroup;
 			children = (
+				85507AF5192B77C200DD7D53 /* HulpViewController.h */,
+				85507AF6192B77C200DD7D53 /* HulpViewController.m */,
 			);
 			name = Aid;
 			sourceTree = "<group>";
@@ -165,6 +203,10 @@
 		04520A1C192A6C060068993A /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				665241D4192B48C700484AC1 /* LocationViewController.h */,
+				665241D5192B48C700484AC1 /* LocationViewController.m */,
+				668202CC192B9CA600875220 /* LocationToevoegenControllerViewController.h */,
+				668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */,
 			);
 			name = Locations;
 			sourceTree = "<group>";
@@ -172,6 +214,10 @@
 		04CED280192AA98C002C32BB /* Stappenplan */ = {
 			isa = PBXGroup;
 			children = (
+				040633A0192B9BFF003BF9F6 /* StappenPlanViewController.h */,
+				040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */,
+				040633E9192C8EE2003BF9F6 /* StapTableViewCell.h */,
+				040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */,
 			);
 			name = Stappenplan;
 			sourceTree = "<group>";
@@ -219,6 +265,8 @@
 		04E96B1B192A0FE200EEDFCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				665241DD192B5E2E00484AC1 /* MapKit.framework */,
+				665241DB192B5E2500484AC1 /* CoreLocation.framework */,
 				04E96B1C192A0FE200EEDFCF /* Foundation.framework */,
 				04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */,
 				04E96B20192A0FE200EEDFCF /* UIKit.framework */,
@@ -231,18 +279,18 @@
 		04E96B24192A0FE200EEDFCF /* ProjectMobile */ = {
 			isa = PBXGroup;
 			children = (
+				040633A3192BDCC7003BF9F6 /* Util */,
+				04063390192B8BF6003BF9F6 /* Databank */,
 				04520A1C192A6C060068993A /* Locations */,
 				04520A1B192A6BF30068993A /* Aid */,
 				04520A1A192A6BE00068993A /* Memory */,
 				04520A19192A6BDA0068993A /* Calendar */,
 				04520A18192A6BD00068993A /* Home */,
-				04E96B55192A191D00EEDFCF /* Images */,
 				04E96B54192A126B00EEDFCF /* TabBar */,
 				04E96B51192A107B00EEDFCF /* StoryBoard */,
 				04E96B2D192A0FE200EEDFCF /* AppDelegate.h */,
 				04E96B2E192A0FE200EEDFCF /* AppDelegate.m */,
 				04E96B33192A0FE200EEDFCF /* Images.xcassets */,
-				04E96B30192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld */,
 				04E96B25192A0FE200EEDFCF /* Supporting Files */,
 			);
 			path = ProjectMobile;
@@ -296,24 +344,6 @@
 				04520A17192A66D30068993A /* ButtonClickListener.h */,
 			);
 			name = TabBar;
-			sourceTree = "<group>";
-		};
-		04E96B55192A191D00EEDFCF /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				04E96B60192A387F00EEDFCF /* tabbar_geheugenbutton_selected.png */,
-				04E96B61192A387F00EEDFCF /* tabbar_geheugenbutton.png */,
-				04E96B62192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png */,
-				04E96B63192A387F00EEDFCF /* tabbar_kalenderbutton.png */,
-				04E96B64192A387F00EEDFCF /* tabbar_locatiebutton_selected.png */,
-				04E96B65192A387F00EEDFCF /* tabbar_locatiebutton.png */,
-				04E96B66192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png */,
-				04E96B67192A387F00EEDFCF /* tabbbar_hulpbutton.png */,
-				04E96B5E192A301900EEDFCF /* tabbar_homebutton_selected.png */,
-				04E96B5C192A2F6D00EEDFCF /* tabbar_homebutton.png */,
-				04E96B56192A2C9600EEDFCF /* tabbar_background.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,8 +421,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E96B5F192A301900EEDFCF /* tabbar_homebutton_selected.png in Resources */,
-				04E96B6D192A387F00EEDFCF /* tabbar_locatiebutton.png in Resources */,
 				04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */,
 				4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */,
 				04E96B6B192A387F00EEDFCF /* tabbar_kalenderbutton.png in Resources */,
@@ -403,12 +431,8 @@
 				04E96B69192A387F00EEDFCF /* tabbar_geheugenbutton.png in Resources */,
 				4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */,
 				04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */,
-				04E96B6F192A387F00EEDFCF /* tabbbar_hulpbutton.png in Resources */,
 				04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */,
-				04E96B68192A387F00EEDFCF /* tabbar_geheugenbutton_selected.png in Resources */,
 				04E96B53192A109D00EEDFCF /* Storyboard.storyboard in Resources */,
-				04E96B5D192A2F6D00EEDFCF /* tabbar_homebutton.png in Resources */,
-				04E96B57192A2C9600EEDFCF /* tabbar_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,13 +452,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
+				0406338F192B6798003BF9F6 /* EventViewController.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
 				4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */,
+				665241D6192B48C700484AC1 /* LocationViewController.m in Sources */,
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
+				668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				04E96B32192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld in Sources */,
 				4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */,
+				0406339C192B9B33003BF9F6 /* Stap.m in Sources */,
+				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,
+				040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */,
 				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
+				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
+				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,
+				04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */,
+				85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,12 +679,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		04E96B30192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld */ = {
+		04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				04E96B31192A0FE200EEDFCF /* ProjectMobile.xcdatamodel */,
+				04063392192B90DB003BF9F6 /* ProjectMobile.xcdatamodel */,
 			);
-			currentVersion = 04E96B31192A0FE200EEDFCF /* ProjectMobile.xcdatamodel */;
+			currentVersion = 04063392192B90DB003BF9F6 /* ProjectMobile.xcdatamodel */;
 			path = ProjectMobile.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
