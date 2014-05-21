@@ -3,12 +3,32 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[StappenplanDetailViewController tableView:cellForRowAtIndexPath:]:StappenplanDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.stepstone.stap.count">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.section">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.item">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[TabBarView homeClicked:]:TabBarView.m">
          <PersistentStrings>
             <PersistentString
                value = "self.superview">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[StappenPlanViewController getStepstones]:StappenPlanViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

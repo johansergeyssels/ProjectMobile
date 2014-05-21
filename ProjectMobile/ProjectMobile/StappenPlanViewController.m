@@ -73,8 +73,12 @@
 {
     StappenplanDetailViewController *dest = segue.destinationViewController;
     dest.context = self.context;
-    if([segue.identifier isEqualToString:@"updateStepstones"]) {
+    if([segue.identifier isEqualToString:@"updateStepstones"])
+    {
         dest.stepstone = [self.stepstones objectAtIndex:self.table.indexPathForSelectedRow.row];
+    }
+    else if([segue.identifier isEqualToString:@"addStepstones"]) {
+        dest.stepstone = [NSEntityDescription insertNewObjectForEntityForName:@"Stappenplan" inManagedObjectContext:self.context];
     }
 }
 

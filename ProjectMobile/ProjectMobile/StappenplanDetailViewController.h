@@ -10,7 +10,7 @@
 #import "Stappenplan.h"
 #import "IManagedContextObjectContainer.h"
 
-@interface StappenplanDetailViewController : UIViewController<IManagedContextObjectContainer>
+@interface StappenplanDetailViewController : UIViewController<IManagedContextObjectContainer, UITableViewDataSource>
 @property Stappenplan *stepstone;
 @property NSManagedObjectContext* context;
 

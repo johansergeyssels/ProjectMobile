@@ -7,18 +7,22 @@
 //
 
 #import "StappenplanDetailViewController.h"
+#import "Stappenplan.h"
+#import "Stap.h"
 
 @interface StappenplanDetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *titleLabel;
-
+@property (weak, nonatomic) IBOutlet UITableView *table;
 @end
 
 @implementation StappenplanDetailViewController
+- (IBAction)addStap:(id)sender {
+    Stap* step = [NSEntityDescription insertNewObjectForEntityForName:@"Stap" inManagedObjectContext:self.context];
+    [self.stepstone addStapObject:step];
+    [self.table reloadData];
+}
+
 - (IBAction)save:(id)sender {
-    
-    if(!self.stepstone) {
-        self.stepstone = [NSEntityDescription insertNewObjectForEntityForName:@"Stappenplan" inManagedObjectContext:self.context];
-    }
     self.stepstone.titel = self.titleLabel.text;
     
     NSError* error;
@@ -31,11 +35,15 @@
     }
 }
 
+-(void)viewDidDisappear:(BOOL)animated {
+    [self.context rollback];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -46,10 +54,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    if(self.stepstone)
-    {
-        self.titleLabel.text = self.stepstone.titel;
-    }
+    self.titleLabel.text = self.stepstone.titel;
+    [self.table reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,15 +64,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.stepstone.stap.count + 1;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell;
+    if(indexPath.row == self.stepstone.stap.count)
+    {
+        cell = [self.table dequeueReusableCellWithIdentifier:@"newStapCell" forIndexPath:indexPath];
+    }
+    else
+    {
+        cell = [self.table dequeueReusableCellWithIdentifier:@"stapCell" forIndexPath:indexPath];
+    }
+    return cell;
+}
 
 @end
