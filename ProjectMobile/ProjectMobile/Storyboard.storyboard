@@ -198,11 +198,6 @@
                     <navigationItem key="navigationItem" title="Stappenplan" id="e72-mM-Uok">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="e8C-se-g0R"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="editButton" destination="HQb-uB-RWT" id="04N-XY-dgD"/>
-                        <outlet property="image" destination="AvE-4r-GnL" id="ghC-pc-vF1"/>
-                        <outlet property="label" destination="ntr-lz-u5D" id="vR4-VR-gv0"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGS-Wn-r48" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
