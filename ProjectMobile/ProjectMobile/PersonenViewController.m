@@ -66,6 +66,7 @@
     [super didReceiveMemoryWarning];
 }
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"PersoonDetailViewController"]) {
         NSArray *array = [self.personenCollection indexPathsForSelectedItems];
