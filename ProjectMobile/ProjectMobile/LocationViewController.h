@@ -9,17 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "IManagedContextObjectContainer.h"
 
-@interface LocationViewController : UIViewController <MKMapViewDelegate>
+@interface LocationViewController : UIViewController <MKMapViewDelegate, MKAnnotation, IManagedContextObjectContainer>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
-@property (strong, nonatomic) NSString *naamToiletISomschrijving;
-@property (strong, nonatomic) NSString *straatISstraat;
-@property (strong, nonatomic) NSString *huisnummerIShuisnummer;
-@property (strong, nonatomic) NSString *postcodeISpostcode;
-@property (strong, nonatomic) NSString *latitudeISlat;
-@property (strong, nonatomic) NSString *longtitudeISlong;
+@property NSManagedObjectContext* context;
 
 -(BOOL) jsonBinnenhalen;
 

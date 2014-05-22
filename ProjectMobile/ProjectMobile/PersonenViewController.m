@@ -8,10 +8,12 @@
 
 #import "PersonenViewController.h"
 #import "PersoonCell.h"
+#import "PersoonDetailViewController.h"
 
 @interface PersonenViewController ()
 
 @property NSMutableArray *PersoonImages;
+@property (weak, nonatomic) IBOutlet UICollectionView *personenCollection;
 
 
 @end
@@ -64,6 +66,19 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"PersoonDetailViewController"]) {
+        NSArray *array = [self.personenCollection indexPathsForSelectedItems];
+        NSIndexPath *indexpath = [array objectAtIndex:0];
+        NSLog(@"%ld", (long)indexpath.section);
+        NSLog(@"%ld", (long)indexpath.item);
+        PersoonCell *cell = (PersoonCell*)[self.personenCollection cellForItemAtIndexPath:indexpath];
+        
+        UIImage *image = cell.persoonImage.image;
+        PersoonDetailViewController *dest = segue.destinationViewController;
+        dest.image = image;
+    }
+}
 
 
 

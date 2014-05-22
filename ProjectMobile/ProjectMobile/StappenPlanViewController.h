@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "IManagedContextObjectContainer.h"
 
-@interface StappenPlanViewController : UIViewController<IManagedContextObjectContainer>
+@interface StappenPlanViewController : UIViewController<IManagedContextObjectContainer, UITableViewDataSource>
 @property NSManagedObjectContext* context;
 @end
