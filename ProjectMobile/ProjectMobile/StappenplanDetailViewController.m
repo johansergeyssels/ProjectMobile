@@ -39,7 +39,17 @@
 - (IBAction)addStap:(id)sender {
     Stap* step = [NSEntityDescription insertNewObjectForEntityForName:@"Stap" inManagedObjectContext:self.context];
     step.comment = @"stap";
-    step.stepNr = [NSNumber numberWithLong:(self.stepstone.stap.count + 1)];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Stap"];
+    
+    fetchRequest.fetchLimit = 1;
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"stepNr" ascending:NO]];
+    
+    NSError *error = nil;
+    
+    Stap *lastStep = [self.context executeFetchRequest:fetchRequest error:&error].lastObject;
+    
+    step.stepNr = [NSNumber numberWithInt:[lastStep.stepNr intValue] + 1];
     [self.stepstone addStapObject:step];
     [self reload];
 }
@@ -97,7 +107,7 @@
         EditStapTableViewCell *editcell = [self.table dequeueReusableCellWithIdentifier:@"stapCell" forIndexPath:indexPath];
         Stap *step = [self.stepsSorted objectAtIndex:indexPath.row];
         editcell.commentLabel.text = step.comment;
-        editcell.titleLabel.text = [NSString stringWithFormat:@"Stap %@", step.stepNr];
+        editcell.titleLabel.text = [NSString stringWithFormat:@"Stap %ld", (indexPath.row + 1)];
         cell = editcell;
     }
     return cell;

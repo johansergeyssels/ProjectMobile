@@ -38,7 +38,7 @@
     [self.imageView setImage:[info objectForKeyedSubscript:UIImagePickerControllerOriginalImage]];
     [self dismissViewControllerAnimated:YES completion:nil];
     NSLog(@"%@",[info objectForKeyedSubscript:UIImagePickerControllerReferenceURL]);
-    NSLog(@"%@",[info objectForKeyedSubscript:UIImagePickerControllerMediaURL]);
+    NSLog(@"%@",[info objectForKeyedSubscript:UIImagePickerControllerMediaMetadata]);
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
