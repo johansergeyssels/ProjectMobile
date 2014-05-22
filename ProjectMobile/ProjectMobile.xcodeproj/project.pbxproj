@@ -43,6 +43,8 @@
 		665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DD192B5E2E00484AC1 /* MapKit.framework */; };
 		668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */; };
 		85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85507AF6192B77C200DD7D53 /* HulpViewController.m */; };
+		858C4A31192CAD2F00E4CE53 /* AidTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858C4A30192CAD2F00E4CE53 /* AidTableViewCell.m */; };
+		858C4A34192CB21C00E4CE53 /* Personen.m in Sources */ = {isa = PBXBuildFile; fileRef = 858C4A33192CB21C00E4CE53 /* Personen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,10 @@
 		668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationToevoegenControllerViewController.m; sourceTree = "<group>"; };
 		85507AF5192B77C200DD7D53 /* HulpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HulpViewController.h; sourceTree = "<group>"; };
 		85507AF6192B77C200DD7D53 /* HulpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HulpViewController.m; sourceTree = "<group>"; };
+		858C4A2F192CAD2F00E4CE53 /* AidTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AidTableViewCell.h; sourceTree = "<group>"; };
+		858C4A30192CAD2F00E4CE53 /* AidTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AidTableViewCell.m; sourceTree = "<group>"; };
+		858C4A32192CB21C00E4CE53 /* Personen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personen.h; sourceTree = "<group>"; };
+		858C4A33192CB21C00E4CE53 /* Personen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */,
+				858C4A32192CB21C00E4CE53 /* Personen.h */,
+				858C4A33192CB21C00E4CE53 /* Personen.m */,
 				0406339D192B9B34003BF9F6 /* Stappenplan.h */,
 				0406339E192B9B34003BF9F6 /* Stappenplan.m */,
 				0406339A192B9B33003BF9F6 /* Stap.h */,
@@ -196,6 +204,8 @@
 			children = (
 				85507AF5192B77C200DD7D53 /* HulpViewController.h */,
 				85507AF6192B77C200DD7D53 /* HulpViewController.m */,
+				858C4A2F192CAD2F00E4CE53 /* AidTableViewCell.h */,
+				858C4A30192CAD2F00E4CE53 /* AidTableViewCell.m */,
 			);
 			name = Aid;
 			sourceTree = "<group>";
@@ -423,12 +433,7 @@
 			files = (
 				04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */,
 				4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */,
-				04E96B6B192A387F00EEDFCF /* tabbar_kalenderbutton.png in Resources */,
-				04E96B6A192A387F00EEDFCF /* tabbar_kalenderbutton_selected.png in Resources */,
 				4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */,
-				04E96B6C192A387F00EEDFCF /* tabbar_locatiebutton_selected.png in Resources */,
-				04E96B6E192A387F00EEDFCF /* tabbbar_hulpbutton_selected.png in Resources */,
-				04E96B69192A387F00EEDFCF /* tabbar_geheugenbutton.png in Resources */,
 				4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */,
 				04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */,
 				04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */,
@@ -451,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858C4A31192CAD2F00E4CE53 /* AidTableViewCell.m in Sources */,
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
 				0406338F192B6798003BF9F6 /* EventViewController.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
@@ -459,13 +465,13 @@
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
 				668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
-				04E96B32192A0FE200EEDFCF /* ProjectMobile.xcdatamodeld in Sources */,
 				4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */,
 				0406339C192B9B33003BF9F6 /* Stap.m in Sources */,
 				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,
 				040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */,
 				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
 				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
+				858C4A34192CB21C00E4CE53 /* Personen.m in Sources */,
 				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,
 				04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */,
 				85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */,
