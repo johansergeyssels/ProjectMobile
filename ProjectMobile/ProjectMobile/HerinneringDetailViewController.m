@@ -13,6 +13,8 @@
 @end
 
 @implementation HerinneringDetailViewController
+
+//Herinnering Saven
 - (IBAction)save:(id)sender {
     self.herinnering.label = self.LabelText.text;
     
@@ -31,7 +33,6 @@
     [sender resignFirstResponder];
 }
 
-
 //foto nemen
 - (IBAction)FotoNemen_btn:(id)sender {
     _imageView.image = nil;
@@ -49,6 +50,7 @@
     [self presentModalViewController:imagePicker animated:YES];
 }
 
+// voor gallerij en foto nemen
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image;
     NSURL *mediaURL;
@@ -72,71 +74,41 @@
 }
 
 //CAMERA CODE (Apple Dev site)
-- (BOOL) startCameraControllerFromViewController: (UIViewController*) controller
-
-                                   usingDelegate: (id <UIImagePickerControllerDelegate,
-                                                   
-                                                   UINavigationControllerDelegate>) delegate {
-    
-    
+- (BOOL) startCameraControllerFromViewController: (UIViewController*) controller usingDelegate: (id <UIImagePickerControllerDelegate,
+                                                  UINavigationControllerDelegate>) delegate {
     
     if (([UIImagePickerController isSourceTypeAvailable:
-          
-          UIImagePickerControllerSourceTypeCamera] == NO)
-        
-        || (delegate == nil)
-        
-        || (controller == nil))
+          UIImagePickerControllerSourceTypeCamera] == NO) || (delegate == nil) || (controller == nil))
         
         return NO;
     
-    
-    
-    
-    
     UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
-    
     cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
     
+
+    // Displays a control that allows the user to choose picture or movie capture, if both are available:
     
+    cameraUI.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType: UIImagePickerControllerSourceTypeCamera];
     
-    // Displays a control that allows the user to choose picture or
-    
-    // movie capture, if both are available:
-    
-    cameraUI.mediaTypes =
-    
-    [UIImagePickerController availableMediaTypesForSourceType:
-     
-     UIImagePickerControllerSourceTypeCamera];
-    
-    
-    
-    // Hides the controls for moving & scaling pictures, or for
-    
-    // trimming movies. To instead show the controls, use YES.
+    // Hides the controls for moving & scaling pictures, or for trimming movies. To instead show the controls, use YES.
     
     cameraUI.allowsEditing = NO;
-    
-    
-    
     cameraUI.delegate = delegate;
     
-    
-    
-    [controller presentModalViewController: cameraUI animated: YES];
+   [controller presentModalViewController: cameraUI animated: YES];
     
     return YES;
     
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // imagePicker
     imagePicker = [[UIImagePickerController alloc] init];
+    // Databank
     self.LabelText.text = self.herinnering.label;
+    //self.LabelText.text = self.herinnering.label; VOOR TEXTFIELD!!!!!!!
 }
 
 - (void)didReceiveMemoryWarning
@@ -149,15 +121,5 @@
     [self.context rollback];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

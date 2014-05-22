@@ -16,11 +16,14 @@
 {
     UIImagePickerController *imagePicker;
 }
-
+//databank
 @property NSManagedObjectContext* context;
+@property Herinnering *herinnering;
+
+//Buttons
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIButton *Gallerij_btn;
 @property (weak, nonatomic) IBOutlet UIButton *FotoNemen_btn;
 @property (strong, nonatomic) IBOutlet UITextField *LabelText;
-@property Herinnering *herinnering;
+
 @end
