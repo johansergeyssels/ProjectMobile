@@ -25,7 +25,7 @@
 }
 
 - (IBAction)takeExistingPicture:(id)sender {
-    [self.picker setSourceType: UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    [self.picker setSourceType: UIImagePickerControllerSourceTypePhotoLibrary];
     [self presentViewController:self.picker animated:YES completion:nil];
 }
 

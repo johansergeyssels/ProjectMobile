@@ -123,11 +123,11 @@
         return pinView;
     }
     return nil;
-    
-    
+}
 
-
-
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.context rollback];
 }
 
 @end

@@ -46,26 +46,22 @@
 //gallerij
 
 - (IBAction)Gallerij_btn:(id)sender {
-    
     imagePicker.delegate = self;
         
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    [self presentModalViewController:imagePicker animated:YES];
+    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
 // voor gallerij en foto nemen
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *image;
-    NSURL *mediaURL;
-    mediaURL = (NSURL *)[info valueForKey:UIImagePickerControllerMediaURL];
-    image = (UIImage *)[info valueForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
     _imageView.image = image;
     self.herinnering.foto = UIImageJPEGRepresentation(image, 1.0);
-    [picker dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [picker dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -99,7 +95,7 @@
     cameraUI.allowsEditing = NO;
     cameraUI.delegate = delegate;
     
-   [controller presentModalViewController: cameraUI animated: YES];
+    [controller presentModalViewController: cameraUI animated: YES];
     
     return YES;
     
@@ -125,10 +121,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [self.context rollback];
 }
 
 
