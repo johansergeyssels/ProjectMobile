@@ -241,11 +241,11 @@
 		04520A1A192A6BE00068993A /* Memory */ = {
 			isa = PBXGroup;
 			children = (
-				04CED282192AA99C002C32BB /* Herinneringen */,
 				04CED281192AA994002C32BB /* Personen */,
 				04CED280192AA98C002C32BB /* Stappenplan */,
 				040633A5192BDDC5003BF9F6 /* MemoryMenuViewController.h */,
 				040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */,
+				04CED282192AA99C002C32BB /* Herinneringen */,
 			);
 			name = Memory;
 			sourceTree = "<group>";

@@ -19,5 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIButton *Gallerij_btn;
+@property (weak, nonatomic) IBOutlet UIButton *FotoNemen_btn;
 
 @end
