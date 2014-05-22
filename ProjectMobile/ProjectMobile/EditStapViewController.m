@@ -19,6 +19,34 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)takePicture:(id)sender {
+    self.picker = [[UIImagePickerController alloc] init];
+    self.picker.delegate = self;
+    [self.picker setSourceType: UIImagePickerControllerSourceTypeCamera];
+    [self presentViewController:self.picker animated:YES completion:nil];
+}
+
+- (IBAction)takeExistingPicture:(id)sender {
+    self.picker = [[UIImagePickerController alloc] init];
+    self.picker.delegate = self;
+    [self.picker setSourceType: UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    [self presentViewController:self.picker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [self.imageView setImage:[info objectForKeyedSubscript:UIImagePickerControllerOriginalImage]];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"%@",[info objectForKeyedSubscript:UIImagePickerControllerReferenceURL]);
+    NSLog(@"%@",[info objectForKeyedSubscript:UIImagePickerControllerMediaURL]);
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
