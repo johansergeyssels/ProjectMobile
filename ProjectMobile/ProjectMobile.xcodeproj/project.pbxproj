@@ -17,6 +17,7 @@
 		040633EE192CDE2D003BF9F6 /* StappenplanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633ED192CDE2D003BF9F6 /* StappenplanDetailViewController.m */; };
 		040633F1192D370D003BF9F6 /* EditStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F0192D370D003BF9F6 /* EditStapTableViewCell.m */; };
 		040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */; };
+		040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F6192D6DA8003BF9F6 /* EditStapViewController.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -94,6 +95,8 @@
 		040633F0192D370D003BF9F6 /* EditStapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditStapTableViewCell.m; sourceTree = "<group>"; };
 		040633F2192D371F003BF9F6 /* AddStapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStapTableViewCell.h; sourceTree = "<group>"; };
 		040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStapTableViewCell.m; sourceTree = "<group>"; };
+		040633F5192D6DA8003BF9F6 /* EditStapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditStapViewController.h; sourceTree = "<group>"; };
+		040633F6192D6DA8003BF9F6 /* EditStapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditStapViewController.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 				040633F0192D370D003BF9F6 /* EditStapTableViewCell.m */,
 				040633F2192D371F003BF9F6 /* AddStapTableViewCell.h */,
 				040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */,
+				040633F5192D6DA8003BF9F6 /* EditStapViewController.h */,
+				040633F6192D6DA8003BF9F6 /* EditStapViewController.m */,
 			);
 			name = Stappenplan;
 			sourceTree = "<group>";
@@ -598,6 +603,7 @@
 				66820323192CCC8400875220 /* JSONModelError.m in Sources */,
 				040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */,
 				6682031F192CCC8400875220 /* JSONModel+CoreData.m in Sources */,
+				040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */,
 				388B3F34192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m in Sources */,
 				0406339C192B9B33003BF9F6 /* Stap.m in Sources */,
 				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,

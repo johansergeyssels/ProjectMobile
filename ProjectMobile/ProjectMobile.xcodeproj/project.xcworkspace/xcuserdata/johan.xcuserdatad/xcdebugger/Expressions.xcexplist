@@ -30,5 +30,24 @@
       <ContextState
          contextName = "-[StappenPlanViewController getStepstones]:StappenPlanViewController.m">
       </ContextState>
+      <ContextState
+         contextName = "-[EditStapViewController viewDidAppear:]:EditStapViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.step.comment">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[StappenplanDetailViewController prepareForSegue:sender:]:StappenplanDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "((UITableViewCellContentView *)((UIButton *)sender).superview).superview">
+            </PersistentString>
+            <PersistentString
+               value = "dest.step">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

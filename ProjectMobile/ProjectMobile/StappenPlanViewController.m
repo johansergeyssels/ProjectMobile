@@ -36,6 +36,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [self.context rollback];
     [self getStepstones];
 }
 
@@ -71,14 +72,23 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    StappenplanDetailViewController *dest = segue.destinationViewController;
-    dest.context = self.context;
     if([segue.identifier isEqualToString:@"updateStepstones"])
     {
-        dest.stepstone = [self.stepstones objectAtIndex:self.table.indexPathForSelectedRow.row];
+        UITableViewCell *cell = (UITableViewCell *)((UIButton *)sender).superview.superview.superview;
+        NSIndexPath *index = [self.table indexPathForCell:cell];
+        StappenplanDetailViewController *dest = segue.destinationViewController;
+        dest.context = self.context;
+        dest.stepstone = [self.stepstones objectAtIndex:index.row];
     }
-    else if([segue.identifier isEqualToString:@"addStepstones"]) {
+    else if([segue.identifier isEqualToString:@"addStepstones"])
+    {
+        StappenplanDetailViewController *dest = segue.destinationViewController;
+        dest.context = self.context;
         dest.stepstone = [NSEntityDescription insertNewObjectForEntityForName:@"Stappenplan" inManagedObjectContext:self.context];
+    }
+    else if([segue.identifier isEqualToString:@"showStepstones"])
+    {
+        
     }
 }
 
