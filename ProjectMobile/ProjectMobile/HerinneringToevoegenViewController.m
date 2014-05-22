@@ -14,6 +14,13 @@
 
 @implementation HerinneringToevoegenViewController
 
+//Hide keyboard
+- (IBAction)LabelText:(id)sender {
+    [sender resignFirstResponder];
+}
+
+
+//foto nemen
 - (IBAction)FotoNemen_btn:(id)sender {
     _imageView.image = nil;
     [self startCameraControllerFromViewController: self
