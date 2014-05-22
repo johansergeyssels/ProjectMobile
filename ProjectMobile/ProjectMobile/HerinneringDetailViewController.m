@@ -32,6 +32,9 @@
 - (IBAction)LabelText:(id)sender {
     [sender resignFirstResponder];
 }
+- (IBAction)TextVeld:(id)sender {
+    [sender resignFirstResponder];
+}
 
 //foto nemen
 - (IBAction)FotoNemen_btn:(id)sender {
