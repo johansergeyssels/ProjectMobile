@@ -11,4 +11,5 @@
 @interface PersoonCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *persoonImage;
 
+
 @end
