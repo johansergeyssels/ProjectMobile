@@ -65,9 +65,10 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HerinneringCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"herinneringCell" forIndexPath:indexPath];
-    Herinnering *herinnering = [self.herinneringen objectAtIndex:indexPath.row];
+    Herinnering *herinnering = [self.herinneringen objectAtIndex:indexPath.item];
     //NSURL *URL = [NSURL URLWithString:herinnering.fotourl];
     //[cell.image setImage:URL];
+    cell.image.image = [[UIImage alloc] initWithData:herinnering.foto];
     return cell;
 }
 

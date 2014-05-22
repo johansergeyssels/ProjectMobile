@@ -47,9 +47,9 @@
 
 - (IBAction)Gallerij_btn:(id)sender {
     
-        imagePicker.delegate = self;
+    imagePicker.delegate = self;
         
-        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentModalViewController:imagePicker animated:YES];
 }
 
@@ -60,6 +60,7 @@
     mediaURL = (NSURL *)[info valueForKey:UIImagePickerControllerMediaURL];
     image = (UIImage *)[info valueForKey:UIImagePickerControllerOriginalImage];
     _imageView.image = image;
+    self.herinnering.foto = UIImageJPEGRepresentation(image, 1.0);
     [picker dismissModalViewControllerAnimated:YES];
 }
 
@@ -109,9 +110,15 @@
     [super viewDidLoad];
     // imagePicker
     imagePicker = [[UIImagePickerController alloc] init];
+    
     // Databank
-    self.LabelText.text = self.herinnering.label;
+    
     //self.LabelText.text = self.herinnering.label; VOOR TEXTFIELD!!!!!!!
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    self.LabelText.text = self.herinnering.label;
+    self.imageView.image = [[UIImage alloc]initWithData:self.herinnering.foto];
 }
 
 - (void)didReceiveMemoryWarning
