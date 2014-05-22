@@ -14,6 +14,7 @@
 @property UIColor * firstColor;
 @property UIColor * secondColor;
 @property NSMutableArray *Personen;
+@property NSMutableArray *Info;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -118,13 +119,6 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Personen"];
     self.Personen = [[self.context executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
-    NSManagedObject *persoon;
-    for (int i = 1; i < self.Personen.count; i++)
-    {
-        persoon = [self.Personen objectAtIndex:i];
-        NSLog(@"%@",[persoon valueForKey:@"persoonId"]);
-        
-    }
     [self.tableView reloadData];
     
     CFErrorRef error = nil;
@@ -135,35 +129,41 @@
     if (addressBookRef != nil) {
         
         //Loop door de array
-        //for (int i = 1; i < self.Personen.count; i++){
-        //persoon = [self.Personen objectAtIndex:i];
+        for (int i = 0; i < self.Personen.count; i++){
+        NSManagedObject *persoon;
+        persoon = [self.Personen objectAtIndex:i];
         
         //Het id toevoegen
-        ABRecordID recordID = 1; // Assign here your ID
-            //NSLog(@"%@  Log van id ", id);
+        ABRecordID recordID = [[persoon valueForKey:@"persoonId"] integerValue]; // Assign here your ID
+        NSLog(@"%d", recordID);
         ABRecordRef nxtABRecordRef = ABAddressBookGetPersonWithRecordID (addressBookRef, recordID);
+            //show name and lastname
+            NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonFirstNameProperty);
+            NSLog(@"%@", name);
+            [self.Info addObject:(__bridge id) nxtABRecordRef];
+            
+        }
+        
+        for (int i = 0; i < self.Info.count; i++)
+        {
+            ABRecordRef contactRecord =(__bridge ABRecordRef)([self.Info objectAtIndex:i]);
+             NSLog(@"%@", contactRecord);
+            
+            
+        }
         
         
-        //show name and lastname
-        NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonFirstNameProperty);
-        
-        NSLog(@"%@", name);
-        
-        ABMultiValueRef addressesRef = ABRecordCopyValue(nxtABRecordRef, kABPersonAddressProperty);
-        
-        
-        if (addressesRef != nil) {
+        /*if (addressesRef != nil) {
             for (int index = 0; index < ABMultiValueGetCount(addressesRef); index++) {
                 NSDictionary *addressDictionary = (__bridge_transfer NSDictionary*) ABMultiValueCopyValueAtIndex(addressesRef,index);
                 
             } // for all addresses
             
             CFRelease(addressesRef);
-        }
+        }*/
         
         CFRelease(addressBookRef);
-    }
-    //}
+}
     else {
         NSLog(@"Could not open address book");
     }

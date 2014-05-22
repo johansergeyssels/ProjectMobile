@@ -852,7 +852,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="xgg-r0-IhW" id="jWf-5a-4Br"/>
+                                    <outlet property="dataSource" destination="xgg-r0-IhW" id="Mut-uQ-Shy"/>
                                     <outlet property="delegate" destination="xgg-r0-IhW" id="Yv8-Zd-4dJ"/>
                                 </connections>
                             </tableView>
