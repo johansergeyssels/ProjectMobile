@@ -1,18 +1,18 @@
 //
-//  LocationToevoegenControllerViewController.m
+//  HerinneringViewController.m
 //  ProjectMobile
 //
-//  Created by David Bueds on 20/05/14.
+//  Created by KOEKOEKX Annelies (s) on 21/05/14.
 //  Copyright (c) 2014 johan. All rights reserved.
 //
 
-#import "LocationToevoegenControllerViewController.h"
+#import "HerinneringViewController.h"
 
-@interface LocationToevoegenControllerViewController ()
+@interface HerinneringViewController ()
 
 @end
 
-@implementation LocationToevoegenControllerViewController
+@implementation HerinneringViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning

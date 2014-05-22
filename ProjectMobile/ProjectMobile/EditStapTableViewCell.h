@@ -1,5 +1,5 @@
 //
-//  StapTableViewCell.h
+//  EditStapTableViewCell.h
 //  ProjectMobile
 //
 //  Created by johan on 21/05/14.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StapTableViewCell : UITableViewCell
+@interface EditStapTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UILabel *label;
-@property (weak, nonatomic) IBOutlet UIButton *editButton;
 
 @end

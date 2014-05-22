@@ -1,14 +1,15 @@
 //
-//  StappenPlanViewController.h
+//  HerinneringViewController.h
 //  ProjectMobile
 //
-//  Created by johan on 20/05/14.
+//  Created by KOEKOEKX Annelies (s) on 21/05/14.
 //  Copyright (c) 2014 johan. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "IManagedContextObjectContainer.h"
 
-@interface StappenPlanViewController : UIViewController<IManagedContextObjectContainer, UITableViewDataSource>
+@interface HerinneringViewController : UIViewController<IManagedContextObjectContainer>
 @property NSManagedObjectContext* context;
+
 @end

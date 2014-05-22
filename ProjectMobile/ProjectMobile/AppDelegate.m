@@ -27,15 +27,18 @@
     
     //managedcontext pass through
     UITabBarController* tabbar = (UITabBarController*)self.window.rootViewController;
-    UINavigationController* nav1 = [tabbar.viewControllers objectAtIndex:1];
-    id<IManagedContextObjectContainer> container1 = [nav1.viewControllers objectAtIndex:0]; //memorymenu
-    container1.context = self.managedObjectContext;
-    
-    UINavigationController* nav2 = [tabbar.viewControllers objectAtIndex:4];
-    id<IManagedContextObjectContainer> container2 = [nav2.viewControllers objectAtIndex:0]; //memorymenu
-    container2.context = self.managedObjectContext;
+    [self contextToevoegen:1 tabbar:tabbar];
+    [self contextToevoegen:3 tabbar:tabbar];
+    [self contextToevoegen:4 tabbar:tabbar];
     
     return YES;
+}
+
+- (void) contextToevoegen:(int)index tabbar:(UITabBarController*)tabbar
+{
+    UINavigationController* nav = [tabbar.viewControllers objectAtIndex:index];
+    id<IManagedContextObjectContainer> container = [nav.viewControllers objectAtIndex:0]; //memorymenu
+    container.context = self.managedObjectContext;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

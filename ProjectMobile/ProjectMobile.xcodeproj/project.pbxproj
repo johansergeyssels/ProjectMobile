@@ -14,6 +14,10 @@
 		040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */; };
 		040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */; };
 		040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */; };
+		040633EE192CDE2D003BF9F6 /* StappenplanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633ED192CDE2D003BF9F6 /* StappenplanDetailViewController.m */; };
+		040633F1192D370D003BF9F6 /* EditStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F0192D370D003BF9F6 /* EditStapTableViewCell.m */; };
+		040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */; };
+		040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F6192D6DA8003BF9F6 /* EditStapViewController.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -33,6 +37,8 @@
 		04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B58192A2CBF00EEDFCF /* TabBarView.xib */; };
 		04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B71192A3A0A00EEDFCF /* TabBarView.m */; };
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
+		388B3F31192CDA05009FE4C9 /* HerinneringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */; };
+		388B3F34192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F33192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m */; };
 		4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380C9192BBA9D00A09211 /* Man.jpeg */; };
 		4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CA192BBA9D00A09211 /* Doctor.jpeg */; };
 		4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CB192BBA9D00A09211 /* Son.jpeg */; };
@@ -43,6 +49,19 @@
 		665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DB192B5E2500484AC1 /* CoreLocation.framework */; };
 		665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DD192B5E2E00484AC1 /* MapKit.framework */; };
 		668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */; };
+		668202F8192C992700875220 /* Toilet.m in Sources */ = {isa = PBXBuildFile; fileRef = 668202F7192C992700875220 /* Toilet.m */; };
+		668202FD192CA84C00875220 /* ToiletLocaties.m in Sources */ = {isa = PBXBuildFile; fileRef = 668202FC192CA84C00875220 /* ToiletLocaties.m */; };
+		6682031F192CCC8400875220 /* JSONModel+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 66820306192CCC8400875220 /* JSONModel+CoreData.m */; };
+		66820320192CCC8400875220 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66820308192CCC8400875220 /* JSONModel.m */; };
+		66820321192CCC8400875220 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 6682030A192CCC8400875220 /* JSONModelArray.m */; };
+		66820322192CCC8400875220 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6682030C192CCC8400875220 /* JSONModelClassProperty.m */; };
+		66820323192CCC8400875220 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 6682030E192CCC8400875220 /* JSONModelError.m */; };
+		66820324192CCC8400875220 /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66820311192CCC8400875220 /* NSArray+JSONModel.m */; };
+		66820325192CCC8400875220 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 66820315192CCC8400875220 /* JSONAPI.m */; };
+		66820326192CCC8400875220 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 66820317192CCC8400875220 /* JSONHTTPClient.m */; };
+		66820327192CCC8400875220 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 66820319192CCC8400875220 /* JSONModel+networking.m */; };
+		66820328192CCC8400875220 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6682031C192CCC8400875220 /* JSONKeyMapper.m */; };
+		66820329192CCC8400875220 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6682031E192CCC8400875220 /* JSONValueTransformer.m */; };
 		85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85507AF6192B77C200DD7D53 /* HulpViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +90,14 @@
 		040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryMenuViewController.m; sourceTree = "<group>"; };
 		040633E9192C8EE2003BF9F6 /* StapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StapTableViewCell.h; sourceTree = "<group>"; };
 		040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StapTableViewCell.m; sourceTree = "<group>"; };
+		040633EC192CDE2D003BF9F6 /* StappenplanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StappenplanDetailViewController.h; sourceTree = "<group>"; };
+		040633ED192CDE2D003BF9F6 /* StappenplanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StappenplanDetailViewController.m; sourceTree = "<group>"; };
+		040633EF192D370D003BF9F6 /* EditStapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditStapTableViewCell.h; sourceTree = "<group>"; };
+		040633F0192D370D003BF9F6 /* EditStapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditStapTableViewCell.m; sourceTree = "<group>"; };
+		040633F2192D371F003BF9F6 /* AddStapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStapTableViewCell.h; sourceTree = "<group>"; };
+		040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStapTableViewCell.m; sourceTree = "<group>"; };
+		040633F5192D6DA8003BF9F6 /* EditStapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditStapViewController.h; sourceTree = "<group>"; };
+		040633F6192D6DA8003BF9F6 /* EditStapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditStapViewController.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -97,6 +124,10 @@
 		04E96B71192A3A0A00EEDFCF /* TabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarView.m; sourceTree = "<group>"; };
 		04E96B73192A3AEE00EEDFCF /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		04E96B74192A3AEE00EEDFCF /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		388B3F2F192CDA05009FE4C9 /* HerinneringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringViewController.h; sourceTree = "<group>"; };
+		388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringViewController.m; sourceTree = "<group>"; };
+		388B3F32192CE1F0009FE4C9 /* HerinneringToevoegenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringToevoegenViewController.h; sourceTree = "<group>"; };
+		388B3F33192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringToevoegenViewController.m; sourceTree = "<group>"; };
 		4C2380C9192BBA9D00A09211 /* Man.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Man.jpeg; sourceTree = "<group>"; };
 		4C2380CA192BBA9D00A09211 /* Doctor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Doctor.jpeg; sourceTree = "<group>"; };
 		4C2380CB192BBA9D00A09211 /* Son.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Son.jpeg; sourceTree = "<group>"; };
@@ -112,6 +143,33 @@
 		665241DD192B5E2E00484AC1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		668202CC192B9CA600875220 /* LocationToevoegenControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationToevoegenControllerViewController.h; sourceTree = "<group>"; };
 		668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationToevoegenControllerViewController.m; sourceTree = "<group>"; };
+		668202F6192C992700875220 /* Toilet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toilet.h; sourceTree = "<group>"; };
+		668202F7192C992700875220 /* Toilet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toilet.m; sourceTree = "<group>"; };
+		668202FB192CA84C00875220 /* ToiletLocaties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToiletLocaties.h; sourceTree = "<group>"; };
+		668202FC192CA84C00875220 /* ToiletLocaties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToiletLocaties.m; sourceTree = "<group>"; };
+		66820305192CCC8400875220 /* JSONModel+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+CoreData.h"; sourceTree = "<group>"; };
+		66820306192CCC8400875220 /* JSONModel+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+CoreData.m"; sourceTree = "<group>"; };
+		66820307192CCC8400875220 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		66820308192CCC8400875220 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		66820309192CCC8400875220 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
+		6682030A192CCC8400875220 /* JSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelArray.m; sourceTree = "<group>"; };
+		6682030B192CCC8400875220 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		6682030C192CCC8400875220 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
+		6682030D192CCC8400875220 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		6682030E192CCC8400875220 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
+		66820310192CCC8400875220 /* NSArray+JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONModel.h"; sourceTree = "<group>"; };
+		66820311192CCC8400875220 /* NSArray+JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONModel.m"; sourceTree = "<group>"; };
+		66820312192CCC8400875220 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		66820314192CCC8400875220 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		66820315192CCC8400875220 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
+		66820316192CCC8400875220 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		66820317192CCC8400875220 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
+		66820318192CCC8400875220 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		66820319192CCC8400875220 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
+		6682031B192CCC8400875220 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		6682031C192CCC8400875220 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
+		6682031D192CCC8400875220 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		6682031E192CCC8400875220 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		85507AF5192B77C200DD7D53 /* HulpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HulpViewController.h; sourceTree = "<group>"; };
 		85507AF6192B77C200DD7D53 /* HulpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HulpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +217,7 @@
 		040633A3192BDCC7003BF9F6 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				66820303192CCC8400875220 /* JSONModel */,
 				040633A4192BDD41003BF9F6 /* IManagedContextObjectContainer.h */,
 			);
 			name = Util;
@@ -185,11 +244,11 @@
 		04520A1A192A6BE00068993A /* Memory */ = {
 			isa = PBXGroup;
 			children = (
-				04CED282192AA99C002C32BB /* Herinneringen */,
 				04CED281192AA994002C32BB /* Personen */,
 				04CED280192AA98C002C32BB /* Stappenplan */,
 				040633A5192BDDC5003BF9F6 /* MemoryMenuViewController.h */,
 				040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */,
+				04CED282192AA99C002C32BB /* Herinneringen */,
 			);
 			name = Memory;
 			sourceTree = "<group>";
@@ -208,8 +267,12 @@
 			children = (
 				665241D4192B48C700484AC1 /* LocationViewController.h */,
 				665241D5192B48C700484AC1 /* LocationViewController.m */,
+				668202F6192C992700875220 /* Toilet.h */,
+				668202F7192C992700875220 /* Toilet.m */,
 				668202CC192B9CA600875220 /* LocationToevoegenControllerViewController.h */,
 				668202CD192B9CA600875220 /* LocationToevoegenControllerViewController.m */,
+				668202FB192CA84C00875220 /* ToiletLocaties.h */,
+				668202FC192CA84C00875220 /* ToiletLocaties.m */,
 			);
 			name = Locations;
 			sourceTree = "<group>";
@@ -221,6 +284,14 @@
 				040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */,
 				040633E9192C8EE2003BF9F6 /* StapTableViewCell.h */,
 				040633EA192C8EE2003BF9F6 /* StapTableViewCell.m */,
+				040633EC192CDE2D003BF9F6 /* StappenplanDetailViewController.h */,
+				040633ED192CDE2D003BF9F6 /* StappenplanDetailViewController.m */,
+				040633EF192D370D003BF9F6 /* EditStapTableViewCell.h */,
+				040633F0192D370D003BF9F6 /* EditStapTableViewCell.m */,
+				040633F2192D371F003BF9F6 /* AddStapTableViewCell.h */,
+				040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */,
+				040633F5192D6DA8003BF9F6 /* EditStapViewController.h */,
+				040633F6192D6DA8003BF9F6 /* EditStapViewController.m */,
 			);
 			name = Stappenplan;
 			sourceTree = "<group>";
@@ -244,6 +315,10 @@
 		04CED282192AA99C002C32BB /* Herinneringen */ = {
 			isa = PBXGroup;
 			children = (
+				388B3F2F192CDA05009FE4C9 /* HerinneringViewController.h */,
+				388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */,
+				388B3F32192CE1F0009FE4C9 /* HerinneringToevoegenViewController.h */,
+				388B3F33192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m */,
 			);
 			name = Herinneringen;
 			sourceTree = "<group>";
@@ -351,6 +426,68 @@
 			name = TabBar;
 			sourceTree = "<group>";
 		};
+		66820303192CCC8400875220 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				66820304192CCC8400875220 /* JSONModel */,
+				6682030F192CCC8400875220 /* JSONModelCategories */,
+				66820312192CCC8400875220 /* JSONModelLib.h */,
+				66820313192CCC8400875220 /* JSONModelNetworking */,
+				6682031A192CCC8400875220 /* JSONModelTransformations */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		66820304192CCC8400875220 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				66820305192CCC8400875220 /* JSONModel+CoreData.h */,
+				66820306192CCC8400875220 /* JSONModel+CoreData.m */,
+				66820307192CCC8400875220 /* JSONModel.h */,
+				66820308192CCC8400875220 /* JSONModel.m */,
+				66820309192CCC8400875220 /* JSONModelArray.h */,
+				6682030A192CCC8400875220 /* JSONModelArray.m */,
+				6682030B192CCC8400875220 /* JSONModelClassProperty.h */,
+				6682030C192CCC8400875220 /* JSONModelClassProperty.m */,
+				6682030D192CCC8400875220 /* JSONModelError.h */,
+				6682030E192CCC8400875220 /* JSONModelError.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		6682030F192CCC8400875220 /* JSONModelCategories */ = {
+			isa = PBXGroup;
+			children = (
+				66820310192CCC8400875220 /* NSArray+JSONModel.h */,
+				66820311192CCC8400875220 /* NSArray+JSONModel.m */,
+			);
+			path = JSONModelCategories;
+			sourceTree = "<group>";
+		};
+		66820313192CCC8400875220 /* JSONModelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				66820314192CCC8400875220 /* JSONAPI.h */,
+				66820315192CCC8400875220 /* JSONAPI.m */,
+				66820316192CCC8400875220 /* JSONHTTPClient.h */,
+				66820317192CCC8400875220 /* JSONHTTPClient.m */,
+				66820318192CCC8400875220 /* JSONModel+networking.h */,
+				66820319192CCC8400875220 /* JSONModel+networking.m */,
+			);
+			path = JSONModelNetworking;
+			sourceTree = "<group>";
+		};
+		6682031A192CCC8400875220 /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				6682031B192CCC8400875220 /* JSONKeyMapper.h */,
+				6682031C192CCC8400875220 /* JSONKeyMapper.m */,
+				6682031D192CCC8400875220 /* JSONValueTransformer.h */,
+				6682031E192CCC8400875220 /* JSONValueTransformer.m */,
+			);
+			path = JSONModelTransformations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -452,21 +589,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CB2F61F192CC356007AE252 /* PersoonDetailViewController.m in Sources */,
+				66820326192CCC8400875220 /* JSONHTTPClient.m in Sources */,
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
+				66820327192CCC8400875220 /* JSONModel+networking.m in Sources */,
 				0406338F192B6798003BF9F6 /* EventViewController.m in Sources */,
+				668202FD192CA84C00875220 /* ToiletLocaties.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
 				4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */,
+				66820321192CCC8400875220 /* JSONModelArray.m in Sources */,
+				66820324192CCC8400875220 /* NSArray+JSONModel.m in Sources */,
 				665241D6192B48C700484AC1 /* LocationViewController.m in Sources */,
+				668202F8192C992700875220 /* Toilet.m in Sources */,
+				66820320192CCC8400875220 /* JSONModel.m in Sources */,
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
 				668202CE192B9CA600875220 /* LocationToevoegenControllerViewController.m in Sources */,
+				388B3F31192CDA05009FE4C9 /* HerinneringViewController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */,
+				66820323192CCC8400875220 /* JSONModelError.m in Sources */,
+				040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */,
+				6682031F192CCC8400875220 /* JSONModel+CoreData.m in Sources */,
+				040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */,
+				388B3F34192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m in Sources */,
 				0406339C192B9B33003BF9F6 /* Stap.m in Sources */,
 				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,
 				040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */,
+				040633F1192D370D003BF9F6 /* EditStapTableViewCell.m in Sources */,
+				66820322192CCC8400875220 /* JSONModelClassProperty.m in Sources */,
+				66820325192CCC8400875220 /* JSONAPI.m in Sources */,
+				66820329192CCC8400875220 /* JSONValueTransformer.m in Sources */,
 				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
+				66820328192CCC8400875220 /* JSONKeyMapper.m in Sources */,
 				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
 				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,
+				040633EE192CDE2D003BF9F6 /* StappenplanDetailViewController.m in Sources */,
 				04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */,
 				85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */,
 			);
