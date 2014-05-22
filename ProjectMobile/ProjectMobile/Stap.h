@@ -2,7 +2,7 @@
 //  Stap.h
 //  ProjectMobile
 //
-//  Created by johan on 20/05/14.
+//  Created by johan on 22/05/14.
 //  Copyright (c) 2014 johan. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 @interface Stap : NSManagedObject
 
 @property (nonatomic, retain) NSString * comment;
-@property (nonatomic, retain) NSString * fotoUrl;
+@property (nonatomic, retain) NSData * foto;
 @property (nonatomic, retain) NSNumber * stepNr;
 @property (nonatomic, retain) Stappenplan *stappenplan;
 

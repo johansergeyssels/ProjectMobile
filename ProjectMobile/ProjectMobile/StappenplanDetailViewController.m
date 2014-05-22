@@ -108,6 +108,7 @@
         Stap *step = [self.stepsSorted objectAtIndex:indexPath.row];
         editcell.commentLabel.text = step.comment;
         editcell.titleLabel.text = [NSString stringWithFormat:@"Stap %ld", (indexPath.row + 1)];
+        editcell.image.image = [[UIImage alloc] initWithData:step.foto];
         cell = editcell;
     }
     return cell;

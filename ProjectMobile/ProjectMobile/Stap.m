@@ -2,7 +2,7 @@
 //  Stap.m
 //  ProjectMobile
 //
-//  Created by johan on 20/05/14.
+//  Created by johan on 22/05/14.
 //  Copyright (c) 2014 johan. All rights reserved.
 //
 
@@ -13,7 +13,7 @@
 @implementation Stap
 
 @dynamic comment;
-@dynamic fotoUrl;
+@dynamic foto;
 @dynamic stepNr;
 @dynamic stappenplan;
 

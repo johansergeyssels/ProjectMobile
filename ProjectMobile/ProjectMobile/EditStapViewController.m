@@ -20,15 +20,11 @@
 }
 
 - (IBAction)takePicture:(id)sender {
-    self.picker = [[UIImagePickerController alloc] init];
-    self.picker.delegate = self;
     [self.picker setSourceType: UIImagePickerControllerSourceTypeCamera];
     [self presentViewController:self.picker animated:YES completion:nil];
 }
 
 - (IBAction)takeExistingPicture:(id)sender {
-    self.picker = [[UIImagePickerController alloc] init];
-    self.picker.delegate = self;
     [self.picker setSourceType: UIImagePickerControllerSourceTypeSavedPhotosAlbum];
     [self presentViewController:self.picker animated:YES completion:nil];
 }
@@ -36,12 +32,8 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     //[self.imageView setImage:[info objectForKeyedSubscript:UIImagePickerControllerOriginalImage]];
+    self.step.foto = UIImageJPEGRepresentation([info objectForKeyedSubscript:UIImagePickerControllerOriginalImage], 1.0);
     [self dismissViewControllerAnimated:YES completion:nil];
-    NSURL *MyURL = [info objectForKeyedSubscript:UIImagePickerControllerReferenceURL];
-    NSLog(@"%@", MyURL.path);
-    NSLog(@"%@",[info objectForKeyedSubscript:UIImagePickerControllerMediaURL]);
-    UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:MyURL]];
-    [self.imageView setImage:img];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -73,7 +65,10 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    self.picker = [[UIImagePickerController alloc] init];
+    self.picker.delegate = self;
     self.stepText.text = self.step.comment;
+    self.imageView.image = [[UIImage alloc]initWithData: self.step.foto];
 }
 
 @end
