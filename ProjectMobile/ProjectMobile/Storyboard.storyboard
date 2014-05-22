@@ -492,7 +492,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SGt-aL-gx7">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="herinneringCell" id="SGt-aL-gx7" customClass="HerinneringCollectionViewCell">
                                         <rect key="frame" x="0.0" y="64" width="115" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -506,8 +506,14 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="image" destination="Haw-9w-xEh" id="1fs-dZ-pCm"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="mt2-v8-BLq" id="Z8I-4n-nFq"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -522,20 +528,23 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AaH-NX-XDT" kind="push" id="n0S-L6-eEd"/>
+                                    <segue destination="AaH-NX-XDT" kind="push" identifier="addHerinnering" id="n0S-L6-eEd"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="A7r-89-8bj" id="mVA-jE-iWb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XD-eK-hhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1978" y="1120"/>
         </scene>
-        <!--Herinnering Toevoegen View Controller - Herinnering toevoegen-->
+        <!--Herinnering Detail View Controller - Herinnering toevoegen-->
         <scene sceneID="a9Q-uD-o2N">
             <objects>
-                <viewController title="Herinnering toevoegen" id="AaH-NX-XDT" customClass="HerinneringToevoegenViewController" sceneMemberID="viewController">
+                <viewController title="Herinnering toevoegen" id="AaH-NX-XDT" customClass="HerinneringDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DoY-on-LOS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -630,6 +639,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="save:" destination="AaH-NX-XDT" eventType="touchUpInside" id="jnL-hJ-m3r"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

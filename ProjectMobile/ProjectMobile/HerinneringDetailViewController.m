@@ -6,13 +6,25 @@
 //  Copyright (c) 2014 johan. All rights reserved.
 //
 
-#import "HerinneringToevoegenViewController.h"
+#import "HerinneringDetailViewController.h"
 
-@interface HerinneringToevoegenViewController ()
+@interface HerinneringDetailViewController ()
 
 @end
 
-@implementation HerinneringToevoegenViewController
+@implementation HerinneringDetailViewController
+- (IBAction)save:(id)sender {
+    self.herinnering.label = self.LabelText.text;
+    
+    NSError *error;
+    if ([self.context save:&error]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else
+    {
+        //error tonen
+    }
+}
 
 //Hide keyboard
 - (IBAction)LabelText:(id)sender {
@@ -124,12 +136,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     imagePicker = [[UIImagePickerController alloc] init];
+    self.LabelText.text = self.herinnering.label;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [self.context rollback];
 }
 
 /*

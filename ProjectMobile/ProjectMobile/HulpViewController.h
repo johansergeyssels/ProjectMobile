@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "IManagedContextObjectContainer.h"
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface HulpViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, IManagedContextObjectContainer>
+@interface HulpViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, IManagedContextObjectContainer,ABPeoplePickerNavigationControllerDelegate>
 @property NSManagedObjectContext* context;
+@property (strong, nonatomic) IBOutlet UIImageView *contactAfbeelding;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *lastname;
 
 @end

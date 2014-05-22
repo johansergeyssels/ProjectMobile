@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "IManagedContextObjectContainer.h"
 
-@interface HerinneringViewController : UIViewController<IManagedContextObjectContainer>
+@interface HerinneringViewController : UIViewController<IManagedContextObjectContainer, UICollectionViewDataSource>
 @property NSManagedObjectContext* context;
-
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property NSMutableArray *herinneringen;
 @end

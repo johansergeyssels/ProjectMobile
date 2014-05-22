@@ -7,6 +7,8 @@
 //
 
 #import "HerinneringViewController.h"
+#import "HerinneringDetailViewController.h"
+#import "HerinneringCollectionViewCell.h"
 
 @interface HerinneringViewController ()
 
@@ -36,15 +38,37 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)viewDidAppear:(BOOL)animated
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Herinnering"];
+    NSError *error;
+    self.herinneringen = [self.context executeFetchRequest:fetchRequest error:&error];
+    [self.collectionView reloadData];
+    NSLog(@"%d", self.herinneringen.count);
 }
-*/
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"addHerinnering"])
+    {
+        HerinneringDetailViewController *dest = segue.destinationViewController;
+        dest.herinnering = [NSEntityDescription insertNewObjectForEntityForName:@"Herinnering" inManagedObjectContext:self.context];
+        dest.context = self.context;
+    }
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.herinneringen.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    HerinneringCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"herinneringCell" forIndexPath:indexPath];
+    Herinnering *herinnering = [self.herinneringen objectAtIndex:indexPath.row];
+    //NSURL *URL = [NSURL URLWithString:herinnering.fotourl];
+    //[cell.image setImage:URL];
+    return cell;
+}
 
 @end

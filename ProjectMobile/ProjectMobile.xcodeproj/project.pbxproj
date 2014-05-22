@@ -38,10 +38,12 @@
 		04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B71192A3A0A00EEDFCF /* TabBarView.m */; };
 		04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B74192A3AEE00EEDFCF /* TabBarController.m */; };
 		388B3F31192CDA05009FE4C9 /* HerinneringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */; };
-		388B3F34192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F33192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m */; };
+		388B3F34192CE1F0009FE4C9 /* HerinneringDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F33192CE1F0009FE4C9 /* HerinneringDetailViewController.m */; };
 		388B3F37192DEB3F009FE4C9 /* color1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 388B3F35192DEB3F009FE4C9 /* color1.jpg */; };
 		388B3F38192DEB3F009FE4C9 /* color2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 388B3F36192DEB3F009FE4C9 /* color2.jpg */; };
 		388B3F3A192DEF60009FE4C9 /* white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 388B3F39192DEF60009FE4C9 /* white.jpg */; };
+		388B3F40192E1768009FE4C9 /* Herinnering.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F3F192E1768009FE4C9 /* Herinnering.m */; };
+		388B3F43192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F42192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m */; };
 		4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380C9192BBA9D00A09211 /* Man.jpeg */; };
 		4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CA192BBA9D00A09211 /* Doctor.jpeg */; };
 		4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CB192BBA9D00A09211 /* Son.jpeg */; };
@@ -66,6 +68,8 @@
 		66820328192CCC8400875220 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6682031C192CCC8400875220 /* JSONKeyMapper.m */; };
 		66820329192CCC8400875220 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6682031E192CCC8400875220 /* JSONValueTransformer.m */; };
 		85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85507AF6192B77C200DD7D53 /* HulpViewController.m */; };
+		858C4A31192CAD2F00E4CE53 /* AidTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858C4A30192CAD2F00E4CE53 /* AidTableViewCell.m */; };
+		858C4A34192CB21C00E4CE53 /* Personen.m in Sources */ = {isa = PBXBuildFile; fileRef = 858C4A33192CB21C00E4CE53 /* Personen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,11 +133,15 @@
 		04E96B74192A3AEE00EEDFCF /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		388B3F2F192CDA05009FE4C9 /* HerinneringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringViewController.h; sourceTree = "<group>"; };
 		388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringViewController.m; sourceTree = "<group>"; };
-		388B3F32192CE1F0009FE4C9 /* HerinneringToevoegenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringToevoegenViewController.h; sourceTree = "<group>"; };
-		388B3F33192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringToevoegenViewController.m; sourceTree = "<group>"; };
+		388B3F32192CE1F0009FE4C9 /* HerinneringDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringDetailViewController.h; sourceTree = "<group>"; };
+		388B3F33192CE1F0009FE4C9 /* HerinneringDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringDetailViewController.m; sourceTree = "<group>"; };
 		388B3F35192DEB3F009FE4C9 /* color1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = color1.jpg; sourceTree = "<group>"; };
 		388B3F36192DEB3F009FE4C9 /* color2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = color2.jpg; sourceTree = "<group>"; };
 		388B3F39192DEF60009FE4C9 /* white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white.jpg; sourceTree = "<group>"; };
+		388B3F3E192E1768009FE4C9 /* Herinnering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Herinnering.h; sourceTree = "<group>"; };
+		388B3F3F192E1768009FE4C9 /* Herinnering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Herinnering.m; sourceTree = "<group>"; };
+		388B3F41192E1E5D009FE4C9 /* HerinneringCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringCollectionViewCell.h; sourceTree = "<group>"; };
+		388B3F42192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringCollectionViewCell.m; sourceTree = "<group>"; };
 		4C2380C9192BBA9D00A09211 /* Man.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Man.jpeg; sourceTree = "<group>"; };
 		4C2380CA192BBA9D00A09211 /* Doctor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Doctor.jpeg; sourceTree = "<group>"; };
 		4C2380CB192BBA9D00A09211 /* Son.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Son.jpeg; sourceTree = "<group>"; };
@@ -178,6 +186,10 @@
 		6682031E192CCC8400875220 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		85507AF5192B77C200DD7D53 /* HulpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HulpViewController.h; sourceTree = "<group>"; };
 		85507AF6192B77C200DD7D53 /* HulpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HulpViewController.m; sourceTree = "<group>"; };
+		858C4A2F192CAD2F00E4CE53 /* AidTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AidTableViewCell.h; sourceTree = "<group>"; };
+		858C4A30192CAD2F00E4CE53 /* AidTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AidTableViewCell.m; sourceTree = "<group>"; };
+		858C4A32192CB21C00E4CE53 /* Personen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personen.h; sourceTree = "<group>"; };
+		858C4A33192CB21C00E4CE53 /* Personen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +223,11 @@
 		04063390192B8BF6003BF9F6 /* Databank */ = {
 			isa = PBXGroup;
 			children = (
+				388B3F3E192E1768009FE4C9 /* Herinnering.h */,
+				388B3F3F192E1768009FE4C9 /* Herinnering.m */,
 				04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */,
+				858C4A32192CB21C00E4CE53 /* Personen.h */,
+				858C4A33192CB21C00E4CE53 /* Personen.m */,
 				0406339D192B9B34003BF9F6 /* Stappenplan.h */,
 				0406339E192B9B34003BF9F6 /* Stappenplan.m */,
 				0406339A192B9B33003BF9F6 /* Stap.h */,
@@ -264,6 +280,8 @@
 			children = (
 				85507AF5192B77C200DD7D53 /* HulpViewController.h */,
 				85507AF6192B77C200DD7D53 /* HulpViewController.m */,
+				858C4A2F192CAD2F00E4CE53 /* AidTableViewCell.h */,
+				858C4A30192CAD2F00E4CE53 /* AidTableViewCell.m */,
 			);
 			name = Aid;
 			sourceTree = "<group>";
@@ -323,11 +341,13 @@
 			children = (
 				388B3F2F192CDA05009FE4C9 /* HerinneringViewController.h */,
 				388B3F30192CDA05009FE4C9 /* HerinneringViewController.m */,
-				388B3F32192CE1F0009FE4C9 /* HerinneringToevoegenViewController.h */,
-				388B3F33192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m */,
+				388B3F32192CE1F0009FE4C9 /* HerinneringDetailViewController.h */,
+				388B3F33192CE1F0009FE4C9 /* HerinneringDetailViewController.m */,
 				388B3F39192DEF60009FE4C9 /* white.jpg */,
 				388B3F35192DEB3F009FE4C9 /* color1.jpg */,
 				388B3F36192DEB3F009FE4C9 /* color2.jpg */,
+				388B3F41192E1E5D009FE4C9 /* HerinneringCollectionViewCell.h */,
+				388B3F42192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m */,
 			);
 			name = Herinneringen;
 			sourceTree = "<group>";
@@ -600,6 +620,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858C4A31192CAD2F00E4CE53 /* AidTableViewCell.m in Sources */,
+				388B3F40192E1768009FE4C9 /* Herinnering.m in Sources */,
 				4CB2F61F192CC356007AE252 /* PersoonDetailViewController.m in Sources */,
 				66820326192CCC8400875220 /* JSONHTTPClient.m in Sources */,
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
@@ -622,7 +644,7 @@
 				040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */,
 				6682031F192CCC8400875220 /* JSONModel+CoreData.m in Sources */,
 				040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */,
-				388B3F34192CE1F0009FE4C9 /* HerinneringToevoegenViewController.m in Sources */,
+				388B3F34192CE1F0009FE4C9 /* HerinneringDetailViewController.m in Sources */,
 				0406339C192B9B33003BF9F6 /* Stap.m in Sources */,
 				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,
 				040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */,
@@ -633,8 +655,10 @@
 				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
 				66820328192CCC8400875220 /* JSONKeyMapper.m in Sources */,
 				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
+				858C4A34192CB21C00E4CE53 /* Personen.m in Sources */,
 				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,
 				040633EE192CDE2D003BF9F6 /* StappenplanDetailViewController.m in Sources */,
+				388B3F43192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m in Sources */,
 				04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */,
 				85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */,
 			);
