@@ -241,6 +241,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="persoonImage" destination="y5K-Nl-qgh" id="w49-B1-tS2"/>
+                                            <segue destination="cMa-9O-lB3" kind="push" identifier="PersoonDetailViewController" id="2TT-6g-4bw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -250,12 +251,41 @@
                     </view>
                     <navigationItem key="navigationItem" title="Personen" id="TJr-ux-4da"/>
                     <connections>
+                        <outlet property="personenCollection" destination="4Hv-aH-o5U" id="BSm-OR-Ior"/>
                         <outlet property="personenCollectionView" destination="4Hv-aH-o5U" id="cpz-Cy-O4d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHU-xf-cco" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1978" y="459"/>
+        </scene>
+        <!--Persoon Detail View Controller - Detail-->
+        <scene sceneID="G95-z4-uXK">
+            <objects>
+                <viewController id="cMa-9O-lB3" customClass="PersoonDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y6E-3v-aIy"/>
+                        <viewControllerLayoutGuide type="bottom" id="vPK-L7-TT1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NOq-KI-1ia">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="de8-cF-Jed">
+                                <rect key="frame" x="0.0" y="65" width="320" height="287"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70980393886566162" green="0.31372550129890442" blue="0.12549020349979401" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="yjg-dt-kCF"/>
+                    <connections>
+                        <outlet property="imageView" destination="de8-cF-Jed" id="Fsh-sS-UcD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rkm-ZO-Cka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2482" y="459"/>
         </scene>
         <!--View Controller - Herinneringen-->
         <scene sceneID="FHK-NS-4AM">
@@ -494,6 +524,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DdP-FQ-qWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="731" y="2514"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iGI-91-m1H">
+            <objects>
+                <viewController id="K7s-Bk-ZZl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yOt-WO-xy9"/>
+                        <viewControllerLayoutGuide type="bottom" id="yzm-vh-z1q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ItR-hd-2Bl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPY-aQ-EvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
