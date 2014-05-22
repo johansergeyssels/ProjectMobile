@@ -35,10 +35,13 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [self.imageView setImage:[info objectForKeyedSubscript:UIImagePickerControllerOriginalImage]];
+    //[self.imageView setImage:[info objectForKeyedSubscript:UIImagePickerControllerOriginalImage]];
     [self dismissViewControllerAnimated:YES completion:nil];
-    NSLog(@"%@",[info objectForKeyedSubscript:UIImagePickerControllerReferenceURL]);
-    NSLog(@"%@",[info objectForKeyedSubscript:UIImagePickerControllerMediaMetadata]);
+    NSURL *MyURL = [info objectForKeyedSubscript:UIImagePickerControllerReferenceURL];
+    NSLog(@"%@", MyURL.path);
+    NSLog(@"%@",[info objectForKeyedSubscript:UIImagePickerControllerMediaURL]);
+    UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:MyURL]];
+    [self.imageView setImage:img];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
