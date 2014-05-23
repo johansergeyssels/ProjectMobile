@@ -9,6 +9,7 @@
 #import "HerinneringViewController.h"
 #import "HerinneringDetailViewController.h"
 #import "HerinneringCollectionViewCell.h"
+#import "HerinneringOnTapViewController.h"
 
 @interface HerinneringViewController ()
 
@@ -58,7 +59,10 @@
     
     else if([segue.identifier isEqualToString:@"wijzigHerinnering"])
     {
-        HerinneringDetailViewController *dest = segue.destinationViewController;
+        HerinneringOnTapViewController *dest = segue.destinationViewController;
+        NSArray *array = [self.collectionView indexPathsForSelectedItems];
+        NSIndexPath *indexpath = [array objectAtIndex:0];
+        dest.herinnering = [self.herinneringen objectAtIndex:indexpath.item];
         dest.context = self.context;
     }
     
