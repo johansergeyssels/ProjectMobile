@@ -38,6 +38,16 @@
     
 }
 
+- (IBAction)TitelButtonOutside:(id)sender {
+    [sender resignFirstResponder];
+}
+
+
+
+- (IBAction)TitelButtonLeave:(id)sender {
+    [sender resignFirstResponder];
+}
+
 - (IBAction)addStap:(id)sender {
     Stap* step = [NSEntityDescription insertNewObjectForEntityForName:@"Stap" inManagedObjectContext:self.context];
     step.comment = @"stap";
@@ -116,11 +126,11 @@
         cell = editcell;
         if (indexPath.row % 2) {
             editcell.commentField.backgroundColor = self.firstColor;
-            editcell.image.backgroundColor = self.secondColor;
+            //editcell.image.backgroundColor = self.secondColor;
             
         }else {
             editcell.commentField.backgroundColor = self.secondColor;
-            editcell.image.backgroundColor = self.firstColor;
+            //editcell.image.backgroundColor = self.firstColor;
         }
     }
     
