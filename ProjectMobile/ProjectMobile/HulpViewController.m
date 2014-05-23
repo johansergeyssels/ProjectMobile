@@ -15,8 +15,9 @@
 @property UIColor * firstColor;
 @property UIColor * secondColor;
 @property NSMutableArray *Personen;
-@property NSMutableArray *Info;
+@property NSMutableArray *Numbers;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSString * tele;
 
 @end
 
@@ -26,10 +27,34 @@
     return [self.Personen count];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    
-    [self.tableView reloadData];
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AidTableViewCell *selectedCell = [self.tableView cellForRowAtIndexPath:indexPath];
+    self.tele = selectedCell.telefoon;
+    NSLog(@"%@", self.tele);
+}
 
+- (IBAction)bellen:(id)sender {
+    UIAlertView *calert;
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",self.tele]];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+        NSLog(@"%@ nummer", self.tele);
+        [[UIApplication sharedApplication] openURL:phoneUrl];
+    }
+    else
+    {
+        calert = [[UIAlertView alloc]initWithTitle:@"Alarm" message:@"Kan contact niet bellen" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [calert show];
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    // ophalen van de gegevens
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Personen"];
+    self.Personen = [[self.context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    [self.tableView reloadData];
 }
 
 - (IBAction)pickPerson:(id)sender {
@@ -49,30 +74,38 @@
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person {
     
-    // Create a new person
-    NSManagedObject *newPersoon = [NSEntityDescription insertNewObjectForEntityForName:@"Personen" inManagedObjectContext:self.context];
-    NSNumber *id = [NSNumber numberWithInt:ABRecordGetRecordID(person)];
-    NSNumber *one = [NSNumber numberWithInt:1];
-    NSLog(@"%d",ABRecordGetRecordID(person));
-    NSLog(@"%d", [id integerValue]);
-    [newPersoon setValue: id forKey:@"persoonId"];
-    [newPersoon setValue: one forKey:@"importance"];
+    NSPredicate *valuePredicate = [NSPredicate predicateWithFormat:@"self.persoonId == %d",ABRecordGetRecordID(person)];
     
-    //[self.Personen addObject:newPersoon];
-    
-    NSError *error = nil;
-    // Save the object to persistent store
-    if (![self.context save:&error]) {
-        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    if ([[self.Personen filteredArrayUsingPredicate:valuePredicate] count]!=0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Contact reeds toegevoegd" message:@"U kan een contact maar 1 keer toevoegen in de hulplijst" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+        
+        [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
     }
     
-    
-    
-    
-    [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
-    [self.tableView reloadData];
+    else  {
+        // aanmaken van een nieuwe persoon
+        NSManagedObject *newPersoon = [NSEntityDescription insertNewObjectForEntityForName:@"Personen" inManagedObjectContext:self.context];
+        NSNumber *id = [NSNumber numberWithInt:ABRecordGetRecordID(person)];
+        NSNumber *one = [NSNumber numberWithInt:1];
+        NSLog(@"%d",ABRecordGetRecordID(person));
+        NSLog(@"%d", [id integerValue]);
+        [newPersoon setValue: id forKey:@"persoonId"];
+        [newPersoon setValue: one forKey:@"importance"];
+        
+        
+        NSError *error = nil;
+        // Opslagen
+        if (![self.context save:&error]) {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }
+        
+        [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+        
+    }
     return NO;
 }
+
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker
       shouldContinueAfterSelectingPerson:(ABRecordRef)person
@@ -108,17 +141,30 @@
         Personen *persoon = [self.Personen objectAtIndex:indexPath.row];
         
         //Het id toevoegen
-        ABRecordID recordID = [[persoon valueForKey:@"persoonId"] integerValue]; // Assign here your ID
+        ABRecordID recordID = [[persoon valueForKey:@"persoonId"] integerValue];
         NSLog(@"%d", recordID);
         ABRecordRef nxtABRecordRef = ABAddressBookGetPersonWithRecordID (addressBookRef, recordID);
             
             
         //ophalen van de gegevens
+            //naam
         NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonFirstNameProperty);
+            //Voornaam
         NSString*lastname = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonLastNameProperty);
+            //Profielfoto
         NSData  *imgData = (__bridge NSData *)ABPersonCopyImageData(nxtABRecordRef);
         UIImage  *img = [UIImage imageWithData:imgData];
-            
+            //Telefoonnummers
+        ABMultiValueRef phoneNumbers = ABRecordCopyValue(nxtABRecordRef, kABPersonPhoneProperty);
+        NSString* phone = nil;
+        if (ABMultiValueGetCount(phoneNumbers) > 0) {
+           phone = (__bridge_transfer NSString*) ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
+        } else {
+            phone = @"[None]";
+        }
+        NSString *tel = phone;
+        NSLog(@"%@", phone);
+        cell.telefoon = tel;
         [cell.nameLabel setText: name];
         [cell.familyNameLabel setText:lastname];
         [cell.image setImage:img];
@@ -131,17 +177,16 @@
         NSLog(@"Could not open address book");
     }
     
-    // check if row is odd or even and set color accordingly
+    // nakijken of het rijnummer even of oneven is. aan de hand van dit de kleur veranderen van de cell.
     if (indexPath.row % 2) {
         cell.backgroundColor = self.firstColor;
     }else {
         cell.backgroundColor = self.secondColor;
     }
     
-    //cell.nameLabel =
-    
     return cell;
 }
+
 
 - (void)viewDidLoad
 {
@@ -149,50 +194,6 @@
     // Do any additional setup after loading the view.
     self.firstColor = [UIColor colorWithRed:183/255.0f green:80/255.0f blue:23/255.0f alpha:1.0f];
     self.secondColor = [UIColor colorWithRed:179/255.0f green:98/255.0f blue:0/255.0f alpha:1.0f];
-    
-    
-    
-    // Fetch the devices from persistent data store
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Personen"];
-    self.Personen = [[self.context executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    
-    [self.tableView reloadData];
- /*
-    CFErrorRef error = nil;
-    ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions (NULL, &error);
-    
-    
-   
-    if (addressBookRef != nil) {
-        
-        //Loop door de array
-        for (int i = 0; i < self.Personen.count; i++){
-        NSManagedObject *persoon;
-        persoon = [self.Personen objectAtIndex:i];
-        
-        //Het id toevoegen
-        ABRecordID recordID = [[persoon valueForKey:@"persoonId"] integerValue]; // Assign here your ID
-        NSLog(@"%d", recordID);
-        ABRecordRef nxtABRecordRef = ABAddressBookGetPersonWithRecordID (addressBookRef, recordID);
-            
-        }
-        
-        
-        /*if (addressesRef != nil) {
-            for (int index = 0; index < ABMultiValueGetCount(addressesRef); index++) {
-                NSDictionary *addressDictionary = (__bridge_transfer NSDictionary*) ABMultiValueCopyValueAtIndex(addressesRef,index);
-                
-            } // for all addresses
-            
-            CFRelease(addressesRef);
-        }
-        
-        CFRelease(addressBookRef);
-}
-    else {
-        NSLog(@"Could not open address book");
-    }
-  */
     
 }
 

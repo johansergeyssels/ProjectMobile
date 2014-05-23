@@ -1038,6 +1038,9 @@
                                                     <state key="normal" title="Button">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="bellen:" destination="xgg-r0-IhW" eventType="touchUpInside" id="DiM-fb-Chg"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1063,6 +1066,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="InU-uC-BxR" id="NP6-G7-ogk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWr-oH-F4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
