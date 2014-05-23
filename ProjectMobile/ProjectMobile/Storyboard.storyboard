@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VJW-wj-UZg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VJW-wj-UZg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -466,24 +466,40 @@
             </objects>
             <point key="canvasLocation" x="1926" y="414"/>
         </scene>
-        <!--Persoon Detail View Controller - Detail-->
+        <!--Herinnering On Tap View Controller - Detail-->
         <scene sceneID="G95-z4-uXK">
             <objects>
-                <viewController id="cMa-9O-lB3" customClass="PersoonDetailViewController" sceneMemberID="viewController">
+                <viewController id="cMa-9O-lB3" customClass="HerinneringOnTapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOq-KI-1ia">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="de8-cF-Jed">
-                                <rect key="frame" x="0.0" y="65" width="320" height="287"/>
+                                <rect key="frame" x="20" y="65" width="263" height="212"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U8T-aP-HpM">
+                                <rect key="frame" x="206" y="278" width="77" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73725491759999995" green="0.35294118520000001" blue="0.082352943720000002" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem Ipsum Lorem Ipsum Lorem Ipsum" id="heL-kG-paj">
+                                <rect key="frame" x="20" y="328" width="280" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73725491759999995" green="0.35294118520000001" blue="0.082352943720000002" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.70980393886566162" green="0.31372550129890442" blue="0.12549020349979401" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="yjg-dt-kCF"/>
                     <connections>
-                        <outlet property="imageView" destination="de8-cF-Jed" id="Fsh-sS-UcD"/>
+                        <outlet property="imageView" destination="de8-cF-Jed" id="lSr-R9-2kf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rkm-ZO-Cka" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -526,6 +542,7 @@
                                         <size key="customSize" width="100" height="100"/>
                                         <connections>
                                             <outlet property="image" destination="Haw-9w-xEh" id="1fs-dZ-pCm"/>
+                                            <segue destination="LWa-ON-3A4" kind="push" id="dAh-Vg-vVb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -685,6 +702,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Qm-oE-aQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2514" y="1102"/>
+        </scene>
+        <!--View Controller - Herinnering-->
+        <scene sceneID="yLM-AO-JVa">
+            <objects>
+                <viewController title="Herinnering" id="LWa-ON-3A4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ifq-ji-oG2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color1.jpg" id="isp-rs-BLx">
+                                <rect key="frame" x="0.0" y="-64" width="320" height="582"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="dal-p9-HME">
+                                <rect key="frame" x="40" y="77" width="240" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail herinnering" id="Xg8-c6-Yhq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qnQ-RW-C2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2966" y="1101"/>
         </scene>
         <!--Event View Controller - Evenementen-->
         <scene sceneID="jFQ-80-ODu">
