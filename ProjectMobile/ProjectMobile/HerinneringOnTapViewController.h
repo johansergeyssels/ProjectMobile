@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Herinnering.h"
+#import "IManagedContextObjectContainer.h"
 
-@interface HerinneringOnTapViewController : UIViewController<UIImagePickerControllerDelegate>
+@interface HerinneringOnTapViewController : UIViewController<IManagedContextObjectContainer>
 
-
+@property NSManagedObjectContext* context;
 @property (weak, nonatomic) IBOutlet UILabel *Label;
 @property (weak, nonatomic) IBOutlet UITextView *commentText;
 @property Herinnering *herinnering;

@@ -56,11 +56,10 @@
         dest.herinnering = [NSEntityDescription insertNewObjectForEntityForName:@"Herinnering" inManagedObjectContext:self.context];
     }
     
-    else if([segue.identifier isEqualToString:@"WijzigHerinnering"])
+    else if([segue.identifier isEqualToString:@"wijzigHerinnering"])
     {
         HerinneringDetailViewController *dest = segue.destinationViewController;
         dest.context = self.context;
-        dest.herinnering = [NSEntityDescription insertNewObjectForEntityForName:@"Herinnering" inManagedObjectContext:self.context];
     }
     
     

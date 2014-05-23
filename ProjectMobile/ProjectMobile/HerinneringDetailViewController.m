@@ -17,6 +17,7 @@
 //Herinnering Saven
 - (IBAction)save:(id)sender {
     self.herinnering.label = self.LabelText.text;
+    self.herinnering.comment = self.CommentText.text;
     
     NSError *error;
     if ([self.context save:&error]) {
@@ -108,14 +109,11 @@
     [super viewDidLoad];
     // imagePicker
     imagePicker = [[UIImagePickerController alloc] init];
-    
-    // Databank
-    
-    //self.LabelText.text = self.herinnering.label; VOOR TEXTFIELD!!!!!!!
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     self.LabelText.text = self.herinnering.label;
+    self.CommentText.text = self.herinnering.comment;
     self.imageView.image = [[UIImage alloc]initWithData:self.herinnering.foto];
 }
 
