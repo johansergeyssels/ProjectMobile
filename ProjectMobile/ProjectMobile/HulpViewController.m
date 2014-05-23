@@ -8,6 +8,7 @@
 
 #import "HulpViewController.h"
 #import "AidTableViewCell.h"
+#import "Personen.h"
 
 @interface HulpViewController ()
 
@@ -26,6 +27,8 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    
+    [self.tableView reloadData];
 
 }
 
@@ -55,16 +58,19 @@
     [newPersoon setValue: id forKey:@"persoonId"];
     [newPersoon setValue: one forKey:@"importance"];
     
+    //[self.Personen addObject:newPersoon];
+    
     NSError *error = nil;
     // Save the object to persistent store
     if (![self.context save:&error]) {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
-
     
     
     
-        [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    
+    [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    [self.tableView reloadData];
     return NO;
 }
 
@@ -94,7 +100,36 @@
     if (cell == nil) {
         cell = [[AidTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+   
+    CFErrorRef error = nil;
+    ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions (NULL, &error);
     
+    if (addressBookRef != nil) {
+        Personen *persoon = [self.Personen objectAtIndex:indexPath.row];
+        
+        //Het id toevoegen
+        ABRecordID recordID = [[persoon valueForKey:@"persoonId"] integerValue]; // Assign here your ID
+        NSLog(@"%d", recordID);
+        ABRecordRef nxtABRecordRef = ABAddressBookGetPersonWithRecordID (addressBookRef, recordID);
+            
+            
+        //ophalen van de gegevens
+        NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonFirstNameProperty);
+        NSString*lastname = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonLastNameProperty);
+        NSData  *imgData = (__bridge NSData *)ABPersonCopyImageData(nxtABRecordRef);
+        UIImage  *img = [UIImage imageWithData:imgData];
+            
+        [cell.nameLabel setText: name];
+        [cell.familyNameLabel setText:lastname];
+        [cell.image setImage:img];
+        NSLog(@"%@", name);
+        NSLog(@"%@", lastname);
+        
+        CFRelease(addressBookRef);
+    }
+    else {
+        NSLog(@"Could not open address book");
+    }
     
     // check if row is odd or even and set color accordingly
     if (indexPath.row % 2) {
@@ -102,6 +137,8 @@
     }else {
         cell.backgroundColor = self.secondColor;
     }
+    
+    //cell.nameLabel =
     
     return cell;
 }
@@ -120,7 +157,7 @@
     self.Personen = [[self.context executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     [self.tableView reloadData];
-    
+ /*
     CFErrorRef error = nil;
     ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions (NULL, &error);
     
@@ -137,18 +174,6 @@
         ABRecordID recordID = [[persoon valueForKey:@"persoonId"] integerValue]; // Assign here your ID
         NSLog(@"%d", recordID);
         ABRecordRef nxtABRecordRef = ABAddressBookGetPersonWithRecordID (addressBookRef, recordID);
-            //show name and lastname
-            NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonFirstNameProperty);
-            NSLog(@"%@", name);
-            [self.Info addObject:(__bridge id) nxtABRecordRef];
-            
-        }
-        
-        for (int i = 0; i < self.Info.count; i++)
-        {
-            ABRecordRef contactRecord =(__bridge ABRecordRef)([self.Info objectAtIndex:i]);
-             NSLog(@"%@", contactRecord);
-            
             
         }
         
@@ -160,13 +185,14 @@
             } // for all addresses
             
             CFRelease(addressesRef);
-        }*/
+        }
         
         CFRelease(addressBookRef);
 }
     else {
         NSLog(@"Could not open address book");
     }
+  */
     
 }
 
@@ -176,15 +202,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
