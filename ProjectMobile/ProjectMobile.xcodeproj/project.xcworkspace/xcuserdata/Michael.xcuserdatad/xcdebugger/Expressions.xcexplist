@@ -5,5 +5,13 @@
       <ContextState
          contextName = "-[PersonenViewController prepareForSegue:sender:]:PersonenViewController.m">
       </ContextState>
+      <ContextState
+         contextName = "-[PersonenViewController viewDidLoad]:PersonenViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.PersoonImages.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

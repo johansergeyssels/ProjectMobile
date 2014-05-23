@@ -13,4 +13,7 @@
 @interface PersoonDetailViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property UIImage *image;
+@property NSString *fnaam;
+@property NSString *naam;
+
 @end

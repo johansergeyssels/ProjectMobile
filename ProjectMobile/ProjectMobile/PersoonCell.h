@@ -10,6 +10,8 @@
 
 @interface PersoonCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *persoonImage;
+@property NSString *name;
+@property NSString *familyName;
 
 
 @end

@@ -9,6 +9,8 @@
 #import "PersoonDetailViewController.h"
 
 @interface PersoonDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fNameLabel;
 
 @end
 
@@ -27,7 +29,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
     [self.imageView setImage:self.image];
+    self.nameLabel.text = self.naam;
+    self.fNameLabel.text = self.fnaam;
 }
 
 - (void)didReceiveMemoryWarning
