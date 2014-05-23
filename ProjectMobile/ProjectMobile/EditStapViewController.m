@@ -9,13 +9,14 @@
 #import "EditStapViewController.h"
 
 @interface EditStapViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *commentTextfield;
 
 @end
 
 @implementation EditStapViewController
 - (IBAction)done:(id)sender
 {
-    self.step.comment = self.stepText.text;
+    self.step.comment = self.commentTextfield.text;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -67,8 +68,18 @@
 {
     self.picker = [[UIImagePickerController alloc] init];
     self.picker.delegate = self;
-    self.stepText.text = self.step.comment;
+    self.commentTextfield.text = self.step.comment;
     self.imageView.image = [[UIImage alloc]initWithData: self.step.foto];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end
