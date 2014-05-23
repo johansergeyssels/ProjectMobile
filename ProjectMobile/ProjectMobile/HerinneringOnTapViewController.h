@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Herinnering.h"
 
-@interface HerinneringOnTapViewController : UIViewController
+@interface HerinneringOnTapViewController : UIViewController<UIImagePickerControllerDelegate>
 
+
+@property (weak, nonatomic) IBOutlet UILabel *Label;
+@property (weak, nonatomic) IBOutlet UITextView *commentText;
+@property Herinnering *herinnering;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end

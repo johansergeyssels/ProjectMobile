@@ -23,6 +23,14 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.commentText.text = self.herinnering.comment;
+    self.imageView.image = [[UIImage alloc]initWithData: self.herinnering.foto];
+}
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

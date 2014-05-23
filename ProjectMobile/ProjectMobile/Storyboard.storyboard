@@ -542,7 +542,7 @@
                                         <size key="customSize" width="100" height="100"/>
                                         <connections>
                                             <outlet property="image" destination="Haw-9w-xEh" id="1fs-dZ-pCm"/>
-                                            <segue destination="LWa-ON-3A4" kind="push" id="dAh-Vg-vVb"/>
+                                            <segue destination="LWa-ON-3A4" kind="push" identifier="wijzigHerinnering" id="dAh-Vg-vVb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -703,10 +703,10 @@
             </objects>
             <point key="canvasLocation" x="2514" y="1102"/>
         </scene>
-        <!--View Controller - Herinnering-->
+        <!--Herinnering On Tap View Controller - Herinnering-->
         <scene sceneID="yLM-AO-JVa">
             <objects>
-                <viewController title="Herinnering" id="LWa-ON-3A4" sceneMemberID="viewController">
+                <viewController title="Herinnering" id="LWa-ON-3A4" customClass="HerinneringOnTapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ifq-ji-oG2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -719,14 +719,49 @@
                                 <rect key="frame" x="40" y="77" width="240" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f8j-dJ-iS4">
+                                <rect key="frame" x="194" y="283" width="86" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86274516580000005" green="0.46274513010000001" blue="0.062745101750000004" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem" id="pnC-Iq-aQk">
+                                <rect key="frame" x="40" y="336" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86274516580000005" green="0.46274513010000001" blue="0.062745101750000004" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail herinnering" id="Xg8-c6-Yhq"/>
+                    <navigationItem key="navigationItem" title="Detail " id="Xg8-c6-Yhq">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="JRy-z3-PD7">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ysk-BH-gi4">
+                                <rect key="frame" x="233" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Wijzig">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AaH-NX-XDT" kind="push" id="KXY-ff-Uvm"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Label" destination="f8j-dJ-iS4" id="Ret-tY-RLt"/>
+                        <outlet property="commentText" destination="pnC-Iq-aQk" id="JF9-0S-B4g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnQ-RW-C2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2966" y="1101"/>
+            <point key="canvasLocation" x="2498" y="1853"/>
         </scene>
         <!--Event View Controller - Evenementen-->
         <scene sceneID="jFQ-80-ODu">
@@ -1065,7 +1100,7 @@
         <scene sceneID="luZ-Gg-cBE">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="gOT-GG-fqb" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bBT-H5-qL6">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -1116,5 +1151,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="1Fp-oh-DMM"/>
+        <segue reference="n0S-L6-eEd"/>
     </inferredMetricsTieBreakers>
 </document>
