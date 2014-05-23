@@ -25,5 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *Gallerij_btn;
 @property (weak, nonatomic) IBOutlet UIButton *FotoNemen_btn;
 @property (strong, nonatomic) IBOutlet UITextField *LabelText;
+@property (strong, nonatomic) IBOutlet UITextField *CommentText;
 
 @end

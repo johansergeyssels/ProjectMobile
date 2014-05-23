@@ -10,15 +10,30 @@
 #import "Stappenplan.h"
 #import "StapTableViewCell.h"
 #import "StappenplanDetailViewController.h"
+#import "ShowStappenplanViewController.h"
 
 @interface StappenPlanViewController ()
 
 @property NSMutableArray* stepstones;
 @property (weak, nonatomic) IBOutlet UITableView *table;
-
+@property UIColor * firstColor;
+@property UIColor * secondColor;
 @end
 
 @implementation StappenPlanViewController
+- (IBAction)deleteStepstone:(id)sender {
+    UITableViewCell *cell = (UITableViewCell *)((UIButton *)sender).superview.superview.superview;
+    NSIndexPath *index = [self.table indexPathForCell:cell];
+    Stappenplan *stepstone = [self.stepstones objectAtIndex:index.row];
+    
+    [self.stepstones removeObject:stepstone];
+    [self.context deleteObject:stepstone];
+    
+    NSError *error;
+    [self.context save:&error];
+    
+    [self.table reloadData];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +48,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.firstColor = [UIColor colorWithRed:183/255.0f green:80/255.0f blue:23/255.0f alpha:1.0f];
+    self.secondColor = [UIColor colorWithRed:179/255.0f green:98/255.0f blue:0/255.0f alpha:1.0f];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -61,6 +78,12 @@
     
     cell.label.text = steppingstone.titel;
     
+    if (indexPath.row % 2) {
+        cell.backgroundColor = self.firstColor;
+    }else {
+        cell.backgroundColor = self.secondColor;
+    }
+    
     return cell;
 }
 
@@ -88,7 +111,10 @@
     }
     else if([segue.identifier isEqualToString:@"showStepstones"])
     {
-        
+        UITableViewCell *cell = (UITableViewCell *)((UIButton *)sender).superview.superview.superview;
+        NSIndexPath *index = [self.table indexPathForCell:cell];
+        ShowStappenplanViewController *dest = segue.destinationViewController;
+        dest.stepstone = [self.stepstones objectAtIndex:index.row];
     }
 }
 

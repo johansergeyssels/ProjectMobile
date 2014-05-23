@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleLabel;
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property NSArray *stepsSorted;
+@property UIColor * firstColor;
+@property UIColor * secondColor;
 @end
 
 @implementation StappenplanDetailViewController
@@ -34,6 +36,16 @@
         return (NSComparisonResult)NSOrderedSame;
     }];
     
+}
+
+- (IBAction)TitelButtonOutside:(id)sender {
+    [sender resignFirstResponder];
+}
+
+
+
+- (IBAction)TitelButtonLeave:(id)sender {
+    [sender resignFirstResponder];
 }
 
 - (IBAction)addStap:(id)sender {
@@ -79,6 +91,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.firstColor = [UIColor colorWithRed:183/255.0f green:80/255.0f blue:23/255.0f alpha:1.0f];
+    self.secondColor = [UIColor colorWithRed:179/255.0f green:98/255.0f blue:0/255.0f alpha:1.0f];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -106,10 +120,25 @@
     {
         EditStapTableViewCell *editcell = [self.table dequeueReusableCellWithIdentifier:@"stapCell" forIndexPath:indexPath];
         Stap *step = [self.stepsSorted objectAtIndex:indexPath.row];
-        editcell.commentLabel.text = step.comment;
+        editcell.commentField.text = step.comment;
         editcell.titleLabel.text = [NSString stringWithFormat:@"Stap %ld", (indexPath.row + 1)];
         editcell.image.image = [[UIImage alloc] initWithData:step.foto];
         cell = editcell;
+        if (indexPath.row % 2) {
+            editcell.commentField.backgroundColor = self.firstColor;
+            //editcell.image.backgroundColor = self.secondColor;
+            
+        }else {
+            editcell.commentField.backgroundColor = self.secondColor;
+            //editcell.image.backgroundColor = self.firstColor;
+        }
+    }
+    
+    if (indexPath.row % 2) {
+        cell.backgroundColor = self.firstColor;
+        
+    }else {
+        cell.backgroundColor = self.secondColor;
     }
     return cell;
 }

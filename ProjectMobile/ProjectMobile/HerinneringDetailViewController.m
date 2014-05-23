@@ -29,10 +29,12 @@
 }
 
 //Hide keyboard
+
 - (IBAction)LabelText:(id)sender {
-    [sender resignFirstResponder];
+   [sender resignFirstResponder];
 }
-- (IBAction)TextVeld:(id)sender {
+
+- (IBAction)CommentText:(id)sender {
     [sender resignFirstResponder];
 }
 

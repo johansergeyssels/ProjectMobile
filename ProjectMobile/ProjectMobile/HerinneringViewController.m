@@ -55,6 +55,15 @@
         dest.context = self.context;
         dest.herinnering = [NSEntityDescription insertNewObjectForEntityForName:@"Herinnering" inManagedObjectContext:self.context];
     }
+    
+    else if([segue.identifier isEqualToString:@"WijzigHerinnering"])
+    {
+        HerinneringDetailViewController *dest = segue.destinationViewController;
+        dest.context = self.context;
+        dest.herinnering = [NSEntityDescription insertNewObjectForEntityForName:@"Herinnering" inManagedObjectContext:self.context];
+    }
+    
+    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

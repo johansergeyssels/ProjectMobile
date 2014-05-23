@@ -18,6 +18,8 @@
 		040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */; };
 		040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F6192D6DA8003BF9F6 /* EditStapViewController.m */; };
 		040633FA192E37DB003BF9F6 /* Stap.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F9192E37DB003BF9F6 /* Stap.m */; };
+		040633FD192F6907003BF9F6 /* ShowStappenplanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */; };
+		04063400192F7414003BF9F6 /* ShowStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -44,6 +46,10 @@
 		388B3F3A192DEF60009FE4C9 /* white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 388B3F39192DEF60009FE4C9 /* white.jpg */; };
 		388B3F43192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F42192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m */; };
 		388B3F49192E3CBD009FE4C9 /* Herinnering.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F48192E3CBD009FE4C9 /* Herinnering.m */; };
+		38EF0D6E192F5C7C003C3EB3 /* HerinneringOnTapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EF0D6D192F5C7C003C3EB3 /* HerinneringOnTapViewController.m */; };
+		4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380C9192BBA9D00A09211 /* Man.jpeg */; };
+		4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CA192BBA9D00A09211 /* Doctor.jpeg */; };
+		4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CB192BBA9D00A09211 /* Son.jpeg */; };
 		4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */; };
 		4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8BD976192B886D003F00D9 /* PersonenViewController.m */; };
 		4CC96C75192F443C00E43D05 /* PersoonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC96C74192F443C00E43D05 /* PersoonDetailViewController.m */; };
@@ -103,6 +109,10 @@
 		040633F6192D6DA8003BF9F6 /* EditStapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditStapViewController.m; sourceTree = "<group>"; };
 		040633F8192E37DB003BF9F6 /* Stap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stap.h; sourceTree = "<group>"; };
 		040633F9192E37DB003BF9F6 /* Stap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stap.m; sourceTree = "<group>"; };
+		040633FB192F6907003BF9F6 /* ShowStappenplanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowStappenplanViewController.h; sourceTree = "<group>"; };
+		040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStappenplanViewController.m; sourceTree = "<group>"; };
+		040633FE192F7414003BF9F6 /* ShowStapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowStapTableViewCell.h; sourceTree = "<group>"; };
+		040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStapTableViewCell.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -140,6 +150,11 @@
 		388B3F42192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringCollectionViewCell.m; sourceTree = "<group>"; };
 		388B3F47192E3CBD009FE4C9 /* Herinnering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Herinnering.h; sourceTree = "<group>"; };
 		388B3F48192E3CBD009FE4C9 /* Herinnering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Herinnering.m; sourceTree = "<group>"; };
+		38EF0D6C192F5C7C003C3EB3 /* HerinneringOnTapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringOnTapViewController.h; sourceTree = "<group>"; };
+		38EF0D6D192F5C7C003C3EB3 /* HerinneringOnTapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringOnTapViewController.m; sourceTree = "<group>"; };
+		4C2380C9192BBA9D00A09211 /* Man.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Man.jpeg; sourceTree = "<group>"; };
+		4C2380CA192BBA9D00A09211 /* Doctor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Doctor.jpeg; sourceTree = "<group>"; };
+		4C2380CB192BBA9D00A09211 /* Son.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Son.jpeg; sourceTree = "<group>"; };
 		4C3C3F3E192B8B4F00A3650C /* PersoonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersoonCell.h; sourceTree = "<group>"; };
 		4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersoonCell.m; sourceTree = "<group>"; };
 		4C8BD975192B886D003F00D9 /* PersonenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonenViewController.h; sourceTree = "<group>"; };
@@ -315,6 +330,10 @@
 				040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */,
 				040633F5192D6DA8003BF9F6 /* EditStapViewController.h */,
 				040633F6192D6DA8003BF9F6 /* EditStapViewController.m */,
+				040633FB192F6907003BF9F6 /* ShowStappenplanViewController.h */,
+				040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */,
+				040633FE192F7414003BF9F6 /* ShowStapTableViewCell.h */,
+				040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */,
 			);
 			name = Stappenplan;
 			sourceTree = "<group>";
@@ -344,6 +363,8 @@
 				388B3F36192DEB3F009FE4C9 /* color2.jpg */,
 				388B3F41192E1E5D009FE4C9 /* HerinneringCollectionViewCell.h */,
 				388B3F42192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m */,
+				38EF0D6C192F5C7C003C3EB3 /* HerinneringOnTapViewController.h */,
+				38EF0D6D192F5C7C003C3EB3 /* HerinneringOnTapViewController.m */,
 			);
 			name = Herinneringen;
 			sourceTree = "<group>";
@@ -622,6 +643,7 @@
 				668202FD192CA84C00875220 /* ToiletLocaties.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
 				4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */,
+				040633FD192F6907003BF9F6 /* ShowStappenplanViewController.m in Sources */,
 				66820321192CCC8400875220 /* JSONModelArray.m in Sources */,
 				66820324192CCC8400875220 /* NSArray+JSONModel.m in Sources */,
 				665241D6192B48C700484AC1 /* LocationViewController.m in Sources */,
@@ -632,6 +654,7 @@
 				388B3F31192CDA05009FE4C9 /* HerinneringViewController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				4CC96C78192F4A5300E43D05 /* Fotolijst.m in Sources */,
+				38EF0D6E192F5C7C003C3EB3 /* HerinneringOnTapViewController.m in Sources */,
 				4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */,
 				66820323192CCC8400875220 /* JSONModelError.m in Sources */,
 				040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */,
@@ -650,6 +673,7 @@
 				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
 				858C4A34192CB21C00E4CE53 /* Personen.m in Sources */,
 				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,
+				04063400192F7414003BF9F6 /* ShowStapTableViewCell.m in Sources */,
 				040633FA192E37DB003BF9F6 /* Stap.m in Sources */,
 				040633EE192CDE2D003BF9F6 /* StappenplanDetailViewController.m in Sources */,
 				388B3F43192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m in Sources */,
