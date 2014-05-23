@@ -38,7 +38,7 @@
     
     //uilabel
     //[[UILabel appearance] setTintColor:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
-    [[UILabel appearance] setTextColor:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
+    //[[UILabel appearance] setTextColor:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
     
     //managedcontext pass through
     UITabBarController* tabbar = (UITabBarController*)self.window.rootViewController;
