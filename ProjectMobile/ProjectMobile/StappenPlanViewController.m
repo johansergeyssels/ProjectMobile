@@ -10,6 +10,7 @@
 #import "Stappenplan.h"
 #import "StapTableViewCell.h"
 #import "StappenplanDetailViewController.h"
+#import "ShowStappenplanViewController.h"
 
 @interface StappenPlanViewController ()
 
@@ -110,7 +111,10 @@
     }
     else if([segue.identifier isEqualToString:@"showStepstones"])
     {
-        
+        UITableViewCell *cell = (UITableViewCell *)((UIButton *)sender).superview.superview.superview;
+        NSIndexPath *index = [self.table indexPathForCell:cell];
+        ShowStappenplanViewController *dest = segue.destinationViewController;
+        dest.stepstone = [self.stepstones objectAtIndex:index.row];
     }
 }
 

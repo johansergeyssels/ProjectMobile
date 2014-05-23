@@ -18,6 +18,8 @@
 		040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */; };
 		040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F6192D6DA8003BF9F6 /* EditStapViewController.m */; };
 		040633FA192E37DB003BF9F6 /* Stap.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F9192E37DB003BF9F6 /* Stap.m */; };
+		040633FD192F6907003BF9F6 /* ShowStappenplanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */; };
+		04063400192F7414003BF9F6 /* ShowStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -106,6 +108,10 @@
 		040633F6192D6DA8003BF9F6 /* EditStapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditStapViewController.m; sourceTree = "<group>"; };
 		040633F8192E37DB003BF9F6 /* Stap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stap.h; sourceTree = "<group>"; };
 		040633F9192E37DB003BF9F6 /* Stap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stap.m; sourceTree = "<group>"; };
+		040633FB192F6907003BF9F6 /* ShowStappenplanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowStappenplanViewController.h; sourceTree = "<group>"; };
+		040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStappenplanViewController.m; sourceTree = "<group>"; };
+		040633FE192F7414003BF9F6 /* ShowStapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowStapTableViewCell.h; sourceTree = "<group>"; };
+		040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStapTableViewCell.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -319,6 +325,10 @@
 				040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */,
 				040633F5192D6DA8003BF9F6 /* EditStapViewController.h */,
 				040633F6192D6DA8003BF9F6 /* EditStapViewController.m */,
+				040633FB192F6907003BF9F6 /* ShowStappenplanViewController.h */,
+				040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */,
+				040633FE192F7414003BF9F6 /* ShowStapTableViewCell.h */,
+				040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */,
 			);
 			name = Stappenplan;
 			sourceTree = "<group>";
@@ -634,6 +644,7 @@
 				668202FD192CA84C00875220 /* ToiletLocaties.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
 				4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */,
+				040633FD192F6907003BF9F6 /* ShowStappenplanViewController.m in Sources */,
 				66820321192CCC8400875220 /* JSONModelArray.m in Sources */,
 				66820324192CCC8400875220 /* NSArray+JSONModel.m in Sources */,
 				665241D6192B48C700484AC1 /* LocationViewController.m in Sources */,
@@ -662,6 +673,7 @@
 				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
 				858C4A34192CB21C00E4CE53 /* Personen.m in Sources */,
 				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,
+				04063400192F7414003BF9F6 /* ShowStapTableViewCell.m in Sources */,
 				040633FA192E37DB003BF9F6 /* Stap.m in Sources */,
 				040633EE192CDE2D003BF9F6 /* StappenplanDetailViewController.m in Sources */,
 				388B3F43192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m in Sources */,
