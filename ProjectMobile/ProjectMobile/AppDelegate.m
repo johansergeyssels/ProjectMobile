@@ -38,7 +38,7 @@
 {
     UINavigationController* nav = [tabbar.viewControllers objectAtIndex:index];
     id<IManagedContextObjectContainer> container = [nav.viewControllers objectAtIndex:0]; //memorymenu
-    container.context = self.managedObjectContext;
+    container.context = [self managedObjectContext];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -89,9 +89,9 @@
 // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
 - (NSManagedObjectContext *)managedObjectContext
 {
-    if (_managedObjectContext != nil) {
+    /*if (_managedObjectContext != nil) {
         return _managedObjectContext;
-    }
+    }*/ //johan: nodig om alle tabs te voorzien van een aparte managedobjectcontext
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {

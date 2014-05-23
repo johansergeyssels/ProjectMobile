@@ -12,8 +12,8 @@
 
 @interface Herinnering : NSManagedObject
 
-@property (nonatomic, retain) NSString * fotourl;
 @property (nonatomic, retain) NSString * comment;
+@property (nonatomic, retain) NSData * foto;
 @property (nonatomic, retain) NSString * label;
 
 @end

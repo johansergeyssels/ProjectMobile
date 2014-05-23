@@ -11,8 +11,8 @@
 
 @implementation Herinnering
 
-@dynamic fotourl;
 @dynamic comment;
+@dynamic foto;
 @dynamic label;
 
 @end

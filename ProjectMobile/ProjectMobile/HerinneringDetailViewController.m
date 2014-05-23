@@ -13,6 +13,8 @@
 @end
 
 @implementation HerinneringDetailViewController
+
+//Herinnering Saven
 - (IBAction)save:(id)sender {
     self.herinnering.label = self.LabelText.text;
     
@@ -30,7 +32,9 @@
 - (IBAction)LabelText:(id)sender {
     [sender resignFirstResponder];
 }
-
+- (IBAction)TextVeld:(id)sender {
+    [sender resignFirstResponder];
+}
 
 //foto nemen
 - (IBAction)FotoNemen_btn:(id)sender {
@@ -42,24 +46,22 @@
 //gallerij
 
 - (IBAction)Gallerij_btn:(id)sender {
-    
-        imagePicker.delegate = self;
+    imagePicker.delegate = self;
         
-        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    [self presentModalViewController:imagePicker animated:YES];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
+// voor gallerij en foto nemen
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *image;
-    NSURL *mediaURL;
-    mediaURL = (NSURL *)[info valueForKey:UIImagePickerControllerMediaURL];
-    image = (UIImage *)[info valueForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
     _imageView.image = image;
-    [picker dismissModalViewControllerAnimated:YES];
+    self.herinnering.foto = UIImageJPEGRepresentation(image, 1.0);
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [picker dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -72,57 +74,26 @@
 }
 
 //CAMERA CODE (Apple Dev site)
-- (BOOL) startCameraControllerFromViewController: (UIViewController*) controller
-
-                                   usingDelegate: (id <UIImagePickerControllerDelegate,
-                                                   
-                                                   UINavigationControllerDelegate>) delegate {
-    
-    
+- (BOOL) startCameraControllerFromViewController: (UIViewController*) controller usingDelegate: (id <UIImagePickerControllerDelegate,
+                                                  UINavigationControllerDelegate>) delegate {
     
     if (([UIImagePickerController isSourceTypeAvailable:
-          
-          UIImagePickerControllerSourceTypeCamera] == NO)
-        
-        || (delegate == nil)
-        
-        || (controller == nil))
+          UIImagePickerControllerSourceTypeCamera] == NO) || (delegate == nil) || (controller == nil))
         
         return NO;
     
-    
-    
-    
-    
     UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
-    
     cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
     
+
+    // Displays a control that allows the user to choose picture or movie capture, if both are available:
     
+    cameraUI.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType: UIImagePickerControllerSourceTypeCamera];
     
-    // Displays a control that allows the user to choose picture or
-    
-    // movie capture, if both are available:
-    
-    cameraUI.mediaTypes =
-    
-    [UIImagePickerController availableMediaTypesForSourceType:
-     
-     UIImagePickerControllerSourceTypeCamera];
-    
-    
-    
-    // Hides the controls for moving & scaling pictures, or for
-    
-    // trimming movies. To instead show the controls, use YES.
+    // Hides the controls for moving & scaling pictures, or for trimming movies. To instead show the controls, use YES.
     
     cameraUI.allowsEditing = NO;
-    
-    
-    
     cameraUI.delegate = delegate;
-    
-    
     
     [controller presentModalViewController: cameraUI animated: YES];
     
@@ -130,13 +101,20 @@
     
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // imagePicker
     imagePicker = [[UIImagePickerController alloc] init];
+    
+    // Databank
+    
+    //self.LabelText.text = self.herinnering.label; VOOR TEXTFIELD!!!!!!!
+}
+
+-(void)viewDidAppear:(BOOL)animated {
     self.LabelText.text = self.herinnering.label;
+    self.imageView.image = [[UIImage alloc]initWithData:self.herinnering.foto];
 }
 
 - (void)didReceiveMemoryWarning
@@ -145,19 +123,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [self.context rollback];
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

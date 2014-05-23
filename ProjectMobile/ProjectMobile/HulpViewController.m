@@ -8,12 +8,14 @@
 
 #import "HulpViewController.h"
 #import "AidTableViewCell.h"
+#import "Personen.h"
 
 @interface HulpViewController ()
 
 @property UIColor * firstColor;
 @property UIColor * secondColor;
 @property NSMutableArray *Personen;
+@property NSMutableArray *Info;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -25,6 +27,8 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    
+    [self.tableView reloadData];
 
 }
 
@@ -54,16 +58,19 @@
     [newPersoon setValue: id forKey:@"persoonId"];
     [newPersoon setValue: one forKey:@"importance"];
     
+    //[self.Personen addObject:newPersoon];
+    
     NSError *error = nil;
     // Save the object to persistent store
     if (![self.context save:&error]) {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
-
     
     
     
-        [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    
+    [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    [self.tableView reloadData];
     return NO;
 }
 
@@ -93,7 +100,36 @@
     if (cell == nil) {
         cell = [[AidTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+   
+    CFErrorRef error = nil;
+    ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions (NULL, &error);
     
+    if (addressBookRef != nil) {
+        Personen *persoon = [self.Personen objectAtIndex:indexPath.row];
+        
+        //Het id toevoegen
+        ABRecordID recordID = [[persoon valueForKey:@"persoonId"] integerValue]; // Assign here your ID
+        NSLog(@"%d", recordID);
+        ABRecordRef nxtABRecordRef = ABAddressBookGetPersonWithRecordID (addressBookRef, recordID);
+            
+            
+        //ophalen van de gegevens
+        NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonFirstNameProperty);
+        NSString*lastname = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonLastNameProperty);
+        NSData  *imgData = (__bridge NSData *)ABPersonCopyImageData(nxtABRecordRef);
+        UIImage  *img = [UIImage imageWithData:imgData];
+            
+        [cell.nameLabel setText: name];
+        [cell.familyNameLabel setText:lastname];
+        [cell.image setImage:img];
+        NSLog(@"%@", name);
+        NSLog(@"%@", lastname);
+        
+        CFRelease(addressBookRef);
+    }
+    else {
+        NSLog(@"Could not open address book");
+    }
     
     // check if row is odd or even and set color accordingly
     if (indexPath.row % 2) {
@@ -101,6 +137,8 @@
     }else {
         cell.backgroundColor = self.secondColor;
     }
+    
+    //cell.nameLabel =
     
     return cell;
 }
@@ -118,15 +156,8 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Personen"];
     self.Personen = [[self.context executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
-    NSManagedObject *persoon;
-    for (int i = 1; i < self.Personen.count; i++)
-    {
-        persoon = [self.Personen objectAtIndex:i];
-        NSLog(@"%@",[persoon valueForKey:@"persoonId"]);
-        
-    }
     [self.tableView reloadData];
-    
+ /*
     CFErrorRef error = nil;
     ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions (NULL, &error);
     
@@ -135,24 +166,19 @@
     if (addressBookRef != nil) {
         
         //Loop door de array
-        //for (int i = 1; i < self.Personen.count; i++){
-        //persoon = [self.Personen objectAtIndex:i];
+        for (int i = 0; i < self.Personen.count; i++){
+        NSManagedObject *persoon;
+        persoon = [self.Personen objectAtIndex:i];
         
         //Het id toevoegen
-        ABRecordID recordID = 1; // Assign here your ID
-            //NSLog(@"%@  Log van id ", id);
+        ABRecordID recordID = [[persoon valueForKey:@"persoonId"] integerValue]; // Assign here your ID
+        NSLog(@"%d", recordID);
         ABRecordRef nxtABRecordRef = ABAddressBookGetPersonWithRecordID (addressBookRef, recordID);
+            
+        }
         
         
-        //show name and lastname
-        NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonFirstNameProperty);
-        
-        NSLog(@"%@", name);
-        
-        ABMultiValueRef addressesRef = ABRecordCopyValue(nxtABRecordRef, kABPersonAddressProperty);
-        
-        
-        if (addressesRef != nil) {
+        /*if (addressesRef != nil) {
             for (int index = 0; index < ABMultiValueGetCount(addressesRef); index++) {
                 NSDictionary *addressDictionary = (__bridge_transfer NSDictionary*) ABMultiValueCopyValueAtIndex(addressesRef,index);
                 
@@ -162,11 +188,11 @@
         }
         
         CFRelease(addressBookRef);
-    }
-    //}
+}
     else {
         NSLog(@"Could not open address book");
     }
+  */
     
 }
 
@@ -176,15 +202,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

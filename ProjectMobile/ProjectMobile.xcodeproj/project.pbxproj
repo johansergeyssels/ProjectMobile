@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0406338F192B6798003BF9F6 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406338E192B6798003BF9F6 /* EventViewController.m */; };
 		04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */; };
-		0406339C192B9B33003BF9F6 /* Stap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406339B192B9B33003BF9F6 /* Stap.m */; };
 		0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406339E192B9B34003BF9F6 /* Stappenplan.m */; };
 		040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633A1192B9BFF003BF9F6 /* StappenPlanViewController.m */; };
 		040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633A6192BDDC5003BF9F6 /* MemoryMenuViewController.m */; };
@@ -18,6 +17,7 @@
 		040633F1192D370D003BF9F6 /* EditStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F0192D370D003BF9F6 /* EditStapTableViewCell.m */; };
 		040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */; };
 		040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F6192D6DA8003BF9F6 /* EditStapViewController.m */; };
+		040633FA192E37DB003BF9F6 /* Stap.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F9192E37DB003BF9F6 /* Stap.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -42,8 +42,8 @@
 		388B3F37192DEB3F009FE4C9 /* color1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 388B3F35192DEB3F009FE4C9 /* color1.jpg */; };
 		388B3F38192DEB3F009FE4C9 /* color2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 388B3F36192DEB3F009FE4C9 /* color2.jpg */; };
 		388B3F3A192DEF60009FE4C9 /* white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 388B3F39192DEF60009FE4C9 /* white.jpg */; };
-		388B3F40192E1768009FE4C9 /* Herinnering.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F3F192E1768009FE4C9 /* Herinnering.m */; };
 		388B3F43192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F42192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m */; };
+		388B3F49192E3CBD009FE4C9 /* Herinnering.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F48192E3CBD009FE4C9 /* Herinnering.m */; };
 		4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380C9192BBA9D00A09211 /* Man.jpeg */; };
 		4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CA192BBA9D00A09211 /* Doctor.jpeg */; };
 		4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CB192BBA9D00A09211 /* Son.jpeg */; };
@@ -86,8 +86,6 @@
 		0406338D192B6798003BF9F6 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		0406338E192B6798003BF9F6 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		04063392192B90DB003BF9F6 /* ProjectMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectMobile.xcdatamodel; sourceTree = "<group>"; };
-		0406339A192B9B33003BF9F6 /* Stap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stap.h; sourceTree = "<group>"; };
-		0406339B192B9B33003BF9F6 /* Stap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stap.m; sourceTree = "<group>"; };
 		0406339D192B9B34003BF9F6 /* Stappenplan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stappenplan.h; sourceTree = "<group>"; };
 		0406339E192B9B34003BF9F6 /* Stappenplan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stappenplan.m; sourceTree = "<group>"; };
 		040633A0192B9BFF003BF9F6 /* StappenPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StappenPlanViewController.h; sourceTree = "<group>"; };
@@ -105,6 +103,8 @@
 		040633F3192D371F003BF9F6 /* AddStapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStapTableViewCell.m; sourceTree = "<group>"; };
 		040633F5192D6DA8003BF9F6 /* EditStapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditStapViewController.h; sourceTree = "<group>"; };
 		040633F6192D6DA8003BF9F6 /* EditStapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditStapViewController.m; sourceTree = "<group>"; };
+		040633F8192E37DB003BF9F6 /* Stap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stap.h; sourceTree = "<group>"; };
+		040633F9192E37DB003BF9F6 /* Stap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stap.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -138,10 +138,10 @@
 		388B3F35192DEB3F009FE4C9 /* color1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = color1.jpg; sourceTree = "<group>"; };
 		388B3F36192DEB3F009FE4C9 /* color2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = color2.jpg; sourceTree = "<group>"; };
 		388B3F39192DEF60009FE4C9 /* white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white.jpg; sourceTree = "<group>"; };
-		388B3F3E192E1768009FE4C9 /* Herinnering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Herinnering.h; sourceTree = "<group>"; };
-		388B3F3F192E1768009FE4C9 /* Herinnering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Herinnering.m; sourceTree = "<group>"; };
 		388B3F41192E1E5D009FE4C9 /* HerinneringCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringCollectionViewCell.h; sourceTree = "<group>"; };
 		388B3F42192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringCollectionViewCell.m; sourceTree = "<group>"; };
+		388B3F47192E3CBD009FE4C9 /* Herinnering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Herinnering.h; sourceTree = "<group>"; };
+		388B3F48192E3CBD009FE4C9 /* Herinnering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Herinnering.m; sourceTree = "<group>"; };
 		4C2380C9192BBA9D00A09211 /* Man.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Man.jpeg; sourceTree = "<group>"; };
 		4C2380CA192BBA9D00A09211 /* Doctor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Doctor.jpeg; sourceTree = "<group>"; };
 		4C2380CB192BBA9D00A09211 /* Son.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Son.jpeg; sourceTree = "<group>"; };
@@ -223,15 +223,15 @@
 		04063390192B8BF6003BF9F6 /* Databank */ = {
 			isa = PBXGroup;
 			children = (
-				388B3F3E192E1768009FE4C9 /* Herinnering.h */,
-				388B3F3F192E1768009FE4C9 /* Herinnering.m */,
+				388B3F47192E3CBD009FE4C9 /* Herinnering.h */,
+				388B3F48192E3CBD009FE4C9 /* Herinnering.m */,
 				04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */,
+				040633F8192E37DB003BF9F6 /* Stap.h */,
+				040633F9192E37DB003BF9F6 /* Stap.m */,
 				858C4A32192CB21C00E4CE53 /* Personen.h */,
 				858C4A33192CB21C00E4CE53 /* Personen.m */,
 				0406339D192B9B34003BF9F6 /* Stappenplan.h */,
 				0406339E192B9B34003BF9F6 /* Stappenplan.m */,
-				0406339A192B9B33003BF9F6 /* Stap.h */,
-				0406339B192B9B33003BF9F6 /* Stap.m */,
 			);
 			name = Databank;
 			sourceTree = "<group>";
@@ -621,8 +621,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				858C4A31192CAD2F00E4CE53 /* AidTableViewCell.m in Sources */,
-				388B3F40192E1768009FE4C9 /* Herinnering.m in Sources */,
+				4CB2F61F192CC356007AE252 /* PersoonDetailViewController.m in Sources */,
 				66820326192CCC8400875220 /* JSONHTTPClient.m in Sources */,
+				388B3F49192E3CBD009FE4C9 /* Herinnering.m in Sources */,
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
 				66820327192CCC8400875220 /* JSONModel+networking.m in Sources */,
 				0406338F192B6798003BF9F6 /* EventViewController.m in Sources */,
@@ -644,7 +645,6 @@
 				6682031F192CCC8400875220 /* JSONModel+CoreData.m in Sources */,
 				040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */,
 				388B3F34192CE1F0009FE4C9 /* HerinneringDetailViewController.m in Sources */,
-				0406339C192B9B33003BF9F6 /* Stap.m in Sources */,
 				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,
 				040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */,
 				040633F1192D370D003BF9F6 /* EditStapTableViewCell.m in Sources */,
@@ -657,6 +657,7 @@
 				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
 				858C4A34192CB21C00E4CE53 /* Personen.m in Sources */,
 				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,
+				040633FA192E37DB003BF9F6 /* Stap.m in Sources */,
 				040633EE192CDE2D003BF9F6 /* StappenplanDetailViewController.m in Sources */,
 				388B3F43192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m in Sources */,
 				04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */,

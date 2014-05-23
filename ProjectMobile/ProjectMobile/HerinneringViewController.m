@@ -40,11 +40,11 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [self.context rollback];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Herinnering"];
     NSError *error;
     self.herinneringen = [self.context executeFetchRequest:fetchRequest error:&error];
     [self.collectionView reloadData];
-    NSLog(@"%d", self.herinneringen.count);
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -52,8 +52,8 @@
     if([segue.identifier isEqualToString:@"addHerinnering"])
     {
         HerinneringDetailViewController *dest = segue.destinationViewController;
-        dest.herinnering = [NSEntityDescription insertNewObjectForEntityForName:@"Herinnering" inManagedObjectContext:self.context];
         dest.context = self.context;
+        dest.herinnering = [NSEntityDescription insertNewObjectForEntityForName:@"Herinnering" inManagedObjectContext:self.context];
     }
 }
 
@@ -65,9 +65,10 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HerinneringCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"herinneringCell" forIndexPath:indexPath];
-    Herinnering *herinnering = [self.herinneringen objectAtIndex:indexPath.row];
+    Herinnering *herinnering = [self.herinneringen objectAtIndex:indexPath.item];
     //NSURL *URL = [NSURL URLWithString:herinnering.fotourl];
     //[cell.image setImage:URL];
+    cell.image.image = [[UIImage alloc] initWithData:herinnering.foto];
     return cell;
 }
 
