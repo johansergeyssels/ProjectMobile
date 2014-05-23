@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface EditStapTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UITextView *commentField;
 
 @end
