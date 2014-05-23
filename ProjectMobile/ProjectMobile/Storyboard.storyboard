@@ -588,9 +588,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="FotoNemen_btn:" destination="AaH-NX-XDT" eventType="editingDidEnd" id="2kS-8c-JHG"/>
-                                                    <action selector="TextVeld:" destination="AaH-NX-XDT" eventType="editingDidEnd" id="5Hu-46-dIU"/>
-                                                    <action selector="TextVeld:" destination="AaH-NX-XDT" eventType="editingDidEndOnExit" id="6Ls-RH-PbS"/>
+                                                    <action selector="CommentText:" destination="AaH-NX-XDT" eventType="editingDidEndOnExit" id="8cy-HS-M4T"/>
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QV5-sp-R5j">
@@ -608,8 +606,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="LabelText:" destination="AaH-NX-XDT" eventType="editingDidEndOnExit" id="e79-4b-3oP"/>
-                                                    <action selector="LabelText:" destination="AaH-NX-XDT" eventType="editingDidEnd" id="nd6-4T-LiG"/>
+                                                    <action selector="LabelText:" destination="AaH-NX-XDT" eventType="editingDidEndOnExit" id="8cG-FR-v7D"/>
                                                 </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="vgv-Zg-IMg">
@@ -664,6 +661,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="CommentText" destination="Nd1-If-n9N" id="Ixg-Cf-wia"/>
                         <outlet property="FotoNemen_btn" destination="DvR-tJ-kuy" id="Q28-VM-H8E"/>
                         <outlet property="Gallerij_btn" destination="bJH-jr-pji" id="v6h-s2-KOo"/>
                         <outlet property="LabelText" destination="D7b-Jf-crC" id="gDB-dh-gxp"/>
