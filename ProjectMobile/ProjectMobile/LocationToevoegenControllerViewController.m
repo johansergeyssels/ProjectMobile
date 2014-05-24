@@ -45,4 +45,31 @@
 }
 */
 
+- (IBAction)GemeenteTextField:(id)sender {
+    [sender resignFirstResponder];
+}
+- (IBAction)StraatnaamTextField:(id)sender {
+    [sender resignFirstResponder];
+}
+- (IBAction)HuisnummerTextField:(id)sender {
+    [sender resignFirstResponder];
+}
+- (IBAction)BusTextField:(id)sender {
+    [sender resignFirstResponder];
+}
+- (IBAction)InfoTextField:(id)sender {
+    [sender resignFirstResponder];
+}
+
+
+// Wegnemen
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.GemeenteTextField resignFirstResponder];
+    [self.StraatnaamTextField resignFirstResponder];
+    [self.HuisnummerTextField resignFirstResponder];
+    [self.BusTextField resignFirstResponder];
+    [self.InfoTextField resignFirstResponder];
+}
+
+
 @end
