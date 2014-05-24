@@ -18,6 +18,7 @@
     [super viewDidLoad];
     [self jsonBinnenhalen];
     
+    //https://developer.apple.com/library/ios/documentation/uikit/reference/UILongPressGestureRecognizer_Class/Reference/Reference.html
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]
                                                initWithTarget:self
                                                action:@selector(handleLongPress:)];
@@ -27,10 +28,10 @@
 }
 
 -(void) handleLongPress:(UILongPressGestureRecognizer *)recognizer {
-    NSLog(@"Lang geduwd");
+    if (self.locatieToevoegenKnop.state == UIGestureRecognizerStateBegan){
+        NSLog(@"Begin duwen");
+    }
 }
-
-
 
 //als de gebruiker zijn locatie veranderd, update de mapview
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
