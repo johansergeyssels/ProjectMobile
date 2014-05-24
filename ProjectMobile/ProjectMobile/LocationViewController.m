@@ -18,7 +18,19 @@
     [super viewDidLoad];
     [self jsonBinnenhalen];
     
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]
+                                               initWithTarget:self
+                                               action:@selector(handleLongPress:)];
+    longPress.minimumPressDuration = 2.0;
+    [self.locatieToevoegenKnop addGestureRecognizer:longPress];
+    
 }
+
+-(void) handleLongPress:(UILongPressGestureRecognizer *)recognizer {
+    NSLog(@"Lang geduwd");
+}
+
+
 
 //als de gebruiker zijn locatie veranderd, update de mapview
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation

@@ -11,12 +11,13 @@
 #import <MapKit/MapKit.h>
 #import "IManagedContextObjectContainer.h"
 
-@interface LocationViewController : UIViewController <MKMapViewDelegate, MKAnnotation, IManagedContextObjectContainer>
+@interface LocationViewController : UIViewController <MKMapViewDelegate, MKAnnotation, IManagedContextObjectContainer, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property NSManagedObjectContext* context;
 
 -(BOOL) jsonBinnenhalen;
 
+@property (weak, nonatomic) IBOutlet UIButton *locatieToevoegenKnop;
 @end
 

@@ -875,7 +875,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Locaties" id="JFb-1Q-N5c">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="EGf-TZ-14L">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="HFx-hC-sfI">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" restorationIdentifier="toevoegenID" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="HFx-hC-sfI">
                                 <rect key="frame" x="282" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
@@ -888,6 +888,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="locatieToevoegenKnop" destination="HFx-hC-sfI" id="kND-1f-Mmt"/>
                         <outlet property="mapView" destination="3vK-VF-DHe" id="7qb-Fm-aWg"/>
                     </connections>
                 </viewController>
