@@ -1033,6 +1033,29 @@
             </objects>
             <point key="canvasLocation" x="1914" y="1820"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eLw-Zx-Uqk">
+            <objects>
+                <viewController storyboardIdentifier="testVC" id="ezJ-FZ-ftt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="koU-ab-SmN">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color1.jpg" id="0Yi-iA-pej">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H3I-C8-eBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="2509"/>
+        </scene>
         <!--Hulp View Controller - Hulp-->
         <scene sceneID="xCI-q4-xf5">
             <objects>
