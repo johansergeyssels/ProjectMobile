@@ -21,6 +21,9 @@
 		040633FD192F6907003BF9F6 /* ShowStappenplanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */; };
 		04063400192F7414003BF9F6 /* ShowStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */; };
 		0406340219314B3A003BF9F6 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0406340119314B3A003BF9F6 /* EventKit.framework */; };
+		0406340519322D44003BF9F6 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406340419322D44003BF9F6 /* EventDetailViewController.m */; };
+		0406340819324036003BF9F6 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406340719324036003BF9F6 /* EventTableViewCell.m */; };
+		0406340B19325DE5003BF9F6 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406340A19325DE5003BF9F6 /* Event.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -113,6 +116,12 @@
 		040633FE192F7414003BF9F6 /* ShowStapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowStapTableViewCell.h; sourceTree = "<group>"; };
 		040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStapTableViewCell.m; sourceTree = "<group>"; };
 		0406340119314B3A003BF9F6 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		0406340319322D44003BF9F6 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		0406340419322D44003BF9F6 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
+		0406340619324036003BF9F6 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		0406340719324036003BF9F6 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		0406340919325DE5003BF9F6 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		0406340A19325DE5003BF9F6 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -273,6 +282,12 @@
 			children = (
 				0406338D192B6798003BF9F6 /* EventViewController.h */,
 				0406338E192B6798003BF9F6 /* EventViewController.m */,
+				0406340319322D44003BF9F6 /* EventDetailViewController.h */,
+				0406340419322D44003BF9F6 /* EventDetailViewController.m */,
+				0406340619324036003BF9F6 /* EventTableViewCell.h */,
+				0406340719324036003BF9F6 /* EventTableViewCell.m */,
+				0406340919325DE5003BF9F6 /* Event.h */,
+				0406340A19325DE5003BF9F6 /* Event.m */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -657,12 +672,14 @@
 				388B3F31192CDA05009FE4C9 /* HerinneringViewController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				4CC96C78192F4A5300E43D05 /* Fotolijst.m in Sources */,
+				0406340819324036003BF9F6 /* EventTableViewCell.m in Sources */,
 				38EF0D6E192F5C7C003C3EB3 /* HerinneringOnTapViewController.m in Sources */,
 				4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */,
 				66820323192CCC8400875220 /* JSONModelError.m in Sources */,
 				040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */,
 				6682031F192CCC8400875220 /* JSONModel+CoreData.m in Sources */,
 				040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */,
+				0406340B19325DE5003BF9F6 /* Event.m in Sources */,
 				388B3F34192CE1F0009FE4C9 /* HerinneringDetailViewController.m in Sources */,
 				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,
 				040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */,
@@ -683,6 +700,7 @@
 				388B3F43192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m in Sources */,
 				04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */,
 				85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */,
+				0406340519322D44003BF9F6 /* EventDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
