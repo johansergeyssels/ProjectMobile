@@ -34,13 +34,16 @@
 -(void) handleLongPress:(UILongPressGestureRecognizer *)recognizer {
     if (self.locatieToevoegenKnop.state == UIGestureRecognizerStateBegan){
         NSLog(@"Begin duwen");
+        
+        //als de popover is aangemaakt
         if(self._popover) {
+            //
             [self._popover dismissPopoverAnimated:YES];
             self._popover = nil;
             return;
         }
         UIViewController *testVC = [self.storyboard instantiateViewControllerWithIdentifier:@"testVC"];
-        testVC.contentSizeForViewInPopover = CGSizeMake(200, 200);
+        testVC.contentSizeForViewInPopover = CGSizeMake(200, 100);
         self._popover = [[UIPopoverController alloc] initWithContentViewController:testVC];
         self._popover.delegate = self;
         [self._popover presentPopoverFromBarButtonItem:recognizer permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
