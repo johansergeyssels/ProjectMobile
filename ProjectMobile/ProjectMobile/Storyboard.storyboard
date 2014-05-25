@@ -857,30 +857,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titel event" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xsH-QT-8So">
-                                                    <rect key="frame" x="84" y="15" width="233" height="21"/>
+                                                    <rect key="frame" x="110" y="15" width="197" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="locatie event" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sKo-PC-kWD">
-                                                    <rect key="frame" x="84" y="44" width="233" height="21"/>
+                                                    <rect key="frame" x="110" y="44" width="197" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="begin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D7C-Mu-L7O">
-                                                    <rect key="frame" x="20" y="15" width="56" height="21"/>
+                                                    <rect key="frame" x="20" y="15" width="82" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="end" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XFk-uE-bUd">
-                                                    <rect key="frame" x="20" y="44" width="56" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -888,7 +881,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="beginLabel" destination="D7C-Mu-L7O" id="98U-Av-1Xu"/>
-                                            <outlet property="endLabel" destination="XFk-uE-bUd" id="Zem-49-4kt"/>
                                             <outlet property="locationLabel" destination="sKo-PC-kWD" id="LwD-e2-RSb"/>
                                             <outlet property="titleLabel" destination="xsH-QT-8So" id="83a-8b-1Wc"/>
                                             <segue destination="DaX-co-dgT" kind="push" identifier="gotoEventDetails" id="r0w-tH-JbO"/>
@@ -919,13 +911,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sTb-Bd-ZOd">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sTb-Bd-ZOd">
                                 <rect key="frame" x="0.0" y="255" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80392156859999997" green="0.4431372549" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="Toevoegen in agenda">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="addEventToAgenda:" destination="DaX-co-dgT" eventType="touchUpInside" id="qD6-cb-gwu"/>
@@ -978,6 +973,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PDM-da-xaJ"/>
                     <connections>
+                        <outlet property="agendaButton" destination="sTb-Bd-ZOd" id="dCi-uh-jW1"/>
                         <outlet property="beginLabel" destination="CYq-L9-DjB" id="trO-lc-S8f"/>
                         <outlet property="eindLabel" destination="inJ-Oq-XMH" id="4dY-26-yAH"/>
                         <outlet property="locationLabel" destination="cLJ-b5-z2y" id="C2T-B2-nEl"/>

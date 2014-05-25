@@ -59,12 +59,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd/MM/yyyy"];
+    
     EventTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"eventCell" forIndexPath:indexPath];
     Event *event = [self.events objectAtIndex:indexPath.row];
     cell.titleLabel.text = event.title;
     cell.locationLabel.text = event.location;
-    cell.beginLabel.text = [event.beginDate description];
-    cell.endLabel.text = [event.endDate description];
+    cell.beginLabel.text = [dateFormatter stringFromDate:event.beginDate];
     
     if (indexPath.row % 2) {
         cell.backgroundColor = self.firstColor;

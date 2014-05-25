@@ -10,26 +10,22 @@
 #import <EventKit/EventKit.h>
 
 @interface EventDetailViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *agendaButton;
+@property EKEventStore *store;
 @end
 
 @implementation EventDetailViewController
 - (IBAction)addEventToAgenda:(id)sender {
-    EKEventStore *store = [[EKEventStore alloc] init];
-    [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error)
-    {
-        if(granted)
-        {
-            EKEvent *event = [EKEvent eventWithEventStore:store];
-            [event setTitle:self.event.title];
-            [event setStartDate:self.event.beginDate];
-            [event setEndDate:self.event.endDate];
-            EKCalendar *calendar = [[store calendarsForEntityType:EKEntityTypeEvent] objectAtIndex:0];
-            [event setCalendar:calendar];
-            NSError *errorSave;
-            [store saveEvent:event span:EKSpanThisEvent commit:YES error:&errorSave];
-        }
-    }];
+    EKEvent *event = [EKEvent eventWithEventStore:self.store];
+    [event setTitle:self.event.title];
+    [event setStartDate:self.event.beginDate];
+    [event setEndDate:self.event.endDate];
+    EKCalendar *calendar = [[self.store calendarsForEntityType:EKEntityTypeEvent] objectAtIndex:0];
+    [event setCalendar:calendar];
+    NSError *errorSave;
+    [self.store saveEvent:event span:EKSpanThisEvent commit:YES error:&errorSave];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"opgeslagen" message:@"Het event is toegevoegd aan uw agenda" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (IBAction)addEventLocation:(id)sender {
@@ -48,7 +44,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.store = [[EKEventStore alloc] init];
+    
+    [self.store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error)
+     {
+         if(granted)
+         {
+             [self.agendaButton setEnabled:YES];
+         }
+     }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,10 +63,12 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"hh:mm dd/MM/yyyy"];
     self.titleLabel.text = self.event.title;
     self.locationLabel.text = self.event.location;
-    self.beginLabel.text = [self.event.beginDate description];
-    self.eindLabel.text = [self.event.endDate description];
+    self.beginLabel.text = [NSString stringWithFormat:@"Begint om %@",[dateFormatter stringFromDate:self.event.beginDate]];
+    self.eindLabel.text = [NSString stringWithFormat:@"Eindigt om %@",[dateFormatter stringFromDate:self.event.beginDate]];
 }
 
 @end
