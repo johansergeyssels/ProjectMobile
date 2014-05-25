@@ -57,7 +57,7 @@
         dest.herinnering = [NSEntityDescription insertNewObjectForEntityForName:@"Herinnering" inManagedObjectContext:self.context];
     }
     
-    else if([segue.identifier isEqualToString:@"wijzigHerinnering"])
+    else if([segue.identifier isEqualToString:@"detailHerinnering"])
     {
         HerinneringOnTapViewController *dest = segue.destinationViewController;
         NSArray *array = [self.collectionView indexPathsForSelectedItems];

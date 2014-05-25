@@ -607,7 +607,7 @@
                                         <size key="customSize" width="100" height="100"/>
                                         <connections>
                                             <outlet property="image" destination="Haw-9w-xEh" id="1fs-dZ-pCm"/>
-                                            <segue destination="LWa-ON-3A4" kind="push" identifier="wijzigHerinnering" id="dAh-Vg-vVb"/>
+                                            <segue destination="LWa-ON-3A4" kind="push" identifier="detailHerinnering" id="dAh-Vg-vVb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -814,7 +814,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AaH-NX-XDT" kind="push" id="KXY-ff-Uvm"/>
+                                    <segue destination="AaH-NX-XDT" kind="push" identifier="wijzigHerinnering" id="KXY-ff-Uvm"/>
                                 </connections>
                             </button>
                         </barButtonItem>
