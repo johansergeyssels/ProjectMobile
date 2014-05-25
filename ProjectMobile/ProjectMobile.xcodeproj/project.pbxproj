@@ -20,6 +20,7 @@
 		040633FA192E37DB003BF9F6 /* Stap.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F9192E37DB003BF9F6 /* Stap.m */; };
 		040633FD192F6907003BF9F6 /* ShowStappenplanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */; };
 		04063400192F7414003BF9F6 /* ShowStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */; };
+		0406340219314B3A003BF9F6 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0406340119314B3A003BF9F6 /* EventKit.framework */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -111,6 +112,7 @@
 		040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStappenplanViewController.m; sourceTree = "<group>"; };
 		040633FE192F7414003BF9F6 /* ShowStapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowStapTableViewCell.h; sourceTree = "<group>"; };
 		040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStapTableViewCell.m; sourceTree = "<group>"; };
+		0406340119314B3A003BF9F6 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0406340219314B3A003BF9F6 /* EventKit.framework in Frameworks */,
 				04E96B23192A0FE200EEDFCF /* CoreData.framework in Frameworks */,
 				665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */,
 				665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */,
@@ -390,6 +393,7 @@
 		04E96B1B192A0FE200EEDFCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0406340119314B3A003BF9F6 /* EventKit.framework */,
 				665241DD192B5E2E00484AC1 /* MapKit.framework */,
 				665241DB192B5E2500484AC1 /* CoreLocation.framework */,
 				04E96B1C192A0FE200EEDFCF /* Foundation.framework */,

@@ -7,9 +7,10 @@
 //
 
 #import "EventViewController.h"
+#import <EventKit/EventKit.h>
 
 @interface EventViewController ()
-
+@property EKEventStore *store;
 @end
 
 @implementation EventViewController
@@ -27,6 +28,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.store = [[EKEventStore alloc] init];
+    [self.store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
+        // handle access here
+        EKEvent *event = [EKEvent eventWithEventStore:self.store];
+        [event setTitle:@"TestEVent"];
+        [event setStartDate:[NSDate date]];
+        [event setEndDate:[NSDate date]];
+        //NSCalendar *calendar = [NSCalendar currentCalendar];
+        EKCalendar *calendar = [[self.store calendarsForEntityType:EKEntityTypeEvent] objectAtIndex:0];
+        
+        [event setCalendar:calendar];
+        NSError *errorSave;
+        [self.store saveEvent:event span:EKSpanThisEvent commit:YES error:&errorSave];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,16 +49,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
