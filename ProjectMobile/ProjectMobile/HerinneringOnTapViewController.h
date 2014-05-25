@@ -13,8 +13,10 @@
 @interface HerinneringOnTapViewController : UIViewController<IManagedContextObjectContainer>
 
 @property NSManagedObjectContext* context;
+
 @property (weak, nonatomic) IBOutlet UILabel *Label;
 @property (weak, nonatomic) IBOutlet UITextView *commentText;
+@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
 @property Herinnering *herinnering;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end

@@ -25,8 +25,9 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    self.imageView.image = [[UIImage alloc]initWithData: self.herinnering.foto];
+    self.detailImage.image = [[UIImage alloc]initWithData: self.herinnering.foto];
     self.Label.text = self.herinnering.label;
+    self.commentText.text = self.herinnering.comment;
     
 }
 
