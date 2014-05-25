@@ -30,6 +30,22 @@
 -(void) handleLongPress:(UILongPressGestureRecognizer *)recognizer {
     if (self.locatieToevoegenKnop.state == UIGestureRecognizerStateBegan){
         NSLog(@"Begin duwen");
+        
+        if(_locationAddPicker == nil) {
+            _locationAddPicker = [[LocationViewController alloc] init];
+            //_locationAddPicker = [[LocationViewController alloc] initWithStyle: UITableViewStylePlain];
+            //_locationAddPicker.delegate = self;
+            
+        }
+        if(_locationAddPickerPopover == nil) {
+            //de locatie picker popover wordt niet getoond --> tonen
+            _locationAddPickerPopover = [[UIPopoverController alloc] initWithContentViewController:_locationAddPicker];
+            [_locationAddPickerPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *) self.locatieToevoegenKnop permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+        } else {
+            //de popover wordt getoond --> verbergen
+            [_locationAddPickerPopover dismissPopoverAnimated:YES];
+            _locationAddPickerPopover = nil;
+        }
     }
 }
 
@@ -142,6 +158,16 @@
 {
     [self.context rollback];
 }
+
+/*
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:<#animated#>];
+    
+    //De UI update als er gekozen wordt
+    [self refreshUI];
+    
+}
+*/
 
 
 

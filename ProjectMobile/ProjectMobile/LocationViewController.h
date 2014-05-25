@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "IManagedContextObjectContainer.h"
+#import "LocationAddPicker.h"
 
 @interface LocationViewController : UIViewController <MKMapViewDelegate, MKAnnotation, IManagedContextObjectContainer, UIGestureRecognizerDelegate>
 
@@ -18,6 +18,12 @@
 
 -(BOOL) jsonBinnenhalen;
 
+//knop voor toe te voegen (long pressure detectie)
 @property (weak, nonatomic) IBOutlet UIButton *locatieToevoegenKnop;
+//voor de popup
+@property (nonatomic, strong) UIPopoverController *popover;
+@property (nonatomic, strong) LocationAddPicker *locationAddPicker;
+@property (nonatomic, strong) UIPopoverController *locationAddPickerPopover;
+
 @end
 
