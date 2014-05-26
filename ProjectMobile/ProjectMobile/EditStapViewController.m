@@ -21,8 +21,16 @@
 }
 
 - (IBAction)takePicture:(id)sender {
-    [self.picker setSourceType: UIImagePickerControllerSourceTypeCamera];
-    [self presentViewController:self.picker animated:YES completion:nil];
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
+    {
+        [self.picker setSourceType: UIImagePickerControllerSourceTypeCamera];
+        [self presentViewController:self.picker animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"camera" message:@"Er is geen camera beschikbaar" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 - (IBAction)takeExistingPicture:(id)sender {
