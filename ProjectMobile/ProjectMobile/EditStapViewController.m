@@ -40,7 +40,6 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    //[self.imageView setImage:[info objectForKeyedSubscript:UIImagePickerControllerOriginalImage]];
     self.step.foto = UIImageJPEGRepresentation([info objectForKeyedSubscript:UIImagePickerControllerOriginalImage], 1.0);
     [self dismissViewControllerAnimated:YES completion:nil];
 }

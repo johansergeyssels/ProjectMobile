@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Stap.h"
 
-@interface EditStapViewController : UIViewController<UIImagePickerControllerDelegate, UITextViewDelegate>
+@interface EditStapViewController : UIViewController<UIImagePickerControllerDelegate, UITextViewDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *stepText;
 @property Stap *step;
 @property UIImagePickerController *picker;
