@@ -28,9 +28,18 @@
 
 //foto nemen
 - (IBAction)FotoNemen_btn:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
+    {
     _imageView.image = nil;
     [self startCameraControllerFromViewController: self
      usingDelegate: self];
+    }
+    
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Camera" message:@"Er is geen camera beschikbaar." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        
+        [alert show];
+    }
 }
 
 //gallerij
