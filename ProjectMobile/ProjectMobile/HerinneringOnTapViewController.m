@@ -26,6 +26,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [self.context rollback];
     self.detailImage.image = [[UIImage alloc]initWithData: self.herinnering.foto];
     self.Label.text = self.herinnering.label;
     self.commentText.text = self.herinnering.comment;
@@ -48,6 +49,8 @@
 {
     HerinneringDetailViewController *dest = segue.destinationViewController;
     dest.herinnering = self.herinnering;
+    dest.context = self.context;
+    
 }
 
 @end
