@@ -12,8 +12,8 @@
 
 @interface HulpViewController ()
 
-@property UIColor * firstColor;
-@property UIColor * secondColor;
+@property UIColor * eersteKleur;
+@property UIColor * tweedeKleur;
 @property NSMutableArray *Personen;
 @property NSMutableArray *Numbers;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -27,15 +27,15 @@
     return [self.Personen count];
 }
 
+
+//
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AidTableViewCell *selectedCell = [self.tableView cellForRowAtIndexPath:indexPath];
-    self.tele = selectedCell.telefoon;
+    AidTableViewCell *geselecteerdeCell = [self.tableView cellForRowAtIndexPath:indexPath];
+    self.tele = geselecteerdeCell.telefoon;
     NSLog(@"%@", self.tele);
-}
-
-- (IBAction)bellen:(id)sender {
-    UIAlertView *calert;
+    
+    UIAlertView *telefoonMelding;
     NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",self.tele]];
     
     if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
@@ -44,9 +44,11 @@
     }
     else
     {
-        calert = [[UIAlertView alloc]initWithTitle:@"Alarm" message:@"Kan contact niet bellen" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        [calert show];
+        telefoonMelding = [[UIAlertView alloc]initWithTitle:@"Kan Contact niet opbellen" message:@"Service om contact te bellen is niet beschikbaar" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [telefoonMelding show];
     }
+
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -74,11 +76,11 @@
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person {
     
-    NSPredicate *valuePredicate = [NSPredicate predicateWithFormat:@"self.persoonId == %d",ABRecordGetRecordID(person)];
+    NSPredicate *idPredicate = [NSPredicate predicateWithFormat:@"self.persoonId == %d",ABRecordGetRecordID(person)];
     
-    if ([[self.Personen filteredArrayUsingPredicate:valuePredicate] count]!=0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Contact reeds toegevoegd" message:@"U kan een contact maar 1 keer toevoegen in de hulplijst" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
+    if ([[self.Personen filteredArrayUsingPredicate:idPredicate] count]!=0) {
+        UIAlertView *melding = [[UIAlertView alloc] initWithTitle:@"Contact reeds toegevoegd" message:@"U kan een contact maar 1 keer toevoegen in de hulplijst" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [melding show];
         
         [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
     }
@@ -156,17 +158,17 @@
         UIImage  *img = [UIImage imageWithData:imgData];
             //Telefoonnummers
         ABMultiValueRef phoneNumbers = ABRecordCopyValue(nxtABRecordRef, kABPersonPhoneProperty);
-        NSString* phone = nil;
+        NSString* telefoonnummer = nil;
         if (ABMultiValueGetCount(phoneNumbers) > 0) {
-           phone = (__bridge_transfer NSString*) ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
+           telefoonnummer = (__bridge_transfer NSString*) ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
         } else {
-            phone = @"[None]";
+            telefoonnummer = @"[None]";
         }
-        NSString *tel = phone;
-        NSLog(@"%@", phone);
+        NSString *tel = telefoonnummer;
+        NSLog(@"%@", telefoonnummer);
         cell.telefoon = tel;
-        [cell.nameLabel setText: name];
-        [cell.familyNameLabel setText:lastname];
+        [cell.naamLabel setText: name];
+        [cell.FamilienaamLabel setText:lastname];
         [cell.image setImage:img];
         NSLog(@"%@", name);
         NSLog(@"%@", lastname);
@@ -174,14 +176,14 @@
         CFRelease(addressBookRef);
     }
     else {
-        NSLog(@"Could not open address book");
+        NSLog(@"Contacten kunnen niet worden geopend.");
     }
     
     // nakijken of het rijnummer even of oneven is. aan de hand van dit de kleur veranderen van de cell.
     if (indexPath.row % 2) {
-        cell.backgroundColor = self.firstColor;
+        cell.backgroundColor = self.eersteKleur;
     }else {
-        cell.backgroundColor = self.secondColor;
+        cell.backgroundColor = self.tweedeKleur;
     }
     
     return cell;
@@ -192,8 +194,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.firstColor = [UIColor colorWithRed:183/255.0f green:80/255.0f blue:23/255.0f alpha:1.0f];
-    self.secondColor = [UIColor colorWithRed:179/255.0f green:98/255.0f blue:0/255.0f alpha:1.0f];
+    self.eersteKleur = [UIColor colorWithRed:183/255.0f green:80/255.0f blue:23/255.0f alpha:1.0f];
+    self.tweedeKleur = [UIColor colorWithRed:179/255.0f green:98/255.0f blue:0/255.0f alpha:1.0f];
     
 }
 

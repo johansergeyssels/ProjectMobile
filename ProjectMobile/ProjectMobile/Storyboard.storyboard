@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VJW-wj-UZg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VJW-wj-UZg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -1032,22 +1032,16 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zPE-Pl-Fku">
-                                                    <rect key="frame" x="245" y="23" width="83" height="33"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tel iphone" id="QIX-YX-5n4">
+                                                    <rect key="frame" x="279" y="30" width="21" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="bellen:" destination="xgg-r0-IhW" eventType="touchUpInside" id="DiM-fb-Chg"/>
-                                                    </connections>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="familyNameLabel" destination="fww-eo-AO4" id="meU-rb-bGH"/>
+                                            <outlet property="FamilienaamLabel" destination="fww-eo-AO4" id="aeA-RH-P4c"/>
                                             <outlet property="image" destination="J8z-ol-Z0d" id="Qr8-JO-ZBL"/>
-                                            <outlet property="nameLabel" destination="loK-YJ-h16" id="RJq-Aj-jGu"/>
+                                            <outlet property="naamLabel" destination="loK-YJ-h16" id="cKR-T8-tYV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1213,6 +1207,7 @@
         <image name="home_phone.png" width="322" height="311"/>
         <image name="invoerveld_03" width="521" height="78"/>
         <image name="locatietoevoegen" width="641" height="1136"/>
+        <image name="tel iphone" width="94" height="106"/>
         <image name="white.jpg" width="270" height="84"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
