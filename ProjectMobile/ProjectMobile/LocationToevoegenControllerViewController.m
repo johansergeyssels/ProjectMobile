@@ -7,12 +7,22 @@
 //
 
 #import "LocationToevoegenControllerViewController.h"
+#import "Locatie.h"
 
 @interface LocationToevoegenControllerViewController ()
 
 @end
 
 @implementation LocationToevoegenControllerViewController
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,17 +43,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)GemeenteTextField:(id)sender {
     [sender resignFirstResponder];
@@ -72,4 +71,6 @@
 }
 
 
+- (IBAction)OpslaanButton:(id)sender {
+}
 @end

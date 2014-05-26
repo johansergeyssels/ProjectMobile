@@ -10,8 +10,8 @@
 
 @interface AidTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *image;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *familyNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *naamLabel;
+@property (strong, nonatomic) IBOutlet UILabel *FamilienaamLabel;
 @property (strong,nonatomic) IBOutlet NSString *telefoon;
 
 @end

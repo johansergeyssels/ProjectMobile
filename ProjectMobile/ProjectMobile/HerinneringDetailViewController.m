@@ -14,20 +14,7 @@
 
 @implementation HerinneringDetailViewController
 
-//Herinnering Saven
-- (IBAction)save:(id)sender {
-    self.herinnering.label = self.LabelText.text;
-    self.herinnering.comment = self.CommentText.text;
-    
-    NSError *error;
-    if ([self.context save:&error]) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-    else
-    {
-        //error tonen
-    }
-}
+
 
 //Hide keyboard
 
@@ -41,16 +28,24 @@
 
 //foto nemen
 - (IBAction)FotoNemen_btn:(id)sender {
-    _imageView.image = nil;
-    [self startCameraControllerFromViewController: self
-     usingDelegate: self];
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
+    {
+        [self updateHerinnering];
+        _imageView.image = nil;
+        [self startCameraControllerFromViewController: self usingDelegate: self];
+    }
+    
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Camera" message:@"Er is geen camera beschikbaar." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 //gallerij
 
 - (IBAction)Gallerij_btn:(id)sender {
+    [self updateHerinnering];
     imagePicker.delegate = self;
-        
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
@@ -115,6 +110,26 @@
     self.LabelText.text = self.herinnering.label;
     self.CommentText.text = self.herinnering.comment;
     self.imageView.image = [[UIImage alloc]initWithData:self.herinnering.foto];
+}
+
+- (void) updateHerinnering
+{
+    self.herinnering.label = self.LabelText.text;
+    self.herinnering.comment = self.CommentText.text;
+}
+
+//Herinnering Saven
+- (IBAction)save:(id)sender {
+    [self updateHerinnering];
+    
+    NSError *error;
+    if ([self.context save:&error]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else
+    {
+        //error tonen
+    }
 }
 
 - (void)didReceiveMemoryWarning
