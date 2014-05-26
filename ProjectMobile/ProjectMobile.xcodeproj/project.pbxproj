@@ -55,7 +55,8 @@
 		4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8BD976192B886D003F00D9 /* PersonenViewController.m */; };
 		4CC96C75192F443C00E43D05 /* PersoonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC96C74192F443C00E43D05 /* PersoonDetailViewController.m */; };
 		4CC96C78192F4A5300E43D05 /* Fotolijst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC96C77192F4A5300E43D05 /* Fotolijst.m */; };
-		66000AF81930F4A7004ED1BE /* LocationAddPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 66000AF71930F4A7004ED1BE /* LocationAddPicker.m */; };
+		66000AFB1931F059004ED1BE /* UIPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66000AFA1931F059004ED1BE /* UIPopoverController.m */; };
+		66000AFE1932175D004ED1BE /* Locatie.m in Sources */ = {isa = PBXBuildFile; fileRef = 66000AFD1932175D004ED1BE /* Locatie.m */; };
 		665241D6192B48C700484AC1 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665241D5192B48C700484AC1 /* LocationViewController.m */; };
 		665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DB192B5E2500484AC1 /* CoreLocation.framework */; };
 		665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DD192B5E2E00484AC1 /* MapKit.framework */; };
@@ -169,8 +170,10 @@
 		4CC96C74192F443C00E43D05 /* PersoonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersoonDetailViewController.m; sourceTree = "<group>"; };
 		4CC96C76192F4A5300E43D05 /* Fotolijst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fotolijst.h; path = ../Fotolijst.h; sourceTree = "<group>"; };
 		4CC96C77192F4A5300E43D05 /* Fotolijst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fotolijst.m; path = ../Fotolijst.m; sourceTree = "<group>"; };
-		66000AF61930F4A7004ED1BE /* LocationAddPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationAddPicker.h; path = ../LocationAddPicker.h; sourceTree = "<group>"; };
-		66000AF71930F4A7004ED1BE /* LocationAddPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationAddPicker.m; path = ../LocationAddPicker.m; sourceTree = "<group>"; };
+		66000AF91931F059004ED1BE /* UIPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPopoverController.h; sourceTree = "<group>"; };
+		66000AFA1931F059004ED1BE /* UIPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopoverController.m; sourceTree = "<group>"; };
+		66000AFC1932175D004ED1BE /* Locatie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locatie.h; sourceTree = "<group>"; };
+		66000AFD1932175D004ED1BE /* Locatie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locatie.m; sourceTree = "<group>"; };
 		665241D4192B48C700484AC1 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		665241D5192B48C700484AC1 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		665241DB192B5E2500484AC1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -249,6 +252,8 @@
 				388B3F47192E3CBD009FE4C9 /* Herinnering.h */,
 				388B3F48192E3CBD009FE4C9 /* Herinnering.m */,
 				04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */,
+				66000AFC1932175D004ED1BE /* Locatie.h */,
+				66000AFD1932175D004ED1BE /* Locatie.m */,
 				040633F8192E37DB003BF9F6 /* Stap.h */,
 				040633F9192E37DB003BF9F6 /* Stap.m */,
 				858C4A32192CB21C00E4CE53 /* Personen.h */,
@@ -318,10 +323,10 @@
 		04520A1C192A6C060068993A /* Locations */ = {
 			isa = PBXGroup;
 			children = (
-				66000AF61930F4A7004ED1BE /* LocationAddPicker.h */,
-				66000AF71930F4A7004ED1BE /* LocationAddPicker.m */,
 				665241D4192B48C700484AC1 /* LocationViewController.h */,
 				665241D5192B48C700484AC1 /* LocationViewController.m */,
+				66000AF91931F059004ED1BE /* UIPopoverController.h */,
+				66000AFA1931F059004ED1BE /* UIPopoverController.m */,
 				668202F6192C992700875220 /* Toilet.h */,
 				668202F7192C992700875220 /* Toilet.m */,
 				668202CC192B9CA600875220 /* LocationToevoegenControllerViewController.h */,
@@ -657,6 +662,7 @@
 				388B3F49192E3CBD009FE4C9 /* Herinnering.m in Sources */,
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
 				66820327192CCC8400875220 /* JSONModel+networking.m in Sources */,
+				66000AFE1932175D004ED1BE /* Locatie.m in Sources */,
 				0406338F192B6798003BF9F6 /* EventViewController.m in Sources */,
 				668202FD192CA84C00875220 /* ToiletLocaties.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
@@ -683,6 +689,7 @@
 				388B3F34192CE1F0009FE4C9 /* HerinneringDetailViewController.m in Sources */,
 				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,
 				040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */,
+				66000AFB1931F059004ED1BE /* UIPopoverController.m in Sources */,
 				040633F1192D370D003BF9F6 /* EditStapTableViewCell.m in Sources */,
 				66820322192CCC8400875220 /* JSONModelClassProperty.m in Sources */,
 				4CC96C75192F443C00E43D05 /* PersoonDetailViewController.m in Sources */,
@@ -690,7 +697,6 @@
 				66820329192CCC8400875220 /* JSONValueTransformer.m in Sources */,
 				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
 				66820328192CCC8400875220 /* JSONKeyMapper.m in Sources */,
-				66000AF81930F4A7004ED1BE /* LocationAddPicker.m in Sources */,
 				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
 				858C4A34192CB21C00E4CE53 /* Personen.m in Sources */,
 				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,

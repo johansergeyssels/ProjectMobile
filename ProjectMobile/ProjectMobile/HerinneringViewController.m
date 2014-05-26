@@ -65,8 +65,6 @@
         dest.herinnering = [self.herinneringen objectAtIndex:indexpath.item];
         dest.context = self.context;
     }
-    
-    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

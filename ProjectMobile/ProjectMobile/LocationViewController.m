@@ -10,6 +10,10 @@
 #import "Toilet.h"
 #import "ToiletLocaties.h"
 
+@interface LocationViewController()
+@property (nonatomic, strong) UIPopoverController *_popover;
+@end
+
 @implementation LocationViewController
 
 //als de view geladen is
@@ -31,22 +35,23 @@
     if (self.locatieToevoegenKnop.state == UIGestureRecognizerStateBegan){
         NSLog(@"Begin duwen");
         
-        if(_locationAddPicker == nil) {
-            _locationAddPicker = [[LocationViewController alloc] init];
-            //_locationAddPicker = [[LocationViewController alloc] initWithStyle: UITableViewStylePlain];
-            //_locationAddPicker.delegate = self;
-            
+        //als de popover is aangemaakt
+        if(self._popover) {
+            //
+            [self._popover dismissPopoverAnimated:YES];
+            self._popover = nil;
+            return;
         }
-        if(_locationAddPickerPopover == nil) {
-            //de locatie picker popover wordt niet getoond --> tonen
-            _locationAddPickerPopover = [[UIPopoverController alloc] initWithContentViewController:_locationAddPicker];
-            [_locationAddPickerPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *) self.locatieToevoegenKnop permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
-        } else {
-            //de popover wordt getoond --> verbergen
-            [_locationAddPickerPopover dismissPopoverAnimated:YES];
-            _locationAddPickerPopover = nil;
-        }
+        UIViewController *testVC = [self.storyboard instantiateViewControllerWithIdentifier:@"testVC"];
+        testVC.contentSizeForViewInPopover = CGSizeMake(200, 100);
+        self._popover = [[UIPopoverController alloc] initWithContentViewController:testVC];
+        self._popover.delegate = self;
+        [self._popover presentPopoverFromBarButtonItem:recognizer permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
     }
+}
+
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    self._popover = nil;
 }
 
 //als de gebruiker zijn locatie veranderd, update de mapview
@@ -158,16 +163,6 @@
 {
     [self.context rollback];
 }
-
-/*
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:<#animated#>];
-    
-    //De UI update als er gekozen wordt
-    [self refreshUI];
-    
-}
-*/
 
 
 

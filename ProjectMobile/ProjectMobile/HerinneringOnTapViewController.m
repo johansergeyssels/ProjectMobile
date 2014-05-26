@@ -7,6 +7,7 @@
 //
 
 #import "HerinneringOnTapViewController.h"
+#import "HerinneringDetailViewController.h"
 
 @interface HerinneringOnTapViewController ()
 
@@ -32,7 +33,6 @@
 }
 
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,6 +44,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    HerinneringDetailViewController *dest = segue.destinationViewController;
+    dest.herinnering = self.herinnering;
+}
 
 @end
