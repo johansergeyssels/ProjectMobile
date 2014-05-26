@@ -60,9 +60,7 @@
     
     if (addressBookRef != nil) {
         Fotolijst *fotolijst = [self.PersoonImages objectAtIndex:indexPath.item];
-        
-        ABRecordID recordID = [[fotolijst valueForKey:@"persoonId"] integerValue]; // Assign here your ID
-        NSLog(@"%d", recordID);
+        ABRecordID recordID = [[fotolijst valueForKey:@"persoonId"] integerValue];
         ABRecordRef nxtABRecordRef = ABAddressBookGetPersonWithRecordID (addressBookRef, recordID);
         
         
@@ -125,7 +123,9 @@
     
     else {
         
+    
 // Persoon aanmaken
+
     NSManagedObject *newPersoon = [NSEntityDescription insertNewObjectForEntityForName:@"Fotolijst" inManagedObjectContext:self.context];
     NSNumber *id = [NSNumber numberWithInt:ABRecordGetRecordID(person)];
     NSNumber *one = [NSNumber numberWithInt:1];
