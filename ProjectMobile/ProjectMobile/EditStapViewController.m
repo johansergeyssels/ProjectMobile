@@ -91,4 +91,9 @@
     return YES;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.commentTextfield resignFirstResponder];
+}
+
 @end

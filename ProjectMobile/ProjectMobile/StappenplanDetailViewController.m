@@ -38,6 +38,11 @@
     
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.titleLabel resignFirstResponder];
+}
+
 - (IBAction)TitelButtonOutside:(id)sender {
     [sender resignFirstResponder];
 }

@@ -93,10 +93,10 @@
     cameraUI.allowsEditing = NO;
     cameraUI.delegate = delegate;
     
-    [controller presentModalViewController: cameraUI animated: YES];
+    [self presentViewController:cameraUI animated:YES completion:nil];
+    //[controller presentModalViewController:cameraUI animated: YES];
     
     return YES;
-    
 }
 
 - (void)viewDidLoad

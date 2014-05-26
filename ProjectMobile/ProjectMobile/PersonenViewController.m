@@ -37,11 +37,9 @@
 
 }
 
-
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
-    
 }
 
 
@@ -79,18 +77,14 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"adresboek" message:@"Agenda kan niet geopend worden." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
     }
-
     
     return cell;
 }
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
-
-
 
 - (IBAction)pickPerson:(id)sender {
     ABPeoplePickerNavigationController *picker =
@@ -100,17 +94,14 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-
 - (void)peoplePickerNavigationControllerDidCancel: (ABPeoplePickerNavigationController *)peoplePicker {
     
     [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 
-
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person {
-    
-    
+
     NSPredicate *valuePredicate = [NSPredicate predicateWithFormat:@"self.persoonId == %d",ABRecordGetRecordID(person)];
     
     if ([[self.PersoonImages filteredArrayUsingPredicate:valuePredicate] count]!=0) {
@@ -142,8 +133,6 @@
         }
     }
     
-    
-    
     [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
     [self.personenCollection reloadData];
     return NO;
@@ -157,9 +146,6 @@
     
     return NO;
 }
-
-
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"PersoonDetailViewController"]) {
@@ -187,20 +173,5 @@
     
     [self.personenCollection reloadData];
 }
-
-
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
