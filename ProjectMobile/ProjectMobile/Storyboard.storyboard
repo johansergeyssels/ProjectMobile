@@ -581,7 +581,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="A7r-89-8bj">
-                                <rect key="frame" x="-5" y="0.0" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.73725491759999995" green="0.35294118520000001" blue="0.082352943720000002" alpha="1" colorSpace="deviceRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Uzi-ik-Rio">
@@ -794,7 +794,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem" id="pnC-Iq-aQk">
-                                <rect key="frame" x="40" y="336" width="240" height="128"/>
+                                <rect key="frame" x="40" y="336" width="240" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86274516580000005" green="0.46274513010000001" blue="0.062745101750000004" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1388,6 +1388,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="1Fp-oh-DMM"/>
-        <segue reference="n0S-L6-eEd"/>
+        <segue reference="KXY-ff-Uvm"/>
     </inferredMetricsTieBreakers>
 </document>
