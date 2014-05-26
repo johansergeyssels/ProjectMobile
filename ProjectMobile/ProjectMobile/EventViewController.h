@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EventViewController : UIViewController<UITableViewDataSource>
+@interface EventViewController : UIViewController<UITableViewDataSource, UISearchBarDelegate, UITextFieldDelegate>
 
 @end

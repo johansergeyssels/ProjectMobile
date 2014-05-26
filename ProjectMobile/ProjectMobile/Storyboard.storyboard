@@ -837,41 +837,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" id="K7h-6D-IWK">
+                            <searchBar contentMode="redraw" placeholder="zoek naar evenementen" id="K7h-6D-IWK">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5" green="0.22894003130000001" blue="0.14029992320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.5" green="0.22894003130000001" blue="0.14029992320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Sea-AB-RxX" id="lWJ-Vz-erG"/>
+                                </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="hcy-BQ-EVw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hcy-BQ-EVw">
                                 <rect key="frame" x="-7" y="108" width="327" height="386"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="PFE-Lw-rmj" customClass="EventTableViewCell">
-                                        <rect key="frame" x="0.0" y="22" width="327" height="80"/>
+                                        <rect key="frame" x="0.0" y="22" width="327" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PFE-Lw-rmj" id="Nvd-OJ-CN1">
-                                            <rect key="frame" x="0.0" y="0.0" width="327" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titel event" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xsH-QT-8So">
-                                                    <rect key="frame" x="110" y="15" width="197" height="21"/>
+                                                    <rect key="frame" x="110" y="10" width="197" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="locatie event" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sKo-PC-kWD">
-                                                    <rect key="frame" x="110" y="44" width="197" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="begin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D7C-Mu-L7O">
-                                                    <rect key="frame" x="20" y="15" width="82" height="21"/>
+                                                    <rect key="frame" x="20" y="10" width="82" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -881,7 +877,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="beginLabel" destination="D7C-Mu-L7O" id="98U-Av-1Xu"/>
-                                            <outlet property="locationLabel" destination="sKo-PC-kWD" id="LwD-e2-RSb"/>
                                             <outlet property="titleLabel" destination="xsH-QT-8So" id="83a-8b-1Wc"/>
                                             <segue destination="DaX-co-dgT" kind="push" identifier="gotoEventDetails" id="r0w-tH-JbO"/>
                                         </connections>
@@ -896,6 +891,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Evenementen" id="YnP-76-dkR"/>
                     <connections>
+                        <outlet property="searchBar" destination="K7h-6D-IWK" id="jmg-TF-frM"/>
                         <outlet property="table" destination="hcy-BQ-EVw" id="mJf-S0-lO8"/>
                     </connections>
                 </viewController>
@@ -941,7 +937,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titel event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7WR-IQ-NUn">
                                 <rect key="frame" x="0.0" y="84" width="320" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -960,7 +956,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="locatie" id="cLJ-b5-z2y">
-                                <rect key="frame" x="40" y="171" width="240" height="76"/>
+                                <rect key="frame" x="40" y="171" width="240" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5" green="0.22894003130000001" blue="0.14029992320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1343,7 +1339,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="KXY-ff-Uvm"/>
         <segue reference="1Fp-oh-DMM"/>
-        <segue reference="n0S-L6-eEd"/>
     </inferredMetricsTieBreakers>
 </document>
