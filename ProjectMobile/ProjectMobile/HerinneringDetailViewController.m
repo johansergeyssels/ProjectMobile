@@ -30,14 +30,13 @@
 - (IBAction)FotoNemen_btn:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
     {
-    _imageView.image = nil;
-    [self startCameraControllerFromViewController: self
-     usingDelegate: self];
+        [self updateHerinnering];
+        _imageView.image = nil;
+        [self startCameraControllerFromViewController: self usingDelegate: self];
     }
     
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Camera" message:@"Er is geen camera beschikbaar." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        
         [alert show];
     }
 }
@@ -45,8 +44,8 @@
 //gallerij
 
 - (IBAction)Gallerij_btn:(id)sender {
+    [self updateHerinnering];
     imagePicker.delegate = self;
-        
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
@@ -113,10 +112,15 @@
     self.imageView.image = [[UIImage alloc]initWithData:self.herinnering.foto];
 }
 
-//Herinnering Saven
-- (IBAction)save:(id)sender {
+- (void) updateHerinnering
+{
     self.herinnering.label = self.LabelText.text;
     self.herinnering.comment = self.CommentText.text;
+}
+
+//Herinnering Saven
+- (IBAction)save:(id)sender {
+    [self updateHerinnering];
     
     NSError *error;
     if ([self.context save:&error]) {

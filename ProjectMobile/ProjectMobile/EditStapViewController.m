@@ -23,6 +23,7 @@
 - (IBAction)takePicture:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
     {
+        self.step.comment = self.commentTextfield.text;
         [self.picker setSourceType: UIImagePickerControllerSourceTypeCamera];
         [self presentViewController:self.picker animated:YES completion:nil];
     }
@@ -34,6 +35,7 @@
 }
 
 - (IBAction)takeExistingPicture:(id)sender {
+    self.step.comment = self.commentTextfield.text;
     [self.picker setSourceType: UIImagePickerControllerSourceTypePhotoLibrary];
     [self presentViewController:self.picker animated:YES completion:nil];
 }
