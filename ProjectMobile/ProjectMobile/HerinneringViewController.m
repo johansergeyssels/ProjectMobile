@@ -9,6 +9,7 @@
 #import "HerinneringViewController.h"
 #import "HerinneringDetailViewController.h"
 #import "HerinneringCollectionViewCell.h"
+#import "HerinneringOnTapViewController.h"
 
 @interface HerinneringViewController ()
 
@@ -56,14 +57,14 @@
         dest.herinnering = [NSEntityDescription insertNewObjectForEntityForName:@"Herinnering" inManagedObjectContext:self.context];
     }
     
-    else if([segue.identifier isEqualToString:@"WijzigHerinnering"])
+    else if([segue.identifier isEqualToString:@"detailHerinnering"])
     {
-        HerinneringDetailViewController *dest = segue.destinationViewController;
+        HerinneringOnTapViewController *dest = segue.destinationViewController;
+        NSArray *array = [self.collectionView indexPathsForSelectedItems];
+        NSIndexPath *indexpath = [array objectAtIndex:0];
+        dest.herinnering = [self.herinneringen objectAtIndex:indexpath.item];
         dest.context = self.context;
-        dest.herinnering = [NSEntityDescription insertNewObjectForEntityForName:@"Herinnering" inManagedObjectContext:self.context];
     }
-    
-    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

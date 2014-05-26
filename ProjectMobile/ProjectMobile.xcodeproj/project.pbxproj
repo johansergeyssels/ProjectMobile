@@ -20,6 +20,10 @@
 		040633FA192E37DB003BF9F6 /* Stap.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633F9192E37DB003BF9F6 /* Stap.m */; };
 		040633FD192F6907003BF9F6 /* ShowStappenplanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */; };
 		04063400192F7414003BF9F6 /* ShowStapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */; };
+		0406340219314B3A003BF9F6 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0406340119314B3A003BF9F6 /* EventKit.framework */; };
+		0406340519322D44003BF9F6 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406340419322D44003BF9F6 /* EventDetailViewController.m */; };
+		0406340819324036003BF9F6 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406340719324036003BF9F6 /* EventTableViewCell.m */; };
+		0406340B19325DE5003BF9F6 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406340A19325DE5003BF9F6 /* Event.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -47,13 +51,12 @@
 		388B3F43192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F42192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m */; };
 		388B3F49192E3CBD009FE4C9 /* Herinnering.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B3F48192E3CBD009FE4C9 /* Herinnering.m */; };
 		38EF0D6E192F5C7C003C3EB3 /* HerinneringOnTapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EF0D6D192F5C7C003C3EB3 /* HerinneringOnTapViewController.m */; };
-		4C2380CC192BBA9D00A09211 /* Man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380C9192BBA9D00A09211 /* Man.jpeg */; };
-		4C2380CD192BBA9D00A09211 /* Doctor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CA192BBA9D00A09211 /* Doctor.jpeg */; };
-		4C2380CE192BBA9D00A09211 /* Son.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2380CB192BBA9D00A09211 /* Son.jpeg */; };
 		4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */; };
 		4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8BD976192B886D003F00D9 /* PersonenViewController.m */; };
 		4CC96C75192F443C00E43D05 /* PersoonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC96C74192F443C00E43D05 /* PersoonDetailViewController.m */; };
 		4CC96C78192F4A5300E43D05 /* Fotolijst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC96C77192F4A5300E43D05 /* Fotolijst.m */; };
+		66000AFB1931F059004ED1BE /* UIPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66000AFA1931F059004ED1BE /* UIPopoverController.m */; };
+		66000AFE1932175D004ED1BE /* Locatie.m in Sources */ = {isa = PBXBuildFile; fileRef = 66000AFD1932175D004ED1BE /* Locatie.m */; };
 		665241D6192B48C700484AC1 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665241D5192B48C700484AC1 /* LocationViewController.m */; };
 		665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DB192B5E2500484AC1 /* CoreLocation.framework */; };
 		665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DD192B5E2E00484AC1 /* MapKit.framework */; };
@@ -113,6 +116,13 @@
 		040633FC192F6907003BF9F6 /* ShowStappenplanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStappenplanViewController.m; sourceTree = "<group>"; };
 		040633FE192F7414003BF9F6 /* ShowStapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowStapTableViewCell.h; sourceTree = "<group>"; };
 		040633FF192F7414003BF9F6 /* ShowStapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowStapTableViewCell.m; sourceTree = "<group>"; };
+		0406340119314B3A003BF9F6 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		0406340319322D44003BF9F6 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		0406340419322D44003BF9F6 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
+		0406340619324036003BF9F6 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		0406340719324036003BF9F6 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		0406340919325DE5003BF9F6 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		0406340A19325DE5003BF9F6 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -152,9 +162,6 @@
 		388B3F48192E3CBD009FE4C9 /* Herinnering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Herinnering.m; sourceTree = "<group>"; };
 		38EF0D6C192F5C7C003C3EB3 /* HerinneringOnTapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerinneringOnTapViewController.h; sourceTree = "<group>"; };
 		38EF0D6D192F5C7C003C3EB3 /* HerinneringOnTapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerinneringOnTapViewController.m; sourceTree = "<group>"; };
-		4C2380C9192BBA9D00A09211 /* Man.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Man.jpeg; sourceTree = "<group>"; };
-		4C2380CA192BBA9D00A09211 /* Doctor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Doctor.jpeg; sourceTree = "<group>"; };
-		4C2380CB192BBA9D00A09211 /* Son.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Son.jpeg; sourceTree = "<group>"; };
 		4C3C3F3E192B8B4F00A3650C /* PersoonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersoonCell.h; sourceTree = "<group>"; };
 		4C3C3F3F192B8B4F00A3650C /* PersoonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersoonCell.m; sourceTree = "<group>"; };
 		4C8BD975192B886D003F00D9 /* PersonenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonenViewController.h; sourceTree = "<group>"; };
@@ -163,6 +170,10 @@
 		4CC96C74192F443C00E43D05 /* PersoonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersoonDetailViewController.m; sourceTree = "<group>"; };
 		4CC96C76192F4A5300E43D05 /* Fotolijst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fotolijst.h; path = ../Fotolijst.h; sourceTree = "<group>"; };
 		4CC96C77192F4A5300E43D05 /* Fotolijst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fotolijst.m; path = ../Fotolijst.m; sourceTree = "<group>"; };
+		66000AF91931F059004ED1BE /* UIPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPopoverController.h; sourceTree = "<group>"; };
+		66000AFA1931F059004ED1BE /* UIPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopoverController.m; sourceTree = "<group>"; };
+		66000AFC1932175D004ED1BE /* Locatie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locatie.h; sourceTree = "<group>"; };
+		66000AFD1932175D004ED1BE /* Locatie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locatie.m; sourceTree = "<group>"; };
 		665241D4192B48C700484AC1 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		665241D5192B48C700484AC1 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		665241DB192B5E2500484AC1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -209,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0406340219314B3A003BF9F6 /* EventKit.framework in Frameworks */,
 				04E96B23192A0FE200EEDFCF /* CoreData.framework in Frameworks */,
 				665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */,
 				665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */,
@@ -240,6 +252,8 @@
 				388B3F47192E3CBD009FE4C9 /* Herinnering.h */,
 				388B3F48192E3CBD009FE4C9 /* Herinnering.m */,
 				04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */,
+				66000AFC1932175D004ED1BE /* Locatie.h */,
+				66000AFD1932175D004ED1BE /* Locatie.m */,
 				040633F8192E37DB003BF9F6 /* Stap.h */,
 				040633F9192E37DB003BF9F6 /* Stap.m */,
 				858C4A32192CB21C00E4CE53 /* Personen.h */,
@@ -273,6 +287,12 @@
 			children = (
 				0406338D192B6798003BF9F6 /* EventViewController.h */,
 				0406338E192B6798003BF9F6 /* EventViewController.m */,
+				0406340319322D44003BF9F6 /* EventDetailViewController.h */,
+				0406340419322D44003BF9F6 /* EventDetailViewController.m */,
+				0406340619324036003BF9F6 /* EventTableViewCell.h */,
+				0406340719324036003BF9F6 /* EventTableViewCell.m */,
+				0406340919325DE5003BF9F6 /* Event.h */,
+				0406340A19325DE5003BF9F6 /* Event.m */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -305,6 +325,8 @@
 			children = (
 				665241D4192B48C700484AC1 /* LocationViewController.h */,
 				665241D5192B48C700484AC1 /* LocationViewController.m */,
+				66000AF91931F059004ED1BE /* UIPopoverController.h */,
+				66000AFA1931F059004ED1BE /* UIPopoverController.m */,
 				668202F6192C992700875220 /* Toilet.h */,
 				668202F7192C992700875220 /* Toilet.m */,
 				668202CC192B9CA600875220 /* LocationToevoegenControllerViewController.h */,
@@ -391,6 +413,7 @@
 		04E96B1B192A0FE200EEDFCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0406340119314B3A003BF9F6 /* EventKit.framework */,
 				665241DD192B5E2E00484AC1 /* MapKit.framework */,
 				665241DB192B5E2500484AC1 /* CoreLocation.framework */,
 				04E96B1C192A0FE200EEDFCF /* Foundation.framework */,
@@ -639,6 +662,7 @@
 				388B3F49192E3CBD009FE4C9 /* Herinnering.m in Sources */,
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
 				66820327192CCC8400875220 /* JSONModel+networking.m in Sources */,
+				66000AFE1932175D004ED1BE /* Locatie.m in Sources */,
 				0406338F192B6798003BF9F6 /* EventViewController.m in Sources */,
 				668202FD192CA84C00875220 /* ToiletLocaties.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
@@ -654,15 +678,18 @@
 				388B3F31192CDA05009FE4C9 /* HerinneringViewController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				4CC96C78192F4A5300E43D05 /* Fotolijst.m in Sources */,
+				0406340819324036003BF9F6 /* EventTableViewCell.m in Sources */,
 				38EF0D6E192F5C7C003C3EB3 /* HerinneringOnTapViewController.m in Sources */,
 				4C3C3F40192B8B4F00A3650C /* PersoonCell.m in Sources */,
 				66820323192CCC8400875220 /* JSONModelError.m in Sources */,
 				040633F4192D371F003BF9F6 /* AddStapTableViewCell.m in Sources */,
 				6682031F192CCC8400875220 /* JSONModel+CoreData.m in Sources */,
 				040633F7192D6DA8003BF9F6 /* EditStapViewController.m in Sources */,
+				0406340B19325DE5003BF9F6 /* Event.m in Sources */,
 				388B3F34192CE1F0009FE4C9 /* HerinneringDetailViewController.m in Sources */,
 				040633EB192C8EE2003BF9F6 /* StapTableViewCell.m in Sources */,
 				040633A2192B9BFF003BF9F6 /* StappenPlanViewController.m in Sources */,
+				66000AFB1931F059004ED1BE /* UIPopoverController.m in Sources */,
 				040633F1192D370D003BF9F6 /* EditStapTableViewCell.m in Sources */,
 				66820322192CCC8400875220 /* JSONModelClassProperty.m in Sources */,
 				4CC96C75192F443C00E43D05 /* PersoonDetailViewController.m in Sources */,
@@ -679,6 +706,7 @@
 				388B3F43192E1E5D009FE4C9 /* HerinneringCollectionViewCell.m in Sources */,
 				04063393192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld in Sources */,
 				85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */,
+				0406340519322D44003BF9F6 /* EventDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

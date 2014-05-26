@@ -7,16 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "IManagedContextObjectContainer.h"
 
-@interface LocationViewController : UIViewController <MKMapViewDelegate, MKAnnotation, IManagedContextObjectContainer>
+@interface LocationViewController : UIViewController <MKMapViewDelegate, MKAnnotation, IManagedContextObjectContainer, UIGestureRecognizerDelegate, UIPopoverControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property NSManagedObjectContext* context;
 
 -(BOOL) jsonBinnenhalen;
+
+//knop voor toe te voegen (long pressure detectie)
+@property (weak, nonatomic) IBOutlet UIButton *locatieToevoegenKnop;
+
+
 
 @end
 

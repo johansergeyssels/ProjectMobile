@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Fotolijst" representedClassName="Fotolijst" syncable="YES">
         <attribute name="importance" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="persoonId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -8,6 +8,13 @@
         <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="foto" optional="YES" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Locatie" representedClassName="Locatie" syncable="YES">
+        <attribute name="bus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gemeente" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="huisnummer" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="infoOver" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="straatnaam" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Personen" representedClassName="Personen" syncable="YES">
         <attribute name="importance" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
@@ -24,10 +31,11 @@
         <relationship name="stap" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Stap" inverseName="stappenplan" inverseEntity="Stap" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Herinnering" positionX="45" positionY="9" width="128" height="90"/>
-        <element name="Personen" positionX="45" positionY="9" width="128" height="73"/>
+        <element name="Fotolijst" positionX="-137" positionY="296" width="128" height="73"/>
+        <element name="Herinnering" positionX="-135" positionY="180" width="128" height="90"/>
+        <element name="Personen" positionX="-135" positionY="72" width="128" height="73"/>
         <element name="Stap" positionX="187" positionY="-18" width="128" height="103"/>
         <element name="Stappenplan" positionX="-90" positionY="-36" width="128" height="73"/>
-        <element name="Fotolijst" positionX="45" positionY="9" width="128" height="73"/>
+        <element name="Locatie" positionX="27" positionY="180" width="128" height="118"/>
     </elements>
 </model>

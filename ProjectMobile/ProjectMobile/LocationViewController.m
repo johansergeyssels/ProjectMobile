@@ -10,6 +10,10 @@
 #import "Toilet.h"
 #import "ToiletLocaties.h"
 
+@interface LocationViewController()
+@property (nonatomic, strong) UIPopoverController *_popover;
+@end
+
 @implementation LocationViewController
 
 //als de view geladen is
@@ -18,6 +22,36 @@
     [super viewDidLoad];
     [self jsonBinnenhalen];
     
+    //https://developer.apple.com/library/ios/documentation/uikit/reference/UILongPressGestureRecognizer_Class/Reference/Reference.html
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]
+                                               initWithTarget:self
+                                               action:@selector(handleLongPress:)];
+    longPress.minimumPressDuration = 2.0;
+    [self.locatieToevoegenKnop addGestureRecognizer:longPress];
+    
+}
+
+-(void) handleLongPress:(UILongPressGestureRecognizer *)recognizer {
+    if (self.locatieToevoegenKnop.state == UIGestureRecognizerStateBegan){
+        NSLog(@"Begin duwen");
+        
+        //als de popover is aangemaakt
+        if(self._popover) {
+            //
+            [self._popover dismissPopoverAnimated:YES];
+            self._popover = nil;
+            return;
+        }
+        UIViewController *testVC = [self.storyboard instantiateViewControllerWithIdentifier:@"testVC"];
+        testVC.contentSizeForViewInPopover = CGSizeMake(200, 100);
+        self._popover = [[UIPopoverController alloc] initWithContentViewController:testVC];
+        self._popover.delegate = self;
+        [self._popover presentPopoverFromBarButtonItem:recognizer permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    }
+}
+
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    self._popover = nil;
 }
 
 //als de gebruiker zijn locatie veranderd, update de mapview
@@ -129,6 +163,8 @@
 {
     [self.context rollback];
 }
+
+
 
 @end
 

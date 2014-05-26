@@ -25,10 +25,11 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    self.detailImage.image = [[UIImage alloc]initWithData: self.herinnering.foto];
+    self.Label.text = self.herinnering.label;
     self.commentText.text = self.herinnering.comment;
-    self.imageView.image = [[UIImage alloc]initWithData: self.herinnering.foto];
+    
 }
-
 
 
 - (void)viewDidLoad
