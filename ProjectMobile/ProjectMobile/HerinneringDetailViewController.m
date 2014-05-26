@@ -14,20 +14,7 @@
 
 @implementation HerinneringDetailViewController
 
-//Herinnering Saven
-- (IBAction)save:(id)sender {
-    self.herinnering.label = self.LabelText.text;
-    self.herinnering.comment = self.CommentText.text;
-    
-    NSError *error;
-    if ([self.context save:&error]) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-    else
-    {
-        //error tonen
-    }
-}
+
 
 //Hide keyboard
 
@@ -115,6 +102,21 @@
     self.LabelText.text = self.herinnering.label;
     self.CommentText.text = self.herinnering.comment;
     self.imageView.image = [[UIImage alloc]initWithData:self.herinnering.foto];
+}
+
+//Herinnering Saven
+- (IBAction)save:(id)sender {
+    self.herinnering.label = self.LabelText.text;
+    self.herinnering.comment = self.CommentText.text;
+    
+    NSError *error;
+    if ([self.context save:&error]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else
+    {
+        //error tonen
+    }
 }
 
 - (void)didReceiveMemoryWarning
