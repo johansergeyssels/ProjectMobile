@@ -59,9 +59,15 @@
 
 - (void) setEvents
 {
-    Event *event0 = [[Event alloc] initWithTitle:@"samenkomst op school" location:@"Nijverheidslaan 175, 1000 Anderlecht" beginDate:[NSDate date] endDate:[NSDate date]];
-    Event *event1 = [[Event alloc] initWithTitle:@"project op school" location:@"Nijverheidslaan 175, 1000 Anderlecht" beginDate:[NSDate date] endDate:[NSDate date]];
-    NSArray *data = [NSArray arrayWithObjects:event0, event1, nil] ;
+    Event *event0 = [[Event alloc] initWithTitle:@"samenkomst op school" location:@"Nijverheidskaai 170, 1000 Anderlecht" beginDate:[NSDate date] endDate:[NSDate date]];
+    Event *event1 = [[Event alloc] initWithTitle:@"project op school" location:@"Nijverheidskaai 170, 1000 Anderlecht" beginDate:[NSDate date] endDate:[NSDate date]];
+    Event *event2 = [[Event alloc] initWithTitle:@"Praat café" location:@"Begijnhof 17- Herentalst" beginDate:[NSDate date] endDate:[NSDate date]];
+    Event *event3 = [[Event alloc] initWithTitle:@"Mantelzorgnamiddagen" location:@"WZC Lindelo -Lindelostraat 10 - 2275 Lille" beginDate:[NSDate date] endDate:[NSDate date]];
+    Event *event4 = [[Event alloc] initWithTitle:@"Praatcafé" location:@"Nijverheidskaai 170, 1000 Anderlecht" beginDate:[NSDate date] endDate:[NSDate date]];
+    Event *event5 = [[Event alloc] initWithTitle:@"Praatcafé" location:@"Nijverheidskaai 170, 1000 Anderlecht" beginDate:[NSDate date] endDate:[NSDate date]];
+    Event *event6 = [[Event alloc] initWithTitle:@"Lotgenotencontact" location:@"Nijverheidskaai 170, 1000 Anderlecht" beginDate:[NSDate date] endDate:[NSDate date]];
+    Event *event7 = [[Event alloc] initWithTitle:@"Overlegplatform" location:@"Nijverheidskaai 170, 1000 Anderlecht" beginDate:[NSDate date] endDate:[NSDate date]];
+    NSArray *data = [NSArray arrayWithObjects:event0, event1, event2, event3, event4, event5, event6, event7, nil] ;
     
     if(self.searchString != nil && ![self.searchString isEqualToString:@""]) {
         NSString *searchString = [NSString stringWithFormat:@"*%@*", self.searchString];
@@ -111,6 +117,7 @@
 {
     EventDetailViewController *dest = segue.destinationViewController;
     Event *event = [self.events objectAtIndex:[self.table indexPathForSelectedRow].row];
+    dest.context = self.context;
     dest.event = event;
 }
 

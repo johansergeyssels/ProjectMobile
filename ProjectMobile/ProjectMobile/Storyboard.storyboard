@@ -525,10 +525,10 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="qmJ-ay-e9Y" customClass="PersoonCell">
-                                        <rect key="frame" x="0.0" y="64" width="106.5" height="106.5"/>
+                                        <rect key="frame" x="0.0" y="64" width="106.66666412353516" height="106.66665649414062"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="106.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="106.66666412353516" height="106.66665649414062"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="y5K-Nl-qgh">
@@ -934,7 +934,7 @@
                                     <action selector="addEventToAgenda:" destination="DaX-co-dgT" eventType="touchUpInside" id="qD6-cb-gwu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0bE-4A-QH3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0bE-4A-QH3" customClass="EventOnMap">
                                 <rect key="frame" x="160" y="261" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60827885841836737" green="0.24008282549294294" blue="0.085819921867435409" alpha="1" colorSpace="calibratedRGB"/>
@@ -944,6 +944,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addEventLocation:" destination="DaX-co-dgT" eventType="touchUpInside" id="VQG-A5-ThR"/>
+                                    <segue destination="FMy-ZJ-wr2" kind="push" id="Wdx-76-FbN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titel event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7WR-IQ-NUn">
@@ -1042,7 +1043,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="locatieToevoegenButton" destination="8IA-JD-iHm" id="PRp-Tc-g8R"/>
+                        <outlet property="addButton" destination="8IA-JD-iHm" id="c4E-Ud-Ak0"/>
                         <outlet property="mapView" destination="3vK-VF-DHe" id="7qb-Fm-aWg"/>
                     </connections>
                 </viewController>
@@ -1412,6 +1413,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Wdx-76-FbN"/>
         <segue reference="ioF-c4-hhH"/>
         <segue reference="1Fp-oh-DMM"/>
     </inferredMetricsTieBreakers>

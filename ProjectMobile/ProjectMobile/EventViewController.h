@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IManagedContextObjectContainer.h"
 
-@interface EventViewController : UIViewController<UITableViewDataSource, UISearchBarDelegate, UITextFieldDelegate>
-
+@interface EventViewController : UIViewController<UITableViewDataSource, UISearchBarDelegate, UITextFieldDelegate, IManagedContextObjectContainer>
+@property NSManagedObjectContext* context;
 @end

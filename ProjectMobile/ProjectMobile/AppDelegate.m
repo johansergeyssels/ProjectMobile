@@ -44,6 +44,7 @@
     UITabBarController* tabbar = (UITabBarController*)self.window.rootViewController;
     [self contextToevoegen:1 tabbar:tabbar];
     [self contextToevoegen:3 tabbar:tabbar];
+    [self contextToevoegen:2 tabbar:tabbar];
     [self contextToevoegen:4 tabbar:tabbar];
     
     return YES;

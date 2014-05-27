@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "IManagedContextObjectContainer.h"
-#import "Locatie.h"
 #import "LocationToevoegenViewControllerDelegate.h"
+#import "Event.h"
 
 @interface LocationViewController : UIViewController <MKMapViewDelegate, IManagedContextObjectContainer, UIGestureRecognizerDelegate, UIPopoverControllerDelegate, LocationToevoegenViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *locatieToevoegenButton;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property NSManagedObjectContext* context;
-@property Locatie *locatie;
+@property BOOL noEdit;
+@property Event *event;
 
 -(BOOL) jsonBinnenhalen;
 

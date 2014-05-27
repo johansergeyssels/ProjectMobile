@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Event.h"
+#import "IManagedContextObjectContainer.h"
 
-@interface EventDetailViewController : UIViewController
+@interface EventDetailViewController : UIViewController<IManagedContextObjectContainer>
+@property NSManagedObjectContext* context;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *beginLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eindLabel;

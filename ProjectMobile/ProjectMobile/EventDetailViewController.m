@@ -8,6 +8,8 @@
 
 #import "EventDetailViewController.h"
 #import <EventKit/EventKit.h>
+#import "LocationViewController.h"
+#import "Locatie.h"
 
 @interface EventDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *agendaButton;
@@ -69,6 +71,14 @@
     self.locationLabel.text = self.event.location;
     self.beginLabel.text = [NSString stringWithFormat:@"Begint om %@",[dateFormatter stringFromDate:self.event.beginDate]];
     self.eindLabel.text = [NSString stringWithFormat:@"Eindigt om %@",[dateFormatter stringFromDate:self.event.beginDate]];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    LocationViewController *dest = segue.destinationViewController;
+    dest.context = self.context;
+    dest.noEdit = YES;
+    dest.event = self.event;
 }
 
 @end

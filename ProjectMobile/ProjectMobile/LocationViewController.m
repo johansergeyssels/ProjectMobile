@@ -12,13 +12,25 @@
 #import "LocationToevoegenViewController.h"
 #import "CustomMKPointAnnotation.h"
 #import "Locatie.h"
+#import <CoreLocation/CoreLocation.h>
+#import "OtherLocation.h"
 
 @interface LocationViewController()
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
 @property (nonatomic, strong) UIPopoverController *_popover;
 @property NSMutableArray *locations;
 @end
 
 @implementation LocationViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.noEdit = NO;
+    }
+    return self;
+}
 
 //als de view geladen is
 - (void)viewDidLoad
@@ -179,7 +191,54 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    if(self.noEdit)
+    {
+        [self.addButton setEnabled:false];
+        CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+        [geocoder geocodeAddressString:self.event.location
+                     completionHandler:^(NSArray* placemarks, NSError* error)
+         {
+             if (!error && placemarks && placemarks.count > 0) {
+                 CLPlacemark *topResult = [placemarks objectAtIndex:0];
+                 
+                 OtherLocation *coords = [[OtherLocation alloc] init];
+                 coords.latitude = topResult.location.coordinate.latitude;
+                 coords.longitude = topResult.location.coordinate.longitude;
+                 
+                 [self performSelectorOnMainThread:@selector(addEventWithCoords:) withObject:coords waitUntilDone:YES];
+             }
+             else
+             {
+                 //error tonen
+                 [self performSelectorOnMainThread:@selector(showAlertWithMessage:) withObject:@"Locatie niet gevonden" waitUntilDone:YES];
+             }
+         }];
+    }
     [self.context rollback];
+}
+
+-(void)showAlertWithMessage:(NSString *)message
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fout" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+- (void) addEventWithCoords:(OtherLocation *)coords
+{
+    CLLocationCoordinate2D pinCoordinate;
+    pinCoordinate.latitude = coords.latitude;
+    pinCoordinate.longitude = coords.longitude;
+    
+    CustomMKPointAnnotation *pin = [[CustomMKPointAnnotation alloc] init];
+    pin.type = @"Other";
+    pin.coordinate = pinCoordinate;
+    pin.title = self.event.title;
+    pin.subtitle = self.event.location;
+    //[self.mapView addAnnotation:pin];
+    
+    [self.mapView addAnnotation:pin];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(pinCoordinate, 800, 800);
+    [self.mapView setRegion:region animated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -232,9 +291,10 @@
         locationString = [NSString stringWithFormat:@"%@ %@", locationString, location.gemeente, nil];
     }
     pin.subtitle = locationString;
-    
-    //[self.mapView addAnnotation:pin];
+
     [self.mapView addAnnotation:pin];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(pinCoordinate, 800, 800);
+    [self.mapView setRegion:region animated:YES];
 }
 
 - (void) setLocations

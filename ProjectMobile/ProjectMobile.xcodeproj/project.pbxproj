@@ -27,6 +27,7 @@
 		0413EF34193529F600FA4A01 /* CustomMKPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413EF31193529F600FA4A01 /* CustomMKPointAnnotation.m */; };
 		0413EF3919352A2B00FA4A01 /* LocationToevoegenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413EF3719352A2B00FA4A01 /* LocationToevoegenViewController.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
+		04AE16D61935431200B0A0A5 /* OtherLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE16D51935431200B0A0A5 /* OtherLocation.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
 		04E96B21192A0FE200EEDFCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B20192A0FE200EEDFCF /* UIKit.framework */; };
@@ -132,6 +133,8 @@
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		04AE16D41935431200B0A0A5 /* OtherLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherLocation.h; sourceTree = "<group>"; };
+		04AE16D51935431200B0A0A5 /* OtherLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherLocation.m; sourceTree = "<group>"; };
 		04E96B19192A0FE200EEDFCF /* ProjectMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E96B1C192A0FE200EEDFCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -340,6 +343,8 @@
 				668202F7192C992700875220 /* Toilet.m */,
 				668202FB192CA84C00875220 /* ToiletLocaties.h */,
 				668202FC192CA84C00875220 /* ToiletLocaties.m */,
+				04AE16D41935431200B0A0A5 /* OtherLocation.h */,
+				04AE16D51935431200B0A0A5 /* OtherLocation.m */,
 			);
 			name = Locations;
 			sourceTree = "<group>";
@@ -705,6 +710,7 @@
 				66820329192CCC8400875220 /* JSONValueTransformer.m in Sources */,
 				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
 				66820328192CCC8400875220 /* JSONKeyMapper.m in Sources */,
+				04AE16D61935431200B0A0A5 /* OtherLocation.m in Sources */,
 				0406339F192B9B34003BF9F6 /* Stappenplan.m in Sources */,
 				858C4A34192CB21C00E4CE53 /* Personen.m in Sources */,
 				040633A7192BDDC5003BF9F6 /* MemoryMenuViewController.m in Sources */,
