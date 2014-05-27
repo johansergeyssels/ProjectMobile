@@ -60,6 +60,7 @@
 {
     //het scherm aanpassen als de gebruiker wandelt.
     //NSLog(@"beweegt");
+    
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 800, 800);
     [self.mapView setRegion:region animated:YES];
 }
@@ -74,25 +75,13 @@
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error) {
-                // handle response
-                //NSLog(@"gelukt");
                 NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                //NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
-                //id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error:&error];
-                //NSLog(json);
-                //NSLog(@"%@", jsonObject);
                 
                 ToiletLocaties *toiletlocatie = [[ToiletLocaties alloc] initWithString:json error:&error];
             
                 if(!error) {
+                    NSMutableArray *lijst = [[NSMutableArray alloc] init];
                     for(Toilet *Toilet in toiletlocatie.openbaartoilet) {
-                        NSLog(@"%@", Toilet.district);
-                        NSLog(@"%@", Toilet.omschrijving);
-                        NSLog(@"%@", Toilet.straat);
-                        NSLog(@"%@", Toilet.huisnummer);
-                        NSLog(@"%@", Toilet.postcode);
-                        NSLog(@"%@", Toilet.point_lat);
-                        NSLog(@"%@", Toilet.point_lng);
                         
                         NSString *gemeentePostcodeStraatNummer = [NSString stringWithFormat:@"%@ %@ %@ %@", Toilet.district, Toilet.postcode, Toilet.straat, Toilet.huisnummer];
                         
@@ -114,9 +103,11 @@
                         pin.title = Toilet.omschrijving;
                         pin.subtitle = gemeentePostcodeStraatNummer;
                         
-                        [self.mapView addAnnotation:pin];
-
+                        //[self.mapView addAnnotation:pin];
+                        [lijst addObject:pin];
                     }
+                    [self.mapView addAnnotations:lijst];
+                    
                 }
                 
 
