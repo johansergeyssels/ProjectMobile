@@ -24,8 +24,8 @@
 		0406340519322D44003BF9F6 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406340419322D44003BF9F6 /* EventDetailViewController.m */; };
 		0406340819324036003BF9F6 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406340719324036003BF9F6 /* EventTableViewCell.m */; };
 		0406340B19325DE5003BF9F6 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406340A19325DE5003BF9F6 /* Event.m */; };
-		0413EF221934B18900FA4A01 /* CustomMKPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413EF211934B18900FA4A01 /* CustomMKPointAnnotation.m */; };
-		0413EF2B1934E9ED00FA4A01 /* Locatie.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413EF2A1934E9ED00FA4A01 /* Locatie.m */; };
+		0413EF34193529F600FA4A01 /* CustomMKPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413EF31193529F600FA4A01 /* CustomMKPointAnnotation.m */; };
+		0413EF3919352A2B00FA4A01 /* LocationToevoegenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413EF3719352A2B00FA4A01 /* LocationToevoegenViewController.m */; };
 		04520A1F192A6C670068993A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520A1E192A6C670068993A /* HomeViewController.m */; };
 		04E96B1D192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B1F192A0FE200EEDFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1E192A0FE200EEDFCF /* CoreGraphics.framework */; };
@@ -34,7 +34,6 @@
 		04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B27192A0FE200EEDFCF /* InfoPlist.strings */; };
 		04E96B2B192A0FE200EEDFCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B2A192A0FE200EEDFCF /* main.m */; };
 		04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B2E192A0FE200EEDFCF /* AppDelegate.m */; };
-		04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B33192A0FE200EEDFCF /* Images.xcassets */; };
 		04E96B3B192A0FE200EEDFCF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B3A192A0FE200EEDFCF /* XCTest.framework */; };
 		04E96B3C192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B3D192A0FE200EEDFCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B20192A0FE200EEDFCF /* UIKit.framework */; };
@@ -58,10 +57,10 @@
 		4CC96C75192F443C00E43D05 /* PersoonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC96C74192F443C00E43D05 /* PersoonDetailViewController.m */; };
 		4CC96C78192F4A5300E43D05 /* Fotolijst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC96C77192F4A5300E43D05 /* Fotolijst.m */; };
 		66000AFB1931F059004ED1BE /* UIPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66000AFA1931F059004ED1BE /* UIPopoverController.m */; };
+		66000AFE1932175D004ED1BE /* Locatie.m in Sources */ = {isa = PBXBuildFile; fileRef = 66000AFD1932175D004ED1BE /* Locatie.m */; };
 		665241D6192B48C700484AC1 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665241D5192B48C700484AC1 /* LocationViewController.m */; };
 		665241DC192B5E2500484AC1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DB192B5E2500484AC1 /* CoreLocation.framework */; };
 		665241DE192B5E2E00484AC1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665241DD192B5E2E00484AC1 /* MapKit.framework */; };
-		668202CE192B9CA600875220 /* LocationToevoegenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668202CD192B9CA600875220 /* LocationToevoegenViewController.m */; };
 		668202F8192C992700875220 /* Toilet.m in Sources */ = {isa = PBXBuildFile; fileRef = 668202F7192C992700875220 /* Toilet.m */; };
 		668202FD192CA84C00875220 /* ToiletLocaties.m in Sources */ = {isa = PBXBuildFile; fileRef = 668202FC192CA84C00875220 /* ToiletLocaties.m */; };
 		6682031F192CCC8400875220 /* JSONModel+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 66820306192CCC8400875220 /* JSONModel+CoreData.m */; };
@@ -78,6 +77,7 @@
 		85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85507AF6192B77C200DD7D53 /* HulpViewController.m */; };
 		858C4A31192CAD2F00E4CE53 /* AidTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858C4A30192CAD2F00E4CE53 /* AidTableViewCell.m */; };
 		858C4A34192CB21C00E4CE53 /* Personen.m in Sources */ = {isa = PBXBuildFile; fileRef = 858C4A33192CB21C00E4CE53 /* Personen.m */; };
+		85CD79C319337F6E00499C2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CD79C219337F6E00499C2D /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,13 +124,11 @@
 		0406340719324036003BF9F6 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
 		0406340919325DE5003BF9F6 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		0406340A19325DE5003BF9F6 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
-		0413EF201934B18900FA4A01 /* CustomMKPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMKPointAnnotation.h; sourceTree = "<group>"; };
-		0413EF211934B18900FA4A01 /* CustomMKPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMKPointAnnotation.m; sourceTree = "<group>"; };
-		0413EF261934C5FC00FA4A01 /* Locatie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locatie.h; sourceTree = "<group>"; };
-		0413EF271934C5FC00FA4A01 /* Locatie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locatie.m; sourceTree = "<group>"; };
-		0413EF291934E9ED00FA4A01 /* Locatie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locatie.h; sourceTree = "<group>"; };
-		0413EF2A1934E9ED00FA4A01 /* Locatie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locatie.m; sourceTree = "<group>"; };
-		0413EF2F19351D9500FA4A01 /* LocationToevoegenViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationToevoegenViewControllerDelegate.h; sourceTree = "<group>"; };
+		0413EF30193529F600FA4A01 /* CustomMKPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMKPointAnnotation.h; sourceTree = "<group>"; };
+		0413EF31193529F600FA4A01 /* CustomMKPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMKPointAnnotation.m; sourceTree = "<group>"; };
+		0413EF3619352A2B00FA4A01 /* LocationToevoegenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationToevoegenViewController.h; sourceTree = "<group>"; };
+		0413EF3719352A2B00FA4A01 /* LocationToevoegenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationToevoegenViewController.m; sourceTree = "<group>"; };
+		0413EF3819352A2B00FA4A01 /* LocationToevoegenViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationToevoegenViewControllerDelegate.h; sourceTree = "<group>"; };
 		04520A17192A66D30068993A /* ButtonClickListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonClickListener.h; sourceTree = "<group>"; };
 		04520A1D192A6C670068993A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		04520A1E192A6C670068993A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 		04E96B2C192A0FE200EEDFCF /* ProjectMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectMobile-Prefix.pch"; sourceTree = "<group>"; };
 		04E96B2D192A0FE200EEDFCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E96B2E192A0FE200EEDFCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04E96B33192A0FE200EEDFCF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04E96B39192A0FE200EEDFCF /* ProjectMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E96B3A192A0FE200EEDFCF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04E96B43192A0FE200EEDFCF /* ProjectMobileTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectMobileTests-Info.plist"; sourceTree = "<group>"; };
@@ -180,12 +177,12 @@
 		4CC96C77192F4A5300E43D05 /* Fotolijst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fotolijst.m; path = ../Fotolijst.m; sourceTree = "<group>"; };
 		66000AF91931F059004ED1BE /* UIPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPopoverController.h; sourceTree = "<group>"; };
 		66000AFA1931F059004ED1BE /* UIPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopoverController.m; sourceTree = "<group>"; };
+		66000AFC1932175D004ED1BE /* Locatie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locatie.h; sourceTree = "<group>"; };
+		66000AFD1932175D004ED1BE /* Locatie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locatie.m; sourceTree = "<group>"; };
 		665241D4192B48C700484AC1 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		665241D5192B48C700484AC1 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		665241DB192B5E2500484AC1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		665241DD192B5E2E00484AC1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		668202CC192B9CA600875220 /* LocationToevoegenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationToevoegenViewController.h; sourceTree = "<group>"; };
-		668202CD192B9CA600875220 /* LocationToevoegenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationToevoegenViewController.m; sourceTree = "<group>"; };
 		668202F6192C992700875220 /* Toilet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toilet.h; sourceTree = "<group>"; };
 		668202F7192C992700875220 /* Toilet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toilet.m; sourceTree = "<group>"; };
 		668202FB192CA84C00875220 /* ToiletLocaties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToiletLocaties.h; sourceTree = "<group>"; };
@@ -219,6 +216,7 @@
 		858C4A30192CAD2F00E4CE53 /* AidTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AidTableViewCell.m; sourceTree = "<group>"; };
 		858C4A32192CB21C00E4CE53 /* Personen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personen.h; sourceTree = "<group>"; };
 		858C4A33192CB21C00E4CE53 /* Personen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personen.m; sourceTree = "<group>"; };
+		85CD79C219337F6E00499C2D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,8 +256,8 @@
 				388B3F47192E3CBD009FE4C9 /* Herinnering.h */,
 				388B3F48192E3CBD009FE4C9 /* Herinnering.m */,
 				04063391192B90DB003BF9F6 /* ProjectMobile.xcdatamodeld */,
-				0413EF291934E9ED00FA4A01 /* Locatie.h */,
-				0413EF2A1934E9ED00FA4A01 /* Locatie.m */,
+				66000AFC1932175D004ED1BE /* Locatie.h */,
+				66000AFD1932175D004ED1BE /* Locatie.m */,
 				040633F8192E37DB003BF9F6 /* Stap.h */,
 				040633F9192E37DB003BF9F6 /* Stap.m */,
 				858C4A32192CB21C00E4CE53 /* Personen.h */,
@@ -329,19 +327,19 @@
 		04520A1C192A6C060068993A /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				0413EF3619352A2B00FA4A01 /* LocationToevoegenViewController.h */,
+				0413EF3719352A2B00FA4A01 /* LocationToevoegenViewController.m */,
+				0413EF3819352A2B00FA4A01 /* LocationToevoegenViewControllerDelegate.h */,
+				0413EF30193529F600FA4A01 /* CustomMKPointAnnotation.h */,
+				0413EF31193529F600FA4A01 /* CustomMKPointAnnotation.m */,
 				665241D4192B48C700484AC1 /* LocationViewController.h */,
 				665241D5192B48C700484AC1 /* LocationViewController.m */,
 				66000AF91931F059004ED1BE /* UIPopoverController.h */,
 				66000AFA1931F059004ED1BE /* UIPopoverController.m */,
 				668202F6192C992700875220 /* Toilet.h */,
 				668202F7192C992700875220 /* Toilet.m */,
-				668202CC192B9CA600875220 /* LocationToevoegenViewController.h */,
-				668202CD192B9CA600875220 /* LocationToevoegenViewController.m */,
 				668202FB192CA84C00875220 /* ToiletLocaties.h */,
 				668202FC192CA84C00875220 /* ToiletLocaties.m */,
-				0413EF201934B18900FA4A01 /* CustomMKPointAnnotation.h */,
-				0413EF211934B18900FA4A01 /* CustomMKPointAnnotation.m */,
-				0413EF2F19351D9500FA4A01 /* LocationToevoegenViewControllerDelegate.h */,
 			);
 			name = Locations;
 			sourceTree = "<group>";
@@ -403,8 +401,6 @@
 		04E96B10192A0FE200EEDFCF = {
 			isa = PBXGroup;
 			children = (
-				0413EF261934C5FC00FA4A01 /* Locatie.h */,
-				0413EF271934C5FC00FA4A01 /* Locatie.m */,
 				04E96B24192A0FE200EEDFCF /* ProjectMobile */,
 				04E96B41192A0FE200EEDFCF /* ProjectMobileTests */,
 				04E96B1B192A0FE200EEDFCF /* Frameworks */,
@@ -450,7 +446,7 @@
 				04E96B51192A107B00EEDFCF /* StoryBoard */,
 				04E96B2D192A0FE200EEDFCF /* AppDelegate.h */,
 				04E96B2E192A0FE200EEDFCF /* AppDelegate.m */,
-				04E96B33192A0FE200EEDFCF /* Images.xcassets */,
+				85CD79C219337F6E00499C2D /* Images.xcassets */,
 				04E96B25192A0FE200EEDFCF /* Supporting Files */,
 			);
 			path = ProjectMobile;
@@ -645,8 +641,8 @@
 			files = (
 				04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */,
 				388B3F37192DEB3F009FE4C9 /* color1.jpg in Resources */,
+				85CD79C319337F6E00499C2D /* Images.xcassets in Resources */,
 				388B3F3A192DEF60009FE4C9 /* white.jpg in Resources */,
-				04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */,
 				04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */,
 				388B3F38192DEB3F009FE4C9 /* color2.jpg in Resources */,
 				04E96B53192A109D00EEDFCF /* Storyboard.storyboard in Resources */,
@@ -669,13 +665,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				858C4A31192CAD2F00E4CE53 /* AidTableViewCell.m in Sources */,
-				0413EF2B1934E9ED00FA4A01 /* Locatie.m in Sources */,
 				66820326192CCC8400875220 /* JSONHTTPClient.m in Sources */,
+				0413EF3919352A2B00FA4A01 /* LocationToevoegenViewController.m in Sources */,
 				388B3F49192E3CBD009FE4C9 /* Herinnering.m in Sources */,
 				04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */,
 				66820327192CCC8400875220 /* JSONModel+networking.m in Sources */,
+				66000AFE1932175D004ED1BE /* Locatie.m in Sources */,
 				0406338F192B6798003BF9F6 /* EventViewController.m in Sources */,
-				0413EF221934B18900FA4A01 /* CustomMKPointAnnotation.m in Sources */,
 				668202FD192CA84C00875220 /* ToiletLocaties.m in Sources */,
 				04E96B2B192A0FE200EEDFCF /* main.m in Sources */,
 				4C8BD977192B886D003F00D9 /* PersonenViewController.m in Sources */,
@@ -686,7 +682,6 @@
 				668202F8192C992700875220 /* Toilet.m in Sources */,
 				66820320192CCC8400875220 /* JSONModel.m in Sources */,
 				04E96B75192A3AEE00EEDFCF /* TabBarController.m in Sources */,
-				668202CE192B9CA600875220 /* LocationToevoegenViewController.m in Sources */,
 				388B3F31192CDA05009FE4C9 /* HerinneringViewController.m in Sources */,
 				04E96B72192A3A0A00EEDFCF /* TabBarView.m in Sources */,
 				4CC96C78192F4A5300E43D05 /* Fotolijst.m in Sources */,
@@ -706,6 +701,7 @@
 				66820322192CCC8400875220 /* JSONModelClassProperty.m in Sources */,
 				4CC96C75192F443C00E43D05 /* PersoonDetailViewController.m in Sources */,
 				66820325192CCC8400875220 /* JSONAPI.m in Sources */,
+				0413EF34193529F600FA4A01 /* CustomMKPointAnnotation.m in Sources */,
 				66820329192CCC8400875220 /* JSONValueTransformer.m in Sources */,
 				04520A1F192A6C670068993A /* HomeViewController.m in Sources */,
 				66820328192CCC8400875220 /* JSONKeyMapper.m in Sources */,

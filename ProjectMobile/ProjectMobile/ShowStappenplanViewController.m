@@ -54,7 +54,7 @@
     
     Stap *step = [[self.stepstone.stap allObjects] objectAtIndex:indexPath.row];
     
-    cell.image.image = [[UIImage alloc]initWithData: step.foto];
+    cell.image.image = [[UIImage alloc] initWithData:step.foto];
     cell.commentField.text = step.comment;
     
     return cell;
