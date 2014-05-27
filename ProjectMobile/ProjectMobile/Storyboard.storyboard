@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VJW-wj-UZg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VJW-wj-UZg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -418,7 +418,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="dLa-Kj-YWc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="SR6-Q2-e87">
+                        <barButtonItem key="rightBarButtonItem" title="Bewaren" id="SR6-Q2-e87">
                             <connections>
                                 <action selector="save:" destination="KKw-bn-T8h" id="Lvh-Oy-xcb"/>
                             </connections>
@@ -482,7 +482,7 @@
                         <color key="backgroundColor" red="0.5" green="0.22894003130000001" blue="0.14029992320000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ibj-Zy-sDQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="89Q-vb-Thx">
+                        <barButtonItem key="rightBarButtonItem" title="Klaar" id="89Q-vb-Thx">
                             <connections>
                                 <action selector="done:" destination="g1h-FY-5Pw" id="nmz-sN-Tu8"/>
                             </connections>
@@ -771,12 +771,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Toevoegen" id="kwx-JK-cOB">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Bfe-Ta-a7E">
+                        <barButtonItem key="rightBarButtonItem" title="Bewaren" style="plain" id="Bfe-Ta-a7E">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bqq-vZ-gta">
                                 <rect key="frame" x="233" y="5" width="71" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Save">
+                                <state key="normal" title="Bewaren">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1029,21 +1029,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Locaties" id="JFb-1Q-N5c">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="EGf-TZ-14L">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" restorationIdentifier="toevoegenID" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="HFx-hC-sfI">
-                                <rect key="frame" x="282" y="11" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="s8d-8x-ySv" kind="push" identifier="gotoLocationDetail" id="Urg-2n-G4i"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="8IA-JD-iHm">
+                            <connections>
+                                <segue destination="s8d-8x-ySv" kind="push" identifier="gotoAddLocation" id="z6H-lu-vPc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="locatieToevoegenKnop" destination="HFx-hC-sfI" id="kND-1f-Mmt"/>
+                        <outlet property="locatieToevoegenButton" destination="8IA-JD-iHm" id="PRp-Tc-g8R"/>
                         <outlet property="mapView" destination="3vK-VF-DHe" id="7qb-Fm-aWg"/>
                     </connections>
                 </viewController>
@@ -1051,16 +1044,16 @@
             </objects>
             <point key="canvasLocation" x="1257" y="1784"/>
         </scene>
-        <!--Location Toevoegen Controller View Controller-->
+        <!--Location Toevoegen View Controller-->
         <scene sceneID="b9a-gQ-eGU">
             <objects>
-                <viewController id="s8d-8x-ySv" customClass="LocationToevoegenControllerViewController" sceneMemberID="viewController">
+                <viewController id="s8d-8x-ySv" customClass="LocationToevoegenViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oz0-M8-F9u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ZFj-Rl-5g6">
-                                <rect key="frame" x="0.0" y="65" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locatietoevoegen" id="UM5-Ng-Hue">
@@ -1172,7 +1165,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="e2J-0z-Y3D">
-                        <barButtonItem key="rightBarButtonItem" title="Opslaan" id="n4U-PH-NVL">
+                        <barButtonItem key="rightBarButtonItem" title="Bewaren" id="n4U-PH-NVL">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="OpslaanButton:" destination="s8d-8x-ySv" id="ycn-2V-Y3b"/>

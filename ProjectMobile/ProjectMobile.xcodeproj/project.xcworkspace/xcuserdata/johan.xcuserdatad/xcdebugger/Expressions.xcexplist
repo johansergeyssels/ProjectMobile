@@ -3,6 +3,28 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "__57-[LocationToevoegenControllerViewController SaveLocation]_block_invoke:LocationToevoegenControllerViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LocationViewController addAnotationOnMapWithLocation:]:LocationViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "location.longitude">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LocationViewController addLocationOnMap:]:LocationViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "pin.subtitle">
+            </PersistentString>
+            <PersistentString
+               value = "pin.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__34-[EventViewController viewDidLoad]_block_invoke:EventViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -50,10 +72,18 @@
          contextName = "-[StappenplanDetailViewController prepareForSegue:sender:]:StappenplanDetailViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "((UITableViewCellContentView *)((UIButton *)sender).superview).superview">
+               value = "dest.step">
             </PersistentString>
             <PersistentString
-               value = "dest.step">
+               value = "((UITableViewCellContentView *)((UIButton *)sender).superview).superview">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__41-[LocationViewController jsonBinnenhalen]_block_invoke:LocationViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mapView.annotations">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

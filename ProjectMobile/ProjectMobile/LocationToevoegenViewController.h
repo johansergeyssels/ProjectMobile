@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Locatie.h"
 #import "IManagedContextObjectContainer.h"
+#import "LocationToevoegenViewControllerDelegate.h"
 
-@interface LocationToevoegenControllerViewController : UIViewController<IManagedContextObjectContainer>
+@interface LocationToevoegenViewController : UIViewController<IManagedContextObjectContainer>
 
 @property NSManagedObjectContext* context;
 @property Locatie *locatie;
+@property id<LocationToevoegenViewControllerDelegate> locationDelegate;
 
 @property (weak, nonatomic) IBOutlet UITextField *GemeenteTextField;
 @property (weak, nonatomic) IBOutlet UITextField *StraatnaamTextField;

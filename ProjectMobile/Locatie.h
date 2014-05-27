@@ -14,7 +14,7 @@
 
 @property (nonatomic, retain) NSString * bus;
 @property (nonatomic, retain) NSString * gemeente;
-@property (nonatomic, retain) NSString * huisnummer;
+@property (nonatomic, retain) NSNumber * huisnummer;
 @property (nonatomic, retain) NSString * infoOver;
 @property (nonatomic, retain) NSString * straatnaam;
 @property (nonatomic, retain) NSNumber * latitude;

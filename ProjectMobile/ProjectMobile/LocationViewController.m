@@ -9,10 +9,13 @@
 #import "LocationViewController.h"
 #import "Toilet.h"
 #import "ToiletLocaties.h"
-#import "LocationToevoegenControllerViewController.h"
+#import "LocationToevoegenViewController.h"
+#import "CustomMKPointAnnotation.h"
+#import "Locatie.h"
 
 @interface LocationViewController()
 @property (nonatomic, strong) UIPopoverController *_popover;
+@property NSMutableArray *locations;
 @end
 
 @implementation LocationViewController
@@ -22,18 +25,20 @@
 {
     [super viewDidLoad];
     [self jsonBinnenhalen];
+    [self setLocations];
     
-    //https://developer.apple.com/library/ios/documentation/uikit/reference/UILongPressGestureRecognizer_Class/Reference/Reference.html
+    /*//https://developer.apple.com/library/ios/documentation/uikit/reference/UILongPressGestureRecognizer_Class/Reference/Reference.html
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]
                                                initWithTarget:self
                                                action:@selector(handleLongPress:)];
     longPress.minimumPressDuration = 2.0;
-    [self.locatieToevoegenKnop addGestureRecognizer:longPress];
+    [self.locatieToevoegenButton addGestureRecognizer:longPress];*/
     
 }
 
+/*
 -(void) handleLongPress:(UILongPressGestureRecognizer *)recognizer {
-    if (self.locatieToevoegenKnop.state == UIGestureRecognizerStateBegan){
+    if (self.locatieToevoegenButton.state == UIGestureRecognizerStateBegan){
         NSLog(@"Begin duwen");
         
         //als de popover is aangemaakt
@@ -54,6 +59,7 @@
 -(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
     self._popover = nil;
 }
+ */
 
 //als de gebruiker zijn locatie veranderd, update de mapview
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
@@ -80,13 +86,14 @@
                 ToiletLocaties *toiletlocatie = [[ToiletLocaties alloc] initWithString:json error:&error];
             
                 if(!error) {
-                    NSMutableArray *lijst = [[NSMutableArray alloc] init];
+                    NSMutableArray *lijstWCAnnotations = [[NSMutableArray alloc] init];
                     for(Toilet *Toilet in toiletlocatie.openbaartoilet) {
                         
                         NSString *gemeentePostcodeStraatNummer = [NSString stringWithFormat:@"%@ %@ %@ %@", Toilet.district, Toilet.postcode, Toilet.straat, Toilet.huisnummer];
                         
                         // Toevoegen van een annotatie
-                        MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
+                        CustomMKPointAnnotation *pin = [[CustomMKPointAnnotation alloc] init];
+                        pin.type = @"WC";
                         
                         //maken van een een coordinaat met longtitude en latitude
                         CLLocationCoordinate2D pinCoordinate;
@@ -104,22 +111,25 @@
                         pin.subtitle = gemeentePostcodeStraatNummer;
                         
                         //[self.mapView addAnnotation:pin];
-                        [lijst addObject:pin];
+                        [lijstWCAnnotations addObject:pin];
                     }
-                    [self.mapView addAnnotations:lijst];
-                    
+                    [self performSelectorOnMainThread:@selector(updateWCLijstOnMapWithList:) withObject:lijstWCAnnotations waitUntilDone:YES];
                 }
-                
-
             }] resume];
     
     return YES;
+}
+
+- (void) updateWCLijstOnMapWithList:(NSMutableArray *) list
+{
+    [self.mapView addAnnotations:list];
 }
 
 //overschrijven standaard pin design
 //elke pin die getekend moet worden wordt deze functie uitgevoerd
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
+    CustomMKPointAnnotation *customanno = (CustomMKPointAnnotation *)annotation;
     //checkt de locatie waar je nu bent
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
@@ -135,15 +145,31 @@
             pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotationView"];
             //pinView.animatesDrop = YES;
             pinView.canShowCallout = YES;
-            pinView.image = [UIImage imageNamed:@"wc.png"];
+            if([customanno.type  isEqual: @"WC"])
+            {
+                pinView.image = [UIImage imageNamed:@"wc.png"];
+            }
+            else if([customanno.type  isEqual: @"Other"])
+            {
+                pinView.image = [UIImage imageNamed:@"1groen.png"];
+            }
             pinView.calloutOffset = CGPointMake(0, 0);
-            
-        } else {
+        }
+        else
+        {
             pinView.annotation = annotation;
         }
         
         // Add an image to the left callout.
-        UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wc.png"]];
+        UIImageView *iconView;
+        if([customanno.type  isEqual: @"WC"])
+        {
+            iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wc.png"]];
+        }
+        else if([customanno.type  isEqual: @"Other"])
+        {
+            iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1groen.png"]];
+        }
         pinView.leftCalloutAccessoryView = iconView;
         
         return pinView;
@@ -158,10 +184,73 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    LocationToevoegenControllerViewController *dest = segue.destinationViewController;
+    LocationToevoegenViewController *dest = segue.destinationViewController;
     dest.context = self.context;
+    dest.locatie = [NSEntityDescription insertNewObjectForEntityForName:@"Locatie" inManagedObjectContext:self.context];
+    dest.locationDelegate = self;
 }
 
+- (void)addLocationOnMap:(Locatie *)location
+{
+    CustomMKPointAnnotation *pin = [[CustomMKPointAnnotation alloc] init];
+    pin.type = @"Other";
+    
+    //maken van een een coordinaat met longtitude en latitude
+    CLLocationCoordinate2D pinCoordinate;
+    //specifieren van de latitude en longtitude
+    double latitude = [location.latitude doubleValue];
+    double longtitude = [location.longitude doubleValue];
+    
+    pinCoordinate.latitude = latitude;
+    pinCoordinate.longitude = longtitude;
+    //toewijzen van de pincoordinaten aan de pin zelf
+    pin.coordinate = pinCoordinate;
+    
+    //pin.coordinate = userLocation.coordinate;
+    if(location.infoOver != nil && ![location.infoOver  isEqual: @""])
+    {
+        pin.title = location.infoOver;
+    }
+    else
+    {
+        pin.title = @"toegevoegde locatie";
+    }
+    NSString *locationString = @"";
+    if(location.straatnaam != nil) {
+        locationString = [NSString stringWithFormat:@"%@ ", location.straatnaam, nil];
+    }
+    
+    if(location.huisnummer != nil) {
+        locationString = [NSString stringWithFormat:@"%@%@", locationString, location.huisnummer, nil];
+    }
+    
+    if(location.bus != nil) {
+        locationString = [NSString stringWithFormat:@"%@%@ ", locationString, location.bus, nil];
+    }
+    
+    if(location.gemeente != nil) {
+        locationString = [NSString stringWithFormat:@"%@ %@", locationString, location.gemeente, nil];
+    }
+    pin.subtitle = locationString;
+    
+    //[self.mapView addAnnotation:pin];
+    [self.mapView addAnnotation:pin];
+}
+
+- (void) setLocations
+{
+    NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Locatie"];
+    NSError* error;
+    self.locations = [[self.context executeFetchRequest:fetchRequest error:&error] mutableCopy];
+    for (Locatie *location in self.locations) {
+        [self addLocationOnMap:location];
+    }
+}
+
+-(void)addAnotationOnMapWithLocation:(Locatie *)location
+{
+    [self addLocationOnMap:location];
+}
 @end
 
 
