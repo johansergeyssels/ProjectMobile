@@ -44,7 +44,7 @@
     [self.context rollback];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Herinnering"];
     NSError *error;
-    self.herinneringen = [self.context executeFetchRequest:fetchRequest error:&error];
+    self.herinneringen = [[self.context executeFetchRequest:fetchRequest error:&error] mutableCopy];
     [self.collectionView reloadData];
 }
 

@@ -37,11 +37,9 @@
 
 }
 
-
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
-    
 }
 
 
@@ -60,13 +58,10 @@
     
     if (addressBookRef != nil) {
         Fotolijst *fotolijst = [self.PersoonImages objectAtIndex:indexPath.item];
-        
-        ABRecordID recordID = (int)[[fotolijst valueForKey:@"persoonId"] integerValue]; // Assign here your ID
-        NSLog(@"%d", recordID);
+        ABRecordID recordID = (int)[[fotolijst valueForKey:@"persoonId"] integerValue];
         ABRecordRef nxtABRecordRef = ABAddressBookGetPersonWithRecordID (addressBookRef, recordID);
         
-        
-//Image binnenhalen
+        //Image binnenhalen
         NSData  *imgData = (__bridge NSData *)ABPersonCopyImageData(nxtABRecordRef);
         UIImage  *img = [UIImage imageWithData:imgData];
         NSString* naam = (__bridge_transfer NSString*)ABRecordCopyValue(nxtABRecordRef, kABPersonFirstNameProperty);
@@ -75,26 +70,21 @@
         [cell.persoonImage setImage:img];
         cell.name = naam;
         cell.familyName = familienaam;
-        NSLog(@"%@", cell.name);
-        NSLog(@"%@", cell.familyName);
             
         CFRelease(addressBookRef);
     }
     else {
-        NSLog(@"Could not open address book");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"adresboek" message:@"Agenda kan niet geopend worden." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
     }
-
     
     return cell;
 }
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
-
-
 
 - (IBAction)pickPerson:(id)sender {
     ABPeoplePickerNavigationController *picker =
@@ -104,17 +94,14 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-
 - (void)peoplePickerNavigationControllerDidCancel: (ABPeoplePickerNavigationController *)peoplePicker {
     
     [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 
-
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person {
-    
-    
+
     NSPredicate *valuePredicate = [NSPredicate predicateWithFormat:@"self.persoonId == %d",ABRecordGetRecordID(person)];
     
     if ([[self.PersoonImages filteredArrayUsingPredicate:valuePredicate] count]!=0) {
@@ -124,24 +111,27 @@
     }
     
     else {
-        
-// Persoon aanmaken
-    NSManagedObject *newPersoon = [NSEntityDescription insertNewObjectForEntityForName:@"Fotolijst" inManagedObjectContext:self.context];
-    NSNumber *id = [NSNumber numberWithInt:ABRecordGetRecordID(person)];
-    NSNumber *one = [NSNumber numberWithInt:1];
-    [newPersoon setValue: id forKey:@"persoonId"];
-    [newPersoon setValue: one forKey:@"importance"];
-    
-    
-    NSError *error = nil;
-    if (![self.context save:&error]) {
-        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        NSData  *imgData = (__bridge NSData *)ABPersonCopyImageData(person);
+        if(imgData != nil) {
+        // Persoon aanmaken
+            NSManagedObject *newPersoon = [NSEntityDescription insertNewObjectForEntityForName:@"Fotolijst" inManagedObjectContext:self.context];
+            NSNumber *id = [NSNumber numberWithInt:ABRecordGetRecordID(person)];
+            NSNumber *one = [NSNumber numberWithInt:1];
+            [newPersoon setValue: id forKey:@"persoonId"];
+            [newPersoon setValue: one forKey:@"importance"];
+            
+            NSError *error = nil;
+            if (![self.context save:&error]) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"bewaren" message:@"Persoon kan niet worden opgeslagen" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                [alert show];
+            }
         }
-        
-        
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Geen foto" message:@"U moet een foto toevoegen aan deze contantpersoon." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alert show];
+        }
     }
-    
-    
     
     [[peoplePicker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
     [self.personenCollection reloadData];
@@ -156,9 +146,6 @@
     
     return NO;
 }
-
-
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"PersoonDetailViewController"]) {
@@ -186,20 +173,5 @@
     
     [self.personenCollection reloadData];
 }
-
-
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

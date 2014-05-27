@@ -31,7 +31,7 @@
 //
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AidTableViewCell *geselecteerdeCell = [self.tableView cellForRowAtIndexPath:indexPath];
+    AidTableViewCell *geselecteerdeCell = (AidTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
     self.tele = geselecteerdeCell.telefoon;
     NSLog(@"%@", self.tele);
     
@@ -90,8 +90,6 @@
         NSManagedObject *newPersoon = [NSEntityDescription insertNewObjectForEntityForName:@"Personen" inManagedObjectContext:self.context];
         NSNumber *id = [NSNumber numberWithInt:ABRecordGetRecordID(person)];
         NSNumber *one = [NSNumber numberWithInt:1];
-        NSLog(@"%d",ABRecordGetRecordID(person));
-        NSLog(@"%d", [id integerValue]);
         [newPersoon setValue: id forKey:@"persoonId"];
         [newPersoon setValue: one forKey:@"importance"];
         
@@ -143,7 +141,7 @@
         Personen *persoon = [self.Personen objectAtIndex:indexPath.row];
         
         //Het id toevoegen
-        ABRecordID recordID = [[persoon valueForKey:@"persoonId"] integerValue];
+        ABRecordID recordID =  (int)[[persoon valueForKey:@"persoonId"] integerValue];
         NSLog(@"%d", recordID);
         ABRecordRef nxtABRecordRef = ABAddressBookGetPersonWithRecordID (addressBookRef, recordID);
             

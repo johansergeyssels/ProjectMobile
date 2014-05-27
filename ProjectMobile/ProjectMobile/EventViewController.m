@@ -17,6 +17,7 @@
 @property NSArray *events;
 @property UIColor * firstColor;
 @property UIColor * secondColor;
+@property NSString *searchString;
 @end
 
 @implementation EventViewController
@@ -56,17 +57,26 @@
     tf.returnKeyType = UIReturnKeySearch;
 }
 
-- (NSArray *) getData
+- (void) setEvents
 {
     Event *event0 = [[Event alloc] initWithTitle:@"samenkomst op school" location:@"Nijverheidslaan 175, 1000 Anderlecht" beginDate:[NSDate date] endDate:[NSDate date]];
     Event *event1 = [[Event alloc] initWithTitle:@"project op school" location:@"Nijverheidslaan 175, 1000 Anderlecht" beginDate:[NSDate date] endDate:[NSDate date]];
     NSArray *data = [NSArray arrayWithObjects:event0, event1, nil] ;
-    return data;
+    
+    if(self.searchString != nil && ![self.searchString isEqualToString:@""]) {
+        NSString *searchString = [NSString stringWithFormat:@"*%@*", self.searchString];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title like[c] %@ or location like[c] %@", searchString, searchString];
+        self.events = [data filteredArrayUsingPredicate:predicate];
+    }
+    else
+    {
+        self.events = data;
+    }
+    [self.table reloadData];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    self.events = [self getData];
-    [self.table reloadData];
+    [self setEvents];
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,8 +116,8 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    
-    
+    self.searchString = [[searchBar.text lowercaseString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    [self setEvents];
     [searchBar resignFirstResponder];
 }
 

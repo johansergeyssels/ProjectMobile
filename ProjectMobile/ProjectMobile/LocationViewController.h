@@ -14,13 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property NSManagedObjectContext* context;
-
--(BOOL) jsonBinnenhalen;
-
 //knop voor toe te voegen (long pressure detectie)
 @property (weak, nonatomic) IBOutlet UIButton *locatieToevoegenKnop;
 
-
+-(BOOL) jsonBinnenhalen;
 
 @end
 
