@@ -157,6 +157,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    self.stepstone.titel = self.titleLabel.text;
     if([segue.identifier isEqualToString:@"editStep"])
     {
         UITableViewCell *cell = (UITableViewCell *)((UIButton *)sender).superview.superview.superview;
