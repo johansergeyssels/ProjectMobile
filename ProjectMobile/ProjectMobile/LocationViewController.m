@@ -9,6 +9,7 @@
 #import "LocationViewController.h"
 #import "Toilet.h"
 #import "ToiletLocaties.h"
+#import "LocationToevoegenControllerViewController.h"
 
 @interface LocationViewController()
 @property (nonatomic, strong) UIPopoverController *_popover;
@@ -43,10 +44,10 @@
             return;
         }
         UIViewController *testVC = [self.storyboard instantiateViewControllerWithIdentifier:@"testVC"];
-        testVC.contentSizeForViewInPopover = CGSizeMake(200, 100);
+        testVC.preferredContentSize = CGSizeMake(200, 100);
         self._popover = [[UIPopoverController alloc] initWithContentViewController:testVC];
         self._popover.delegate = self;
-        [self._popover presentPopoverFromBarButtonItem:recognizer permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+        [self._popover presentPopoverFromBarButtonItem:(UIBarButtonItem *)recognizer permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
     }
 }
 
@@ -76,8 +77,8 @@
                 // handle response
                 //NSLog(@"gelukt");
                 NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
-                id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error:&error];
+                //NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
+                //id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options: NSJSONReadingMutableContainers error:&error];
                 //NSLog(json);
                 //NSLog(@"%@", jsonObject);
                 
@@ -164,7 +165,11 @@
     [self.context rollback];
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    LocationToevoegenControllerViewController *dest = segue.destinationViewController;
+    dest.context = self.context;
+}
 
 @end
 

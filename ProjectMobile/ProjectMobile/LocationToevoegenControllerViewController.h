@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Locatie.h"
+#import "IManagedContextObjectContainer.h"
 
-@interface LocationToevoegenControllerViewController : UIViewController
+@interface LocationToevoegenControllerViewController : UIViewController<IManagedContextObjectContainer>
 
+@property NSManagedObjectContext* context;
 @property Locatie *locatie;
 
 @property (weak, nonatomic) IBOutlet UITextField *GemeenteTextField;

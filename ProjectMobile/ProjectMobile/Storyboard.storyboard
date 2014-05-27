@@ -1009,7 +1009,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="s8d-8x-ySv" kind="push" id="Urg-2n-G4i"/>
+                                    <segue destination="s8d-8x-ySv" kind="push" identifier="gotoLocationDetail" id="Urg-2n-G4i"/>
                                 </connections>
                             </button>
                         </barButtonItem>
