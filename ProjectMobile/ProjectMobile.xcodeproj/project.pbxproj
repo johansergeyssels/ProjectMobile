@@ -32,7 +32,6 @@
 		04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B27192A0FE200EEDFCF /* InfoPlist.strings */; };
 		04E96B2B192A0FE200EEDFCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B2A192A0FE200EEDFCF /* main.m */; };
 		04E96B2F192A0FE200EEDFCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E96B2E192A0FE200EEDFCF /* AppDelegate.m */; };
-		04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E96B33192A0FE200EEDFCF /* Images.xcassets */; };
 		04E96B3B192A0FE200EEDFCF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B3A192A0FE200EEDFCF /* XCTest.framework */; };
 		04E96B3C192A0FE200EEDFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B1C192A0FE200EEDFCF /* Foundation.framework */; };
 		04E96B3D192A0FE200EEDFCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E96B20192A0FE200EEDFCF /* UIKit.framework */; };
@@ -77,6 +76,7 @@
 		85507AF7192B77C200DD7D53 /* HulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85507AF6192B77C200DD7D53 /* HulpViewController.m */; };
 		858C4A31192CAD2F00E4CE53 /* AidTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858C4A30192CAD2F00E4CE53 /* AidTableViewCell.m */; };
 		858C4A34192CB21C00E4CE53 /* Personen.m in Sources */ = {isa = PBXBuildFile; fileRef = 858C4A33192CB21C00E4CE53 /* Personen.m */; };
+		85CD79C319337F6E00499C2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CD79C219337F6E00499C2D /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,7 +137,6 @@
 		04E96B2C192A0FE200EEDFCF /* ProjectMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectMobile-Prefix.pch"; sourceTree = "<group>"; };
 		04E96B2D192A0FE200EEDFCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E96B2E192A0FE200EEDFCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04E96B33192A0FE200EEDFCF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04E96B39192A0FE200EEDFCF /* ProjectMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E96B3A192A0FE200EEDFCF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04E96B43192A0FE200EEDFCF /* ProjectMobileTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectMobileTests-Info.plist"; sourceTree = "<group>"; };
@@ -213,6 +212,7 @@
 		858C4A30192CAD2F00E4CE53 /* AidTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AidTableViewCell.m; sourceTree = "<group>"; };
 		858C4A32192CB21C00E4CE53 /* Personen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personen.h; sourceTree = "<group>"; };
 		858C4A33192CB21C00E4CE53 /* Personen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personen.m; sourceTree = "<group>"; };
+		85CD79C219337F6E00499C2D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,7 +439,7 @@
 				04E96B51192A107B00EEDFCF /* StoryBoard */,
 				04E96B2D192A0FE200EEDFCF /* AppDelegate.h */,
 				04E96B2E192A0FE200EEDFCF /* AppDelegate.m */,
-				04E96B33192A0FE200EEDFCF /* Images.xcassets */,
+				85CD79C219337F6E00499C2D /* Images.xcassets */,
 				04E96B25192A0FE200EEDFCF /* Supporting Files */,
 			);
 			path = ProjectMobile;
@@ -634,8 +634,8 @@
 			files = (
 				04E96B29192A0FE200EEDFCF /* InfoPlist.strings in Resources */,
 				388B3F37192DEB3F009FE4C9 /* color1.jpg in Resources */,
+				85CD79C319337F6E00499C2D /* Images.xcassets in Resources */,
 				388B3F3A192DEF60009FE4C9 /* white.jpg in Resources */,
-				04E96B34192A0FE200EEDFCF /* Images.xcassets in Resources */,
 				04E96B59192A2CBF00EEDFCF /* TabBarView.xib in Resources */,
 				388B3F38192DEB3F009FE4C9 /* color2.jpg in Resources */,
 				04E96B53192A109D00EEDFCF /* Storyboard.storyboard in Resources */,

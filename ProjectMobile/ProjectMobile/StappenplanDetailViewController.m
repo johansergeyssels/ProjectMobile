@@ -50,7 +50,6 @@
 
 - (IBAction)addStap:(id)sender {
     Stap* step = [NSEntityDescription insertNewObjectForEntityForName:@"Stap" inManagedObjectContext:self.context];
-    step.comment = @"stap";
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Stap"];
     
