@@ -35,8 +35,10 @@
     self.tele = geselecteerdeCell.telefoon;
     NSLog(@"%@", self.tele);
     
+    NSString *phoneNumber = [self.tele stringByReplacingOccurrencesOfString:@" " withString:@""];
     UIAlertView *telefoonMelding;
-    NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",self.tele]];
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",phoneNumber]];
+    NSLog(@"%@ test", phoneUrl);
     
     if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
         NSLog(@"%@ nummer", self.tele);
