@@ -36,7 +36,7 @@
     NSLog(@"%@", self.tele);
     
     UIAlertView *telefoonMelding;
-    NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",self.tele]];
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",self.tele]];
     
     if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
         NSLog(@"%@ nummer", self.tele);
