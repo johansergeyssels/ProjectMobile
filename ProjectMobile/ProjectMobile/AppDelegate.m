@@ -28,7 +28,6 @@
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:titleFont, NSFontAttributeName,
                                 [UIColor whiteColor], NSForegroundColorAttributeName, nil];
     [[UINavigationBar appearance] setTitleTextAttributes:attributes];
-
     
     //uibutton
     [[UIButton appearance] setTintColor:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];

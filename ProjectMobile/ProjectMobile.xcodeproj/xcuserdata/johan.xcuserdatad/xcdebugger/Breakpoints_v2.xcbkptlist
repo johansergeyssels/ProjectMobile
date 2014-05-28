@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProjectMobile/AppDelegate.m"
-            timestampString = "422918757.896888"
+            timestampString = "422954978.741999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-contextToevoegen:tabbar:"
             landmarkType = "5">
          </BreakpointContent>

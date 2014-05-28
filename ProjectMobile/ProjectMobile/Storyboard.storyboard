@@ -159,7 +159,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.70588237047195435" green="0.37647062540054321" blue="0.11372549831867218" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Geheugen" id="I9r-pt-g2n"/>
+                    <navigationItem key="navigationItem" title="Geheugen" id="I9r-pt-g2n">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="TgH-Q1-E5s"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZc-0q-X4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,6 +231,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Stappenplan" id="e72-mM-Uok">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="xP8-ox-lve"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="e8C-se-g0R">
                             <connections>
                                 <segue destination="KKw-bn-T8h" kind="push" identifier="addStepstones" id="1Fp-oh-DMM"/>
@@ -293,7 +296,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="m1r-db-XF8"/>
+                    <navigationItem key="navigationItem" id="m1r-db-XF8">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="uTM-h0-xKc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="wdK-ye-fN5" id="UkX-oY-Pxm"/>
                     </connections>
@@ -418,6 +423,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="dLa-Kj-YWc">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="CHZ-RV-zTS"/>
                         <barButtonItem key="rightBarButtonItem" title="Bewaren" id="SR6-Q2-e87">
                             <connections>
                                 <action selector="save:" destination="KKw-bn-T8h" id="Lvh-Oy-xcb"/>
@@ -490,6 +496,7 @@
                         <color key="backgroundColor" red="0.5" green="0.22894003130000001" blue="0.14029992320000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ibj-Zy-sDQ">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="pHL-MX-r4X"/>
                         <barButtonItem key="rightBarButtonItem" title="Klaar" id="89Q-vb-Thx">
                             <connections>
                                 <action selector="done:" destination="g1h-FY-5Pw" id="nmz-sN-Tu8"/>
@@ -553,6 +560,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Personen" id="TJr-ux-4da">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="UX7-be-8yu"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WH9-em-mUf">
                             <connections>
                                 <action selector="pickPerson:" destination="CcS-er-cZ9" id="2GE-XD-9P7"/>
@@ -598,7 +606,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.73725491759999995" green="0.35294118520000001" blue="0.082352943720000002" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="yjg-dt-kCF"/>
+                    <navigationItem key="navigationItem" title="Detail" id="yjg-dt-kCF">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="Oy0-0R-VYo"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="fNameLabel" destination="3yt-bk-vom" id="tXt-eY-RRx"/>
                         <outlet property="imageView" destination="de8-cF-Jed" id="Fsh-sS-UcD"/>
@@ -657,6 +667,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Herinneringen" id="4kR-nk-bns">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="gaK-Lm-4Ll"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="TXP-Od-i71">
                             <connections>
                                 <segue destination="AaH-NX-XDT" kind="push" identifier="addHerinnering" id="dn8-gx-lZ0"/>
@@ -771,6 +782,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Toevoegen" id="kwx-JK-cOB">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="T0S-AO-dxo"/>
                         <barButtonItem key="rightBarButtonItem" title="Bewaren" id="dpH-1E-GF4">
                             <connections>
                                 <action selector="save:" destination="AaH-NX-XDT" id="kPL-BC-5Ek"/>
@@ -825,6 +837,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail " id="Xg8-c6-Yhq">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="Mmf-mS-CmO"/>
                         <barButtonItem key="rightBarButtonItem" title="Wijzig" id="MHp-Mk-rlx">
                             <connections>
                                 <segue destination="AaH-NX-XDT" kind="push" identifier="gotoChangeMemory" id="ioF-c4-hhH"/>
@@ -901,7 +914,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Evenementen" id="YnP-76-dkR"/>
+                    <navigationItem key="navigationItem" title="Evenementen" id="YnP-76-dkR">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="Wiz-ww-HuQ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="K7h-6D-IWK" id="jmg-TF-frM"/>
                         <outlet property="table" destination="hcy-BQ-EVw" id="mJf-S0-lO8"/>
@@ -1036,6 +1051,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Locaties" id="JFb-1Q-N5c">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="Hsg-du-ePC"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8IA-JD-iHm">
                             <connections>
                                 <segue destination="s8d-8x-ySv" kind="push" identifier="gotoAddLocation" id="z6H-lu-vPc"/>
@@ -1172,6 +1188,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="e2J-0z-Y3D">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="Uyk-CM-bey"/>
                         <barButtonItem key="rightBarButtonItem" title="Bewaren" id="n4U-PH-NVL">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -1290,6 +1307,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hulp" id="kVa-24-0Be">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="E9R-4P-Hwh"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PCg-4l-GlJ">
                             <connections>
                                 <action selector="pickPerson:" destination="xgg-r0-IhW" id="p3B-YW-ByO"/>
