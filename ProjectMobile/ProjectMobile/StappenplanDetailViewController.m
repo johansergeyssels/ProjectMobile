@@ -125,7 +125,7 @@
         EditStapTableViewCell *editcell = [self.table dequeueReusableCellWithIdentifier:@"stapCell" forIndexPath:indexPath];
         Stap *step = [self.stepsSorted objectAtIndex:indexPath.row];
         editcell.commentField.text = step.comment;
-        editcell.titleLabel.text = [NSString stringWithFormat:@"Stap %d", (indexPath.row + 1)];
+        editcell.titleLabel.text = [NSString stringWithFormat:@"Stap %ld", (indexPath.row + 1)];
         editcell.image.image = [[UIImage alloc] initWithData:step.foto];
         cell = editcell;
         if (indexPath.row % 2) {
